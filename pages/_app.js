@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import { ThemeProvider } from 'styled-components';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import { GlobalStyles, lightTheme } from '../styles';
+import '../styles/globals.css';
 
-export default MyApp
+const queryClient = new QueryClient();
+
+const App = ({ Component, pageProps }) => (
+  <ThemeProvider theme={lightTheme}>
+    <GlobalStyles />
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
+  </ThemeProvider>
+);
+
+export default App;
