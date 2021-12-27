@@ -1,16 +1,16 @@
 module.exports = {
   reactStrictMode: true,
-  // experimental: {
-  //   // ssr and displayName are configured by default
-  //   styledComponents: true,
-  // },
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/fr',
+        source: '/fr',
+        destination: '/',
         permanent: true,
       },
     ];
+  },
+  i18n: {
+    defaultLocale: 'fr',
+    locales: ['fr', 'en'],
   },
 };

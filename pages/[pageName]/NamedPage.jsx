@@ -2,17 +2,17 @@ import { useRouter } from 'next/router';
 
 import Template from '../../components/template/default';
 
-const Home = () => {
+const NamedPage = () => {
   const router = useRouter();
-  const { lang, pageName } = router.query;
+  const { pageName } = router.query;
+
+  if (!pageName) return null;
 
   return (
     <Template>
-      <h1>
-        Page in {lang} named: {pageName}
-      </h1>
+      <h1>Page in lang named: {pageName}</h1>
     </Template>
   );
 };
 
-export default Home;
+export default NamedPage;
