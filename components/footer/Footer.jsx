@@ -1,7 +1,9 @@
 import Image from 'next/image';
 
+import { FooterContainer } from './style';
+
 const Footer = () => (
-  <footer>
+  <FooterContainer>
     <a
       href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
       target='_blank'
@@ -12,7 +14,7 @@ const Footer = () => (
         <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
       </span>
     </a>
-  </footer>
+  </FooterContainer>
 );
 
 export default Footer;

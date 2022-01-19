@@ -14,10 +14,10 @@ const Header = () => {
         <Link href='/' locale={locale} passHref>
           <NavLink>{t('header.nav.home')}</NavLink>
         </Link>
-        {/* <Link href='/catalogue' locale={locale} passHref>
+        <Link href='/shop' locale={locale} passHref>
           <NavLink>{t('header.nav.shop')}</NavLink>
         </Link>
-        <Link href='/a-propos' locale={locale} passHref>
+        {/* <Link href='/a-propos' locale={locale} passHref>
           <NavLink>{t('header.nav.about')}</NavLink>
         </Link> */}
         <Link href='/contact' locale={locale} passHref>

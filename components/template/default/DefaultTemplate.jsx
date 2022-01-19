@@ -1,10 +1,11 @@
+import { Main } from './style';
 import Footer from '../../footer';
 import Header from '../../header';
 
 const DefaultTemplate = ({ children }) => (
   <>
     <Header />
-    <main>{children}</main>
+    <Main>{children}</Main>
     <Footer />
   </>
 );
