@@ -1,9 +1,9 @@
 import en from './langs/en.json';
-import fr from './langs/fr.json';
+// import fr from './langs/fr.json';
 
 const locales = {
   en,
-  fr,
+  // fr,
 };
 
 export default locales;

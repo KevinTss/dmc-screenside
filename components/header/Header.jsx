@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import { Header as HeaderEl, Nav, NavLink } from './style';
 import { useLocale } from '../../hooks';
 
 const Header = () => {
@@ -8,19 +9,21 @@ const Header = () => {
   const { locale, t } = useLocale();
 
   return (
-    <header>
-      <Link href='/' locale={locale}>
-        <a>{t('header.home')}</a>
-      </Link>
-      <Link href='/catalogue' locale={locale}>
-        <a>{t('header.catalog')}</a>
-      </Link>
-      <Link href='/a-propos' locale={locale}>
-        <a>{t('header.about')}</a>
-      </Link>
-      <Link href='/contact' locale={locale}>
-        <a>{t('header.contact')}</a>
-      </Link>
+    <HeaderEl>
+      <Nav>
+        <Link href='/' locale={locale} passHref>
+          <NavLink>{t('header.nav.home')}</NavLink>
+        </Link>
+        {/* <Link href='/catalogue' locale={locale} passHref>
+          <NavLink>{t('header.nav.shop')}</NavLink>
+        </Link>
+        <Link href='/a-propos' locale={locale} passHref>
+          <NavLink>{t('header.nav.about')}</NavLink>
+        </Link> */}
+        <Link href='/contact' locale={locale} passHref>
+          <NavLink>{t('header.nav.contact')}</NavLink>
+        </Link>
+      </Nav>
 
       <div>
         Lang:{' '}
@@ -34,7 +37,7 @@ const Header = () => {
           {locale === 'fr' ? 'en' : 'fr'}
         </button>
       </div>
-    </header>
+    </HeaderEl>
   );
 };
 
