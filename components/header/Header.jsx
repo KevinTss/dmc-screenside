@@ -1,8 +1,9 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { Header as HeaderEl, Nav, NavLink } from './style';
+import { Header as HeaderEl, Container, RightContainer } from './style';
+import { Wrapper } from '../../styles';
 import { useLocale } from '../../hooks';
+import Nav from '../nav';
 
 const Header = () => {
   const { push, asPath } = useRouter();
@@ -10,33 +11,24 @@ const Header = () => {
 
   return (
     <HeaderEl>
-      <Nav>
-        <Link href='/' locale={locale} passHref>
-          <NavLink>{t('header.nav.home')}</NavLink>
-        </Link>
-        <Link href='/shop' locale={locale} passHref>
-          <NavLink>{t('header.nav.shop')}</NavLink>
-        </Link>
-        {/* <Link href='/a-propos' locale={locale} passHref>
-          <NavLink>{t('header.nav.about')}</NavLink>
-        </Link> */}
-        <Link href='/contact' locale={locale} passHref>
-          <NavLink>{t('header.nav.contact')}</NavLink>
-        </Link>
-      </Nav>
-
-      <div>
+      <Wrapper>
+        <Container>
+          <Nav />
+          <RightContainer>ok</RightContainer>
+          {/* <div>
         Lang:{' '}
         <button
-          onClick={() => {
-            push(asPath, asPath, {
-              locale: locale === 'fr' ? 'en' : 'fr',
-            });
-          }}
+        onClick={() => {
+          push(asPath, asPath, {
+            locale: locale === 'fr' ? 'en' : 'fr',
+          });
+        }}
         >
-          {locale === 'fr' ? 'en' : 'fr'}
+        {locale === 'fr' ? 'en' : 'fr'}
         </button>
-      </div>
+      </div> */}
+        </Container>
+      </Wrapper>
     </HeaderEl>
   );
 };
