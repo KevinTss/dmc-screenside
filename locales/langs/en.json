@@ -8,8 +8,14 @@
     }
   },
   "page": {
+    "home": {
+      "title": "Home"
+    },
     "shop": {
       "title": "Shop"
+    },
+    "contact": {
+      "title": "Contact"
     }
   }
 }

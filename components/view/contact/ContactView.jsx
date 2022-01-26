@@ -1,11 +1,13 @@
 import Template from '../../template/default';
+import PageHeader from '../../page-header';
+import { useLocale } from '../../../hooks';
 
-const ContactView = () => {
+export default function ContactView() {
+  const { t } = useLocale();
+
   return (
     <Template>
-      <h1>Page contact</h1>
+      <PageHeader title={t('page.contact.title')} />
     </Template>
   );
-};
-
-export default ContactView;
+}

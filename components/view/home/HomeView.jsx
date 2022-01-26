@@ -1,13 +1,13 @@
-// import { useRouter } from 'next/router';
-
 import Template from '../../template/default';
+import PageHeader from '../../page-header';
+import { useLocale } from '../../../hooks';
 
-const HomeView = (props) => {
+export default function HomeView() {
+  const { t } = useLocale();
+
   return (
     <Template>
-      <h1>Page Home</h1>
+      <PageHeader title={t('page.home.title')} />
     </Template>
   );
-};
-
-export default HomeView;
+}
