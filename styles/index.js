@@ -1,24 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-export const lightTheme = {
-  color: {
-    primary: '#24262f',
-    background: '#f7f7f7',
-    text: '#24262f',
-  },
-  font: {
-    family: `'Lato', sans-serif`,
-  },
-  spacing: {
-    l: '24px',
-    m: '16px',
-    s: '12px',
-    xs: '8px',
-  },
-  border: {
-    radius: '4px',
-  },
-};
+export * from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {

@@ -1,22 +1,27 @@
 import styled from 'styled-components';
 
-export const Container = styled.ul`
-  display: grid;
-  border: 1px solid red;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+import { MediaQuery } from '../../../utils';
 
-  @media (max-width: 1000px) {
+export const MainContainer = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: ${({ theme }) => theme.spacing.m};
+
+  ${MediaQuery.XL_AND_DOWN} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  ${MediaQuery.L_AND_DOWN} {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 800px) {
+  ${MediaQuery.S_AND_DOWN} {
     grid-template-columns: 1fr;
   }
 `;
 
 export const ItemContainer = styled.li`
   display: flex;
-  flex-direction: column;
-  border: 1px solid pink;
+  justify-content: center;
 `;

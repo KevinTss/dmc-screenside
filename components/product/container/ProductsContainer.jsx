@@ -1,16 +1,19 @@
-import { Container, ItemContainer } from './style';
+import { MainContainer, ItemContainer } from './style';
 
-import ProductCard from '../card/';
+import ProductCard from '../card';
+import { Section } from '../../../styles';
 
 const ProductsList = ({ products }) => {
   return (
-    <Container>
-      {products.map((product) => (
-        <ItemContainer key={product.id}>
-          <ProductCard product={product} />
-        </ItemContainer>
-      ))}
-    </Container>
+    <Section>
+      <MainContainer>
+        {products.map((product) => (
+          <ItemContainer key={product.id}>
+            <ProductCard product={product} />
+          </ItemContainer>
+        ))}
+      </MainContainer>
+    </Section>
   );
 };
 

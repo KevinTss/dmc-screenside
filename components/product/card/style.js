@@ -4,10 +4,10 @@ export const Container = styled.a`
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  border: 1px solid green;
+  padding: ${({ theme }) => theme.spacing.m};
 
   &:hover {
-    background: grey;
+    background-color: ${({ theme }) => theme.color.background};
   }
 `;
 
@@ -16,9 +16,10 @@ export const ImageContainer = styled.div``;
 export const CardBody = styled.div``;
 
 export const Name = styled.p`
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.font.size.m};
 `;
 
 export const Price = styled.p`
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.font.size.l};
+  margin-bottom: ${({ theme }) => theme.spacing.m};
 `;
