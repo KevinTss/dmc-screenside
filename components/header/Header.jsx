@@ -1,20 +1,30 @@
-import { useRouter } from 'next/router';
+import { useState } from 'react';
+// import { useRouter } from 'next/router';
 
 import { Header as HeaderEl, Container, RightContainer } from './style';
 import { Wrapper } from '../../styles';
-import { useLocale } from '../../hooks';
+// import { useLocale } from '../../hooks';
 import Nav from '../nav';
+import { Button } from '../ui';
+import CardDrawer from '../cart/drawer';
 
 const Header = () => {
-  const { push, asPath } = useRouter();
-  const { locale, t } = useLocale();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  // const { push, asPath } = useRouter();
+  // const { locale, t } = useLocale();
 
   return (
     <HeaderEl>
       <Wrapper>
         <Container>
           <Nav />
-          <RightContainer>ok</RightContainer>
+          <RightContainer>
+            <Button
+              iconLeft='cart'
+              variant='minimal'
+              onClick={() => setIsDrawerOpen(true)}
+            />
+          </RightContainer>
           {/* <div>
         Lang:{' '}
         <button
@@ -29,6 +39,10 @@ const Header = () => {
       </div> */}
         </Container>
       </Wrapper>
+      <CardDrawer
+        isOpen={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+      />
     </HeaderEl>
   );
 };
