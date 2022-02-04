@@ -7,16 +7,11 @@ const ProductCard = ({ product }) => {
   return (
     <Container>
       <ImageContainer>
-        <Image
-          src='/assets/jambe-de-bois.png'
-          alt={product.name}
-          width={240}
-          height={300}
-        />
+        <Image src={product.imageUrl} alt={product.title} layout='fill' />
       </ImageContainer>
       <CardBody>
-        <Name>{product.name}</Name>
-        <Price>€{product.price}</Price>
+        <Name>{product.title}</Name>
+        <Price>€{product.price.amount}</Price>
         <Button>Add to card</Button>
       </CardBody>
     </Container>

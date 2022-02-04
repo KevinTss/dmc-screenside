@@ -11,7 +11,11 @@ export const Container = styled.a`
   }
 `;
 
-export const ImageContainer = styled.div``;
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 240px;
+  height: 300px;
+`;
 
 export const CardBody = styled.div``;
 

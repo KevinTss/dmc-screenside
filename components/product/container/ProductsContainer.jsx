@@ -3,12 +3,12 @@ import { MainContainer, ItemContainer } from './style';
 import ProductCard from '../card';
 import { Section } from '../../../styles';
 
-const ProductsList = ({ products }) => {
+export default function ProductsList({ products }) {
   return (
     <Section>
       <MainContainer>
         {products.map((product) => (
-          <ItemContainer key={product.id}>
+          <ItemContainer key={product.cursor}>
             <ProductCard product={product} />
           </ItemContainer>
         ))}
@@ -16,5 +16,3 @@ const ProductsList = ({ products }) => {
     </Section>
   );
 };
-
-export default ProductsList;
