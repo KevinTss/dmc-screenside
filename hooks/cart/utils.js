@@ -5,9 +5,9 @@ const LOCAL_STORAGE_KEY_CART = 'cart';
 export const getCartFromLocalStorage = () => {
   if (isSSR) return null;
 
-  return JSON.parse(
-    window?.localStorage?.getItem(LOCAL_STORAGE_KEY_CART) || '{}'
-  );
+  return window?.localStorage?.getItem(LOCAL_STORAGE_KEY_CART)
+    ? JSON.parse(window?.localStorage?.getItem(LOCAL_STORAGE_KEY_CART))
+    : null;
 };
 
 export const setCartToLocalStorage = (data) => {
