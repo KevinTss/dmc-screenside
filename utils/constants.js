@@ -11,3 +11,7 @@ export const MediaQuery = {
   L_AND_DOWN: `@media screen and (max-width: ${Breakpoint.L})`,
   XL_AND_DOWN: `@media screen and (max-width: ${Breakpoint.XL})`,
 };
+
+export const ErrorCode = {
+  _GENERIC: 'generic',
+};

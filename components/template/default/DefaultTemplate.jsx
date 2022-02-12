@@ -1,11 +1,8 @@
 import { Main } from './style';
 import Footer from '../../footer';
 import Header from '../../header';
-import { useCart } from '../../../hooks';
 
-const DefaultTemplate = ({ children }) => {
-  useCart({ createCard: true });
-
+export default function DefaultTemplate({ children }) {
   return (
     <>
       <Header />
@@ -13,6 +10,4 @@ const DefaultTemplate = ({ children }) => {
       <Footer />
     </>
   );
-};
-
-export default DefaultTemplate;
+}

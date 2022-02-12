@@ -21,6 +21,9 @@
   "component": {
     "HomeHeaderSection": {
       "cta": "Discover"
+    },
+    "ProductCard": {
+      "addToCart": "Add to cart"
     }
   }
 }
