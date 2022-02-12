@@ -4,7 +4,7 @@ import { Container, ImageContainer, CardBody, Name, Price } from './style';
 import { Button } from '../../ui';
 import { useCart, useLocale } from '../../../hooks';
 
-const ProductCard = ({ product }) => {
+export default function ProductCard({ product }) {
   const { add, isAddLoading } = useCart();
   const { t } = useLocale();
 
@@ -22,6 +22,4 @@ const ProductCard = ({ product }) => {
       </CardBody>
     </Container>
   );
-};
-
-export default ProductCard;
+}

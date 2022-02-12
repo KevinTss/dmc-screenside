@@ -24,6 +24,12 @@
     },
     "ProductCard": {
       "addToCart": "Add to cart"
+    },
+    "ContactFormSection": {
+      "formSubmitButton": "Send",
+      "formLabelFullName": "Full name",
+      "formLabelEmail": "Email",
+      "formLabelMessage": "Your message"
     }
   }
 }
