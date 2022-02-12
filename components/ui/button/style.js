@@ -18,4 +18,10 @@ export const MinimalButton = styled(BaseButton)`
   border: 2px solid transparent;
 `;
 
+export const PrimaryButton = styled(BaseButton)`
+  border: 2px solid ${({ theme }) => theme.color.primary};
+  color: white;
+  background-color: ${({ theme }) => theme.color.primary};
+`;
+
 export const IconContainer = styled.span``;

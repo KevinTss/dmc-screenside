@@ -1,10 +1,16 @@
-import { DefaultButton, MinimalButton, IconContainer } from './style';
+import {
+  DefaultButton,
+  IconContainer,
+  MinimalButton,
+  PrimaryButton,
+} from './style';
 import Icon from '../icon';
 
 const getButton = (variant) =>
   ({
     default: DefaultButton,
     minimal: MinimalButton,
+    primary: PrimaryButton,
   }[variant]);
 
 export default function Button({
