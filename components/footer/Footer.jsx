@@ -1,20 +1,25 @@
-import Image from 'next/image';
-
 import { FooterContainer } from './style';
+import { useLocale } from '../../hooks';
+import { Text, Link } from '../ui';
+import { Wrapper } from '../../styles';
 
-const Footer = () => (
-  <FooterContainer>
-    <a
-      href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-      target='_blank'
-      rel='noopener noreferrer'
-    >
-      Powered by{' '}
-      <span>
-        <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-      </span>
-    </a>
-  </FooterContainer>
-);
+export default function Footer() {
+  const { t } = useLocale();
 
-export default Footer;
+  return (
+    <FooterContainer>
+      <Wrapper>
+        <Text>
+          Copyright &copy; {new Date().getFullYear()} DMC{' '}
+          {`${t('component.Footer.allRightReserved')} `}
+        </Text>
+        <Text>
+          {`${t('component.Footer.poweredBy')} `}
+          <Link href='https://screenside.be/' target='_blank'>
+            ScreenSide
+          </Link>
+        </Text>
+      </Wrapper>
+    </FooterContainer>
+  );
+}

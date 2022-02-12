@@ -30,6 +30,10 @@
       "formLabelFullName": "Full name",
       "formLabelEmail": "Email",
       "formLabelMessage": "Your message"
+    },
+    "Footer": {
+      "poweredBy": "Powered by",
+      "allRightReserved": "All rights reserved"
     }
   }
 }
