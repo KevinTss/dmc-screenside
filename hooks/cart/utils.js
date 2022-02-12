@@ -6,7 +6,7 @@ export const getCartFromLocalStorage = () => {
   if (isSSR) return null;
 
   return JSON.parse(
-    window?.localStorage?.getItem(LOCAL_STORAGE_KEY_CART) || {}
+    window?.localStorage?.getItem(LOCAL_STORAGE_KEY_CART) || '{}'
   );
 };
 
