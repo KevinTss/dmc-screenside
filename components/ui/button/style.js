@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const BaseButton = styled.button`
   background: transparent;
-  width: 100%;
   border-radius: ${({ theme }) => theme.border.radius};
   padding: ${({ theme }) => theme.spacing.s};
   color: ${({ theme }) => theme.color.primary};

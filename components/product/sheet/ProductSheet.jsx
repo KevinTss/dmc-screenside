@@ -1,0 +1,35 @@
+import Image from 'next/image';
+
+import { Container, ImageContainer, Body, Name, Price } from './style';
+import { Button } from '../../ui';
+import { useCart, useLocale } from '../../../hooks';
+import { Wrapper } from '../../../styles';
+
+export default function ProductSheet({ product }) {
+  const { add, isAddLoading } = useCart();
+  const { t } = useLocale();
+
+  return (
+    <Wrapper>
+      <Container>
+        <ImageContainer>
+          <Image src={product.imageUrl} alt={product.title} layout='fill' />
+        </ImageContainer>
+        <Body>
+          <Name>{product.title}</Name>
+          <Price>€{product.price.amount}</Price>
+          <Button
+            isLoading={isAddLoading}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              add(product);
+            }}
+          >
+            {t('component.ProductCard.addToCart')}
+          </Button>
+        </Body>
+      </Container>
+    </Wrapper>
+  );
+}
