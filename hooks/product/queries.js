@@ -67,3 +67,37 @@ export const GET_PRODUCTS_BY_COLLECTION = `
   }
 }
 `;
+
+export const GET_PRODUCT_BY_HANDLE = `
+query getProductByHandle($handle: String!) {
+  productByHandle(handle: $handle) {
+    id
+    handle
+    title
+    productType
+    description
+    images(first: 1) {
+      edges {
+        node {
+          originalSrc
+        }
+      }
+    }
+    variants(first: 5) {
+      edges {
+        node {
+          id
+          priceV2 {
+            amount
+            currencyCode
+          }
+          compareAtPriceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+}
+`;
