@@ -37,6 +37,7 @@ export const LOAD_CART = `
                 title
                 product {
                   title
+                  handle
                 }
                 priceV2 {
                   amount
@@ -64,6 +65,7 @@ export const ADD_TO_CART = `
                 ... on ProductVariant {
                   product {
                     title
+                    handle
                   }
                 }
               }

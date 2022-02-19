@@ -15,6 +15,10 @@ export const ImageContainer = styled.div`
   position: relative;
   width: 240px;
   height: 300px;
+
+  img {
+    object-fit: contain;
+  }
 `;
 
 export const CardBody = styled.div``;

@@ -7,6 +7,10 @@ const BaseButton = styled.button`
   color: ${({ theme }) => theme.color.primary};
   font-size: ${({ theme }) => theme.font.size.m};
   cursor: pointer;
+
+  &:active {
+    opacity: 0.5;
+  }
 `;
 
 export const DefaultButton = styled(BaseButton)`
