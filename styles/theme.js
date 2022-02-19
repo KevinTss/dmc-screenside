@@ -12,7 +12,10 @@ export const lightTheme = {
       l: '1.5rem',
       m: '1rem',
     },
-    weight: 300,
+    weight: {
+      normal: 300,
+      bold: 600,
+    },
   },
   spacing: {
     xl: '48px',

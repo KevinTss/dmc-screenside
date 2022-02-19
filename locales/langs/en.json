@@ -20,7 +20,7 @@
   },
   "component": {
     "HomeHeaderSection": {
-      "cta": "Discover"
+      "cta": "Discover the E-Shop"
     },
     "ProductCard": {
       "addToCart": "Add to cart"

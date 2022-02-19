@@ -18,11 +18,12 @@ export default function Button({
   variant = 'default',
   iconLeft,
   onClick,
+  ...props
 }) {
   const ButtonComponent = getButton(variant);
 
   return (
-    <ButtonComponent onClick={onClick}>
+    <ButtonComponent onClick={onClick} {...props}>
       {iconLeft && (
         <IconContainer>
           <Icon name={iconLeft} />

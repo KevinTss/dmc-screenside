@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { AdvertisementContainer, ButtonContainer } from './style';
 import { Button, Overlay } from '../../../ui';
@@ -7,7 +8,7 @@ import { Wrapper } from '../../../../styles';
 import backgroundUrl from '../../../../assets/background-advertisement.png';
 
 export default function HomeHeaderSection() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
 
   return (
     <Wrapper>
@@ -21,9 +22,11 @@ export default function HomeHeaderSection() {
         />
         <Overlay />
         <ButtonContainer>
-          <Button variant='primary'>
-            {t('component.HomeHeaderSection.cta')}
-          </Button>
+          <Link href='/shop' locale={locale} passHref>
+            <Button as='a' variant='primary'>
+              {t('component.HomeHeaderSection.cta')}
+            </Button>
+          </Link>
         </ButtonContainer>
       </AdvertisementContainer>
     </Wrapper>

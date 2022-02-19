@@ -6,7 +6,7 @@ import { useCart, useLocale } from '../../../hooks';
 import { Wrapper } from '../../../styles';
 
 export default function ProductSheet({ product }) {
-  const { add, isAddLoading } = useCart();
+  const { add, isAddLoading, open } = useCart();
   const { t } = useLocale();
 
   return (
@@ -24,6 +24,7 @@ export default function ProductSheet({ product }) {
               e.preventDefault();
               e.stopPropagation();
               add(product);
+              open();
             }}
           >
             {t('component.ProductCard.addToCart')}

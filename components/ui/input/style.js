@@ -5,7 +5,7 @@ export const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.color.primary};
   color: ${({ theme }) => theme.color.primary};
   font-size: ${({ theme }) => theme.font.size.m};
-  font-weight: ${({ theme }) => theme.font.weight};
+  font-weight: ${({ theme }) => theme.font.weight.normal};
   padding: ${({ theme }) => theme.spacing.s};
 `;
 
@@ -15,6 +15,6 @@ export const Textarea = styled.textarea`
   color: ${({ theme }) => theme.color.primary};
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.m};
-  font-weight: ${({ theme }) => theme.font.weight};
+  font-weight: ${({ theme }) => theme.font.weight.normal};
   padding: ${({ theme }) => theme.spacing.s};
 `;
