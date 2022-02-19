@@ -42,7 +42,8 @@
       "title": "My cart"
     },
     "CartFooter": {
-      "cta": "Proceed to payment"
+      "proceed": "Proceed to payment",
+      "resetCart": "Reset cart"
     }
   }
 }

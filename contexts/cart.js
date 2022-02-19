@@ -5,6 +5,7 @@ import { shopifyQuery } from '../services/shopify-queries';
 import {
   setCartToLocalStorage,
   getCartFromLocalStorage,
+  removeCartFromLocalStorage,
 } from '../hooks/cart/utils';
 import { CREATE_CART, LOAD_CART, ADD_TO_CART } from '../hooks/cart/queries';
 import { ErrorCode } from '../utils';
@@ -14,6 +15,7 @@ export const CartContext = createContext({ data: null });
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(getCartFromLocalStorage());
   const [errors, setErrors] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
   const { mutate: addToCart, isLoading: isAddLoading } = useMutation(
     ({ cartId, variantId }) =>
       shopifyQuery({
@@ -94,7 +96,16 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const add = (productToAdd) => {
+    if (!cart?.id) return;
+
     addToCart({ cartId: cart.id, variantId: productToAdd.variantId });
+  };
+
+  const reset = () => {
+    removeCartFromLocalStorage();
+    setErrors([]);
+    setCart(null);
+    createCart();
   };
 
   return (
@@ -104,6 +115,10 @@ export const CartProvider = ({ children }) => {
         add,
         isAddLoading,
         errors,
+        reset,
+        open: () => setIsOpen(true),
+        close: () => setIsOpen(false),
+        isOpen,
       }}
     >
       {children}

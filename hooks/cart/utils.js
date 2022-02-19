@@ -15,3 +15,9 @@ export const setCartToLocalStorage = (data) => {
 
   window.localStorage.setItem(LOCAL_STORAGE_KEY_CART, JSON.stringify(data));
 };
+
+export const removeCartFromLocalStorage = () => {
+  if (isSSR) return;
+
+  window.localStorage.removeItem(LOCAL_STORAGE_KEY_CART);
+};

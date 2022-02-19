@@ -6,7 +6,7 @@ import { Button } from '../../ui';
 import { useCart, useLocale } from '../../../hooks';
 
 export default function ProductCard({ product }) {
-  const { add, isAddLoading } = useCart();
+  const { add, isAddLoading, open } = useCart();
   const { t } = useLocale();
 
   return (
@@ -24,6 +24,7 @@ export default function ProductCard({ product }) {
               e.preventDefault();
               e.stopPropagation();
               add(product);
+              open();
             }}
           >
             {t('component.ProductCard.addToCart')}

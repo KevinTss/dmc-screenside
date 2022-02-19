@@ -13,6 +13,10 @@ export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
   height: auto;
+
+  img {
+    object-fit: contain;
+  }
 `;
 
 export const Body = styled.div`

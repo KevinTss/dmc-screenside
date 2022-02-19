@@ -1,4 +1,3 @@
-import { useState } from 'react';
 // import { useRouter } from 'next/router';
 
 import { Header as HeaderEl, Container, RightContainer } from './style';
@@ -7,9 +6,11 @@ import { Wrapper } from '../../styles';
 import Nav from '../nav';
 import { Button } from '../ui';
 import CardDrawer from '../cart/drawer';
+import { useCart } from '../../hooks';
 
 const Header = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { open } = useCart();
+
   // const { push, asPath } = useRouter();
   // const { locale, t } = useLocale();
 
@@ -19,11 +20,7 @@ const Header = () => {
         <Container>
           <Nav />
           <RightContainer>
-            <Button
-              iconLeft='cart'
-              variant='minimal'
-              onClick={() => setIsDrawerOpen(true)}
-            />
+            <Button iconLeft='cart' variant='minimal' onClick={open} />
           </RightContainer>
           {/* <div>
         Lang:{' '}
@@ -39,10 +36,7 @@ const Header = () => {
       </div> */}
         </Container>
       </Wrapper>
-      <CardDrawer
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-      />
+      <CardDrawer />
     </HeaderEl>
   );
 };
