@@ -6,16 +6,11 @@ public_folder: /assets/images
 publish_mode: editorial_workflow
 
 collections:
-  - name: "configuration"
-    label: "Configuration"
-    delete: false
+  - label: "General"
+    name: "general"
     files:
-      - name: "general"
-        label: "Site Config"
-        description: "General site settings"
-
-      - name: "products"
-        label: "products"
+      - label: "Products"
+        name: "products"
         file: "content/products.json"
         fields:
           - label: items
