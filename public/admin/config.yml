@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: public/assets/images
+public_folder: /assets/images
+publish_mode: editorial_workflow
+
+collections:
+  - name: "configuration"
+    label: "Configuration"
+    delete: false
+    files:
+      - name: "general"
+        label: "Site Config"
+        description: "General site settings"
+
+      - name: "products"
+        label: "products"
+        file: "content/products.json"
+        fields:
+          - label: items
+            name: items
+            widget: list
+            fields:
+              - { label: Handle, name: handle, widget: string }
