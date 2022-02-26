@@ -1,13 +1,9 @@
 {
   "items": [
     {
-      "name": "Hotel à insecte",
-      "price": 20,
       "handle": "achel-blonde-33cl"
     },
     {
-      "name": "Table",
-      "price": 150,
       "handle": "chimay-bleue-33cl"
     }
   ]
