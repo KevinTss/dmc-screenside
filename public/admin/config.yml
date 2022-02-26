@@ -13,8 +13,24 @@ collections:
         name: "products"
         file: "content/products.json"
         fields:
-          - label: items
-            name: items
-            widget: list
+          - label: "items"
+            name: "items"
+            widget: "list"
             fields:
-              - { label: Handle, name: handle, widget: string }
+              - label: "Handle"
+                name: "handle"
+                widget: "string"
+              - label: "Percentage of alcohol"
+                name: "percentageAlcohol"
+                widget: "number"
+              - label: "IBU"
+                name: "IBU"
+                widget: "number"
+              - label: "Content"
+                name: "content"
+                widget: "object"
+                fields: 
+                  - label: "English"
+                    name: "en"
+                    widget: "text"
+
