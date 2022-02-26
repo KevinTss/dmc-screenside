@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
-import { AdvertisementContainer, ButtonContainer } from './style';
+import { AdvertisementContainer, ButtonContainer, Image } from './style';
 import { Button, Overlay } from '../../../ui';
 import { useLocale } from '../../../../hooks';
 import { Wrapper } from '../../../../styles';
@@ -13,13 +12,7 @@ export default function HomeHeaderSection() {
   return (
     <Wrapper>
       <AdvertisementContainer>
-        <Image
-          src={backgroundUrl}
-          alt='background-image'
-          width='100%'
-          height='100%'
-          layout='fill'
-        />
+        <Image src={backgroundUrl.src} alt='background-image' />
         <Overlay />
         <ButtonContainer>
           <Link href='/shop' locale={locale} passHref>
