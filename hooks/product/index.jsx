@@ -1,14 +1,17 @@
 import { useQuery } from 'react-query';
 
 import { shopifyQuery } from '../../services/shopify-queries';
-import { GET_PRODUCTS_BY_COLLECTION, GET_PRODUCT_BY_HANDLE } from './queries';
+import {
+  GET_PRODUCTS_BY_COLLECTION_V2,
+  GET_PRODUCT_BY_HANDLE,
+} from './queries';
 import { getProductPrice, getVariantId, getProductImage } from './utils';
 
 export const useProducts = () => {
   const { data } = useQuery('getProducts', async () => {
     try {
       const response = await shopifyQuery({
-        query: GET_PRODUCTS_BY_COLLECTION,
+        query: GET_PRODUCTS_BY_COLLECTION_V2,
         variables: {},
       });
 

@@ -68,6 +68,24 @@ export const GET_PRODUCTS_BY_COLLECTION = `
 }
 `;
 
+export const GET_PRODUCTS_BY_COLLECTION_V2 = `
+{
+  collectionByHandle(handle: "frontpage") {
+    products(first: 10, after: null) {
+      pageInfo {
+        hasNextPage
+      }
+      edges {
+        cursor
+        node {
+          handle
+        }
+      }
+    }
+  }
+}
+`;
+
 export const GET_PRODUCT_BY_HANDLE = `
 query getProductByHandle($handle: String!) {
   productByHandle(handle: $handle) {
