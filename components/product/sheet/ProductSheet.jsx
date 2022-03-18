@@ -17,6 +17,7 @@ export default function ProductSheet({ product }) {
         </ImageContainer>
         <Body>
           <Name>{product.title}</Name>
+          <Name>{product.description}</Name>
           <Price>€{product.price.amount}</Price>
           <Button
             isLoading={isAddLoading}

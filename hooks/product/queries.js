@@ -79,6 +79,22 @@ export const GET_PRODUCTS_BY_COLLECTION_V2 = `
         cursor
         node {
           handle
+          title
+          variants(first: 1) {
+            edges {
+              node {
+                id
+                priceV2 {
+                  amount
+                  currencyCode
+                }
+                compareAtPriceV2 {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+          }
         }
       }
     }

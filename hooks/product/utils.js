@@ -1,9 +1,19 @@
-export const getProductImage = (product) => {
-  const imageUrl = product?.images?.edges?.find(
-    ({ node }) => !!node.originalSrc
-  ).node.originalSrc;
+import productsContent from '../../content/products.json';
 
-  return imageUrl || '/assets/fallback.png';
+export const getProductImage = (handle) => {
+  let imageUrl = '/assets/fallback.png';
+
+  try {
+    const productImage = require(`../../assets/products/${handle}.png`);
+
+    if (!productImage?.default?.src) throw Error('Asset not found');
+
+    imageUrl = productImage.default.src;
+  } catch (e) {
+    console.warn('Error in import product image', e.message);
+  }
+
+  return imageUrl;
 };
 
 export const getProductPrice = (product) => {
@@ -20,4 +30,12 @@ export const getVariantId = (product) => {
   const variantId = product?.variants?.edges?.[0].node.id;
 
   return variantId || null;
+};
+
+export const getProductDescription = (handle) => {
+  const product = productsContent.items.find(
+    (product) => product.handle === handle
+  );
+
+  return product.description_en;
 };

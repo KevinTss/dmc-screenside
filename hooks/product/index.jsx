@@ -5,7 +5,12 @@ import {
   GET_PRODUCTS_BY_COLLECTION_V2,
   GET_PRODUCT_BY_HANDLE,
 } from './queries';
-import { getProductPrice, getVariantId, getProductImage } from './utils';
+import {
+  getProductPrice,
+  getVariantId,
+  getProductImage,
+  getProductDescription,
+} from './utils';
 
 export const useProducts = () => {
   const { data } = useQuery('getProducts', async () => {
@@ -22,8 +27,7 @@ export const useProducts = () => {
           cursor: product.cursor,
           title: product.node.title,
           handle: product.node.handle,
-          description: product.node.description,
-          imageUrl: getProductImage(product.node),
+          imageUrl: getProductImage(product.node.handle),
           price: getProductPrice(product.node),
           variantId: getVariantId(product.node),
         })),
@@ -57,8 +61,8 @@ export const useProduct = (handle) => {
           id: product?.id,
           handle: product?.handle,
           title: product?.title,
-          description: product?.description,
-          imageUrl: getProductImage(product),
+          description: getProductDescription(product?.handle),
+          imageUrl: getProductImage(product?.handle),
           price: getProductPrice(product),
           variantId: getVariantId(product),
         };

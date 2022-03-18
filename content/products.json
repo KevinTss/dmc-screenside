@@ -5,6 +5,18 @@
     },
     {
       "handle": "chimay-bleue-33cl"
+    },
+    {
+      "handle": "oster-vienna-33cl",
+      "description_en": "Lager brewed with Vienna malt, traditionally used in Austrian beers. It gives this beer a beautiful golden colour and a generous body. The addition of a hint of wheat brings a touch of acidity to accentuate the freshness, 3 different and select hops give this beer subtle aromas and a balanced bitterness.",
+      "alcohol_degree": 6.2,
+      "ibu": null
+    },
+    {
+      "handle": "orval-33cl",
+      "description_en": "With a characteristic orange colour and an unmistakable aromatic nose. Orval is a beer with an intense hop aroma that reveals a slight tartness and gains flavour when matured in the cellar for a few years. Its complex character comes from three separate fermentations and the local hops used to produce it. In the glass, it has an amber hue and a generous white head. Its aroma is recognised by its fresh hops and natural yeast. In the mouth, this beer stands out for its robust flavour.",
+      "alcohol_degree": 6.2,
+      "ibu": 36
     }
   ]
 }
