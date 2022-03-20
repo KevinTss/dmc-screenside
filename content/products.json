@@ -1,10 +1,16 @@
 {
   "items": [
     {
-      "handle": "achel-blonde-33cl"
+      "handle": "achel-blonde-33cl",
+      "description_en": "With an amber colour and a fine off-white foam the Achel blond is a beer with an aromatic and fruity nose and aromas of malts. A beer of round and velvety body with sweet citrus flavours.",
+      "percentage_alcohol": 8,
+      "ibu": 20
     },
     {
-      "handle": "chimay-bleue-33cl"
+      "handle": "chimay-bleue-33cl",
+      "description_en": "The strongest and most complex of the Trappist beers from the Abbey of Notre Dame de Scourmont. It offers a bouquet of spices and a fruity nose, very characteristic of Chimay. On the palate, it has a long bitterness and a pronounced roastiness.Originally designed only for Christmas, it has been brewed regularly since 1958.",
+      "percentage_alcohol": 9,
+      "ibu": 35
     },
     {
       "handle": "oster-vienna-33cl",
@@ -23,22 +29,29 @@
       "ibu": 36
     },
     {
-      "handle": "biere-des-amis-33cl"
+      "handle": "biere-des-amis-33cl",
+      "percentage_alcohol": 5.8
     },
     {
-      "handle": "seef-33cl"
+      "handle": "seef-33cl",
+      "percentage_alcohol": 6.5,
+      "ibu": 17
     },
     {
-      "handle": "paix-dieu-tripel-33cl"
+      "handle": "paix-dieu-tripel-33cl",
+      "percentage_alcohol": 9
     },
     {
-      "handle": "dipatout-double-ipa-33cl"
+      "handle": "dipatout-double-ipa-33cl",
+      "percentage_alcohol": 9
     },
     {
-      "handle": "brugse-sport-zot-33cl"
+      "handle": "brugse-sport-zot-33cl",
+      "percentage_alcohol": 0.4
     },
     {
-      "handle": "kriek-mariage-parfait-37-5cl"
+      "handle": "kriek-mariage-parfait-37-5cl",
+      "percentage_alcohol": 8
     }
   ]
 }
