@@ -1,9 +1,21 @@
-import { Input, Textarea } from './style';
+import { InputContainer, Input, Textarea, IconLeftContainer } from './style';
+import Icon from '../icon';
 
-export default function InputElement({ type, ...props }) {
+export default function InputElement({ type, iconLeft, ...props }) {
+  let input = <Input type={type} {...props} />;
+
   if (type === 'textarea') {
-    return <Textarea {...props} />;
+    input = <Textarea {...props} />;
   }
 
-  return <Input type={type} {...props} />;
+  return (
+    <InputContainer>
+      {iconLeft && (
+        <IconLeftContainer>
+          <Icon name={iconLeft} />
+        </IconLeftContainer>
+      )}
+      {input}
+    </InputContainer>
+  );
 }

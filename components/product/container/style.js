@@ -6,7 +6,7 @@ export const MainContainer = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
-  padding: ${({ theme }) => theme.spacing.m};
+  // padding: 0 ${({ theme }) => theme.spacing.m};
 
   ${MediaQuery.XL_AND_DOWN} {
     grid-template-columns: 1fr 1fr 1fr;

@@ -135,3 +135,19 @@ query getProductByHandle($handle: String!) {
   }
 }
 `;
+
+export const GET_PRODUCTS_BY_SEARCH = `
+query ($search: String!) {
+  products(first: 10, query: $search) {
+    pageInfo {
+      hasNextPage
+    }
+    edges{
+      node{
+        title
+        handle
+      }
+    }
+  }
+}
+`;

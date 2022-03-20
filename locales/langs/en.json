@@ -12,7 +12,8 @@
       "title": "Home"
     },
     "shop": {
-      "title": "Shop"
+      "title": "Shop",
+      "searchPlaceholder": "Try \"Chouffe\""
     },
     "contact": {
       "title": "Contact"

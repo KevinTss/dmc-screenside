@@ -1,20 +1,36 @@
 import styled from 'styled-components';
 
-export const Input = styled.input`
+export const InputContainer = styled.div`
+  display: flex;
   border-radius: ${({ theme }) => theme.border.radius};
   border: 1px solid ${({ theme }) => theme.color.primary};
-  color: ${({ theme }) => theme.color.primary};
-  font-size: ${({ theme }) => theme.font.size.m};
-  font-weight: ${({ theme }) => theme.font.weight.normal};
-  padding: ${({ theme }) => theme.spacing.s};
+  padding: ${({ theme }) => theme.spacing.xs};
 `;
 
-export const Textarea = styled.textarea`
-  border-radius: ${({ theme }) => theme.border.radius};
-  border: 1px solid ${({ theme }) => theme.color.primary};
+export const IconLeftContainer = styled.div`
+  margin-right: ${({ theme }) => theme.spacing.xs};
+`;
+
+export const Input = styled.input`
   color: ${({ theme }) => theme.color.primary};
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.m};
   font-weight: ${({ theme }) => theme.font.weight.normal};
-  padding: ${({ theme }) => theme.spacing.s};
+  border: 0;
+
+  ::placeholder {
+    font-size: ${({ theme }) => theme.font.size.xs};
+  }
+`;
+
+export const Textarea = styled.textarea`
+  color: ${({ theme }) => theme.color.primary};
+  font-family: ${({ theme }) => theme.font.family};
+  font-size: ${({ theme }) => theme.font.size.m};
+  font-weight: ${({ theme }) => theme.font.weight.normal};
+  border: 0;
+
+  ::placeholder {
+    font-size: ${({ theme }) => theme.font.size.xs};
+  }
 `;

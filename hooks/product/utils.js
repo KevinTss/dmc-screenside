@@ -39,3 +39,19 @@ export const getProductDescription = (handle) => {
 
   return product.description_en;
 };
+
+export const getFormattedData = (response) => {
+  return {
+    data: response?.products?.edges.map((product) => ({
+      cursor: product.cursor,
+      title: product.node.title,
+      handle: product.node.handle,
+      imageUrl: getProductImage(product.node.handle),
+      price: getProductPrice(product.node),
+      variantId: getVariantId(product.node),
+    })),
+    meta: {
+      hasNextPage: response?.products?.pageInfo.hasNextPage,
+    },
+  };
+};
