@@ -9,12 +9,14 @@ import {
   GET_PRODUCTS_BY_SEARCH,
 } from './queries';
 import {
-  getProductPrice,
-  getVariantId,
-  getProductImage,
-  getProductDescription,
   getFormattedData,
+  getProductDescription,
+  getProductImage,
+  getProductPrice,
+  getQueryString,
+  getVariantId,
 } from './utils';
+import { Tags } from '../../utils/constants';
 
 export const useProducts = () => {
   const { data } = useQuery('getProducts', async () => {
@@ -72,6 +74,7 @@ export const useProduct = (handle) => {
 };
 
 export const useSearchProducts = () => {
+  const [tags, setTags] = useState([]);
   const [search, setSearch] = useState('');
   const { data, isFetching, refetch } = useQuery(
     'getSearchProducts',
@@ -80,7 +83,7 @@ export const useSearchProducts = () => {
         const response = await shopifyQuery({
           query: GET_PRODUCTS_BY_SEARCH,
           variables: {
-            search: `title:*${search.trim()}*`,
+            search: getQueryString(search, tags),
           },
         });
 
@@ -108,15 +111,18 @@ export const useSearchProducts = () => {
   });
 
   useEffect(() => {
-    if (search) {
+    if (search || tags.length) {
       refetch();
     }
-  }, [search]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search, tags]);
 
   return {
-    data,
-    search: debouncedResults,
+    data: isFetching ? [] : data,
     isLoading: isFetching,
     isSearchActive: !!search.length,
+    search: debouncedResults,
+    selectedTags: tags,
+    tags: Object.values(Tags),
   };
 };

@@ -15,3 +15,10 @@ export const MediaQuery = {
 export const ErrorCode = {
   _GENERIC: 'generic',
 };
+
+export const Tags = {
+  BLOND: 'blond',
+  FRUITY: 'fruity',
+  IPA: 'ipa',
+  TRAPPIST: 'trappist',
+};
