@@ -2,14 +2,14 @@ import Template from '../../template/default';
 import ProductsContainer from '../../product/container';
 import PageHeader from '../../page-header';
 import { useLocale, useProducts, useSearchProducts } from '../../../hooks';
-import { Content, Aside } from './style';
-import { Input, Checkbox } from '../../ui';
+import { Content, Aside, LoadMoreButtonContainer } from './style';
+import { Input, Checkbox, Button } from '../../ui';
 // import { useFormik } from 'formik';
 import { Wrapper } from '../../../styles';
 
 export default function ShopView() {
   const { t } = useLocale();
-  const { data: products } = useProducts();
+  const { data: products, page, hasNextPage, fetchNextPage } = useProducts();
   const {
     search,
     data: searchProducts,
@@ -26,9 +26,7 @@ export default function ShopView() {
   //   },
   // });
 
-  const productsToDisplay = isSearchActive
-    ? searchProducts?.data
-    : products?.data;
+  const productsToDisplay = isSearchActive ? searchProducts?.data : products;
 
   return (
     <Template>
@@ -59,6 +57,13 @@ export default function ShopView() {
           </div> */}
           </Aside>
           <ProductsContainer products={productsToDisplay || []} />
+          {hasNextPage && (
+            <LoadMoreButtonContainer>
+              <Button variant='primary' onClick={fetchNextPage}>
+                {t('page.shop.loadMore')}
+              </Button>
+            </LoadMoreButtonContainer>
+          )}
         </Content>
       </Wrapper>
     </Template>

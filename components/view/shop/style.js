@@ -11,3 +11,9 @@ export const Aside = styled.aside`
   width: 300px;
   padding: 0 20px;
 `;
+
+export const LoadMoreButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+`;

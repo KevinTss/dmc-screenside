@@ -13,7 +13,8 @@
     },
     "shop": {
       "title": "Shop",
-      "searchPlaceholder": "Try \"Chouffe\""
+      "searchPlaceholder": "Try \"Chouffe\"",
+      "loadMore": "Load more"
     },
     "contact": {
       "title": "Contact"

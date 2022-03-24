@@ -101,6 +101,37 @@ export const GET_PRODUCTS_BY_COLLECTION_V2 = `
   }
 }
 `;
+export const GET_PRODUCTS = `
+query ($pageSize: Int, $cursor: String) {
+  products(first: $pageSize, after: $cursor) {
+    pageInfo {
+      hasNextPage
+    }
+    edges {
+      cursor
+      node {
+        handle
+        title
+        variants(first: 1) {
+          edges {
+            node {
+              id
+              priceV2 {
+                amount
+                currencyCode
+              }
+              compareAtPriceV2 {
+                amount
+                currencyCode
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
 
 export const GET_PRODUCT_BY_HANDLE = `
 query getProductByHandle($handle: String!) {

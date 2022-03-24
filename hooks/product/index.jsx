@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 
 import { shopifyQuery } from '../../services/shopify-queries';
 import {
-  GET_PRODUCTS_BY_COLLECTION_V2,
+  GET_PRODUCTS,
   GET_PRODUCT_BY_HANDLE,
   GET_PRODUCTS_BY_SEARCH,
 } from './queries';
@@ -18,24 +18,48 @@ import {
 } from './utils';
 import { Tags } from '../../utils/constants';
 
+const PAGE_SIZE = 16;
+
+async function fetchProducts(pageSize, cursor) {
+  try {
+    const response = await shopifyQuery({
+      query: GET_PRODUCTS,
+      variables: { pageSize, cursor },
+    });
+
+    const result = response?.data?.data;
+    const formattedData = getFormattedData(result);
+
+    return formattedData;
+  } catch (error) {
+    throw Error(error.message);
+  }
+}
+
 export const useProducts = () => {
-  const { data } = useQuery('getProducts', async () => {
-    try {
-      const response = await shopifyQuery({
-        query: GET_PRODUCTS_BY_COLLECTION_V2,
-        variables: {},
-      });
-
-      const collection = response?.data?.data?.collectionByHandle;
-      const formattedData = getFormattedData(collection);
-
-      return formattedData;
-    } catch (error) {
-      throw Error(error.message);
+  const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(0);
+  const [hasNextPage, setHasNextPage] = useState(false);
+  const [nextPageCursor, setNextPageCursor] = useState(null);
+  const resp = useQuery(
+    ['getProducts', nextPageCursor],
+    () => fetchProducts(PAGE_SIZE, nextPageCursor),
+    {
+      keepPreviousData: true,
+      onSuccess(response) {
+        setPage(page + 1);
+        setHasNextPage(response?.meta?.hasNextPage || false);
+        setProducts([...products, ...response.data]);
+      },
     }
-  });
+  );
 
-  return { data };
+  const fetchNextPage = () => {
+    const lastItemCursor = products[products.length - 1].cursor;
+    setNextPageCursor(lastItemCursor);
+  };
+
+  return { data: products, page, hasNextPage, fetchNextPage };
 };
 
 export const useProduct = (handle) => {
