@@ -30,7 +30,18 @@
     },
     {
       "handle": "biere-des-amis-33cl",
-      "percentage_alcohol": 5.8
+      "percentage_alcohol": 5.8,
+      "ibu": 21
+    },
+    {
+      "handle": "biere-des-amis-0-0-33cl",
+      "percentage_alcohol": 0,
+      "ibu": 21
+    },
+    {
+      "handle": "biere-des-amis-66cl",
+      "percentage_alcohol": 5.8,
+      "ibu": 21
     },
     {
       "handle": "seef-33cl",
@@ -43,15 +54,43 @@
     },
     {
       "handle": "dipatout-double-ipa-33cl",
+      "description_en": "Hazy DIPA with a straw yellow colour. Intense beer in all respects. Generous in raw materials for an explosive result. Brewed with Simcoe, Mosaic and Amarillo hops.",
       "percentage_alcohol": 9
     },
     {
       "handle": "brugse-sport-zot-33cl",
-      "percentage_alcohol": 0.4
+      "description_en": "The first blond alcohol-free flavoured special beer in Belgium. The basis is the well-known Brugse Zot blond, which is brewed with 4 different kinds of malt and 2 aromatic hop varieties which give it a complex character with hints of citrus. Brewed by a unique filtration technique whereby only the alcohol is filtered out of the beer in a completely natural way.",
+      "percentage_alcohol": 0.4,
+      "ibu": 30
     },
     {
       "handle": "kriek-mariage-parfait-37-5cl",
+      "description_en": "Kriek Mariage Parfait has a clear deep reddish color lambic with a nice large pink head with good retention and some lacing. It reveals tart cherry notes with some mild lambic funk, winy, well supported by its alcohol content. The taste is dominated by loads of fresh tart cherry notes with some mild barnyard  and some vanilla notes, balanced against a backdrop of musky roasted oak. Body is full with good carbonation.",
       "percentage_alcohol": 8
-    }
+    },
+    {
+      "handle": "jacks-precious-ipa-33cl",
+      "description_en": "A Indian Pale Ale. It is a refreshing and lightly drinkable tasting beer with an alcohol percentage of 5.9%. Jack's Precious has the character of a floral bouquet with a citrus accent. The beer tastes softly fruity and creamy. The bitterness of the flowery and spicy hops is not overpowering. The beer has a pale golden colour with a snow-white head that remains as a silky rim after tasting.",
+      "percentage_alcohol": 5.9,
+      "ibu": 50
+    },
+    {
+      "handle": "westmalle-tripel-33cl",
+      "description_en": "With a golden yellow color, the Westmalle Tripel is complex beer, full-bodied, full of nuances, quite sweet, with fruity aromas, among which banana stands out, especially noticeable if tasted in a goblet glass. A fine, elegant beer, creamy and smooth despite its high alcohol content, with a long, dry aftertaste and hardly any perceptible bitterness. According to its creators, it pairs perfectly with fish stews and matured beef.",
+      "percentage_alcohol": 9.5,
+      "ibu": 36
+    },
+    {
+      "handle": "triporteur-haze-33cl",
+      "description_en": "Triporteur Haze is a New England IPA. The beer is brewed with lightly roasted oatmeal and oat flakes. More than 35 kilograms of hops were added during the brewing process: in the whirlpool and during fermentation and maturation, and it shows in the taste. This is a tasty hop bomb with lactose to give the beer some extra body.",
+      "percentage_alcohol": 6.8,
+      "ibu": 35
+    },
+    { "handle": "tandem-white-ipa-33cl" },
+    { "handle": "brusseleir-33cl" },
+    { "handle": "bmx-ipa-33cl" },
+    { "handle": "smash-33cl" },
+    { "handle": "de-poes-blonde-33cl" },
+    { "handle": "bicyclette-pale-ale-33cl" }
   ]
 }
