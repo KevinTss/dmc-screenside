@@ -30,27 +30,33 @@
     },
     {
       "handle": "biere-des-amis-33cl",
+      "description_en": "Golden blonde, re-fermented in bottle, clear and slightly opalescent beer. The dominant aromas are malted and cereal flavours evolving towards secondary citrus flavours. The beer presents soft and mellow with a slight and pleasant bitter aftertaste, Bière des Amis offers a nice length on the palate, with a nuanced aftertaste and a certain roundness.",
       "percentage_alcohol": 5.8,
       "ibu": 21
     },
     {
       "handle": "biere-des-amis-0-0-33cl",
+      "description_en": "Golden blonde, re-fermented in bottle, clear and slightly opalescent beer. The dominant aromas are malted and cereal flavours evolving towards secondary citrus flavours. The beer presents soft and mellow with a slight and pleasant bitter aftertaste, Bière des Amis offers a nice length on the palate, with a nuanced aftertaste and a certain roundness.",
       "percentage_alcohol": 0,
       "ibu": 21
     },
     {
       "handle": "biere-des-amis-66cl",
+      "description_en": "Golden blonde, re-fermented in bottle, clear and slightly opalescent beer. The dominant aromas are malted and cereal flavours evolving towards secondary citrus flavours. The beer presents soft and mellow with a slight and pleasant bitter aftertaste, Bière des Amis offers a nice length on the palate, with a nuanced aftertaste and a certain roundness.",
       "percentage_alcohol": 5.8,
       "ibu": 21
     },
     {
       "handle": "seef-33cl",
+      "description_en": "Seef Bier is blond coloured and has quite a full and creamy head.  Nice flavour, some good funk tones, ligth sweetness. Light to medium bodied with fine carbonation. This glorious craft beer has a beautiful body and a wonderful aroma.",
       "percentage_alcohol": 6.5,
       "ibu": 17
     },
     {
       "handle": "paix-dieu-tripel-33cl",
-      "percentage_alcohol": 9
+      "description_en": "Paix Dieu is distinguished by its golden colour under a creamy, generous and consistent head. The beer reveals delicate fruity and spicy aromas. On the mouth it reveals all its character and develops a long and delicate bitterness, supported by a hint of hops. Produced at the Paix Dieu abbey, the lunar calendar play a central role in the brewing.",
+      "percentage_alcohol": 9,
+      "ibu": 24
     },
     {
       "handle": "dipatout-double-ipa-33cl",
@@ -86,11 +92,41 @@
       "percentage_alcohol": 6.8,
       "ibu": 35
     },
-    { "handle": "tandem-white-ipa-33cl" },
-    { "handle": "brusseleir-33cl" },
-    { "handle": "bmx-ipa-33cl" },
-    { "handle": "smash-33cl" },
-    { "handle": "de-poes-blonde-33cl" },
-    { "handle": "bicyclette-pale-ale-33cl" }
+    {
+      "handle": "tandem-white-ipa-33cl",
+      "description_en": "A refreshing and light wheat beer. Tandem is brewed with rye and Nelson sauvin, citra and chinook hops. The aromatic hops give it notes of white grapes.",
+      "percentage_alcohol": 3.8,
+      "ibu": 20
+    },
+    {
+      "handle": "brusseleir-33cl",
+      "description_en": "Brusseleir is a complex and powerful beer. Almost black, it comes from a processing of malty flavours, with hints of caramel, coffee and bitter chocolate, and a roasted accent in the aftertaste. Fermentation and dry-hopping give it fruity notes evocative of cassis, with a slightly spicy aroma of tobacco leaves. The whole is structured by a long bitterness.",
+      "percentage_alcohol": 8,
+      "ibu": 70
+    },
+    {
+      "handle": "bmx-ipa-33cl",
+      "description_en": "An organic Indian Pale Ale. BMX is type of beer of high fermentation with particularly rich and pronounced flavors. This unique taste comes from the bitter and strong hop components, resulting from the more complex brewing process. This deliciously fizzy IPA was created by three beer and bike enthusiasts!",
+      "percentage_alcohol": 7,
+      "ibu": 65
+    },
+    {
+      "handle": "smash-33cl",
+      "description_en": "SMASH {C} (Single Malt & Single Hop) is a generously hopped beer brewed from a single malt and a single hop, whose exclusively aromatic use gives it a particularly expressive fruity bouquet with little bitterness.",
+      "percentage_alcohol": 6.2,
+      "ibu": 26
+    },
+    {
+      "handle": "de-poes-blonde-33cl",
+      "description_en": "De Poes blond is a blond unfiltered beer of high fermentation, with secondary fermentation in the bottle. The beer is fruity with a slight alcoholic touch at the back of the tongue. A very high quality of bitter and aroma hops gives balance of bitterness. The herbs used provide the pleasant freshness and the reference to flowers and citrus.",
+      "percentage_alcohol": 8,
+      "ibu": 30
+    },
+    {
+      "handle": "bicyclette-pale-ale-33cl",
+      "description_en": "Made by the Brussels brewery DrinkDrink!, this Pale Ale is the result of the union of three hops. A light, sparkling, and refreshing blond beer. Bicyclette is a delicious Belgian and organic beer full of flavour and divinely light, made by three beer and bicycle enthusiasts!",
+      "percentage_alcohol": 4.8,
+      "ibu": 42
+    }
   ]
 }
