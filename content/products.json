@@ -13,6 +13,18 @@
       "ibu": 35
     },
     {
+      "handle": "chimay-rouge-33cl",
+      "description_en": "Chimay Blue Beer, a dark Trappist beer, has a powerful aroma and a complex flavour that improves with age.  This authentic Belgian beer, whose fresh yeast tinge is associated with a slight hint of pink flowers, is particularly pleasant. Its aroma, which is perceived when the beer is enjoyed, only accentuates the pleasant sensation revealed by the smell; everything unwraps a light yet pleasant caramelised touch. Relatively dry flavour with a hint of caramel, thick, creamy brown head.",
+      "percentage_alcohol": 7,
+      "ibu": 35
+    },
+    {
+      "handle": "chimay-triple-33cl",
+      "description_en": "Chimay Triple is a triple Trappist beer. Visually, it is a beautiful, golden-bodied lager with a fine layer of snow-coloured foam. The nose offers interesting aromas of sultanas and apple compote. This complexity is due to the finesse of the Cistercian brothers' hops. On the palate, it has an interesting balance between the fruity notes of the yeast and the pleasant bitterness of the bittering hops. Its style is therefore very different from that of its older sisters, Chimay Rouge and Chimay Bleu.",
+      "percentage_alcohol": 8,
+      "ibu": 38
+    },
+    {
       "handle": "oster-vienna-33cl",
       "description_en": "Lager brewed with Vienna malt, traditionally used in Austrian beers. It gives this beer a beautiful golden colour and a generous body. The addition of a hint of wheat brings a touch of acidity to accentuate the freshness, 3 different and select hops give this beer subtle aromas and a balanced bitterness.",
       "percentage_alcohol": 6.2
@@ -127,6 +139,132 @@
       "description_en": "Made by the Brussels brewery DrinkDrink!, this Pale Ale is the result of the union of three hops. A light, sparkling, and refreshing blond beer. Bicyclette is a delicious Belgian and organic beer full of flavour and divinely light, made by three beer and bicycle enthusiasts!",
       "percentage_alcohol": 4.8,
       "ibu": 42
+    },
+    {
+      "handle": "trappistes-rochefort-6-33cl",
+      "description_en": "Beer with Trappist denomination of origin, top fermented and with secondary fermentation in the bottle. A smooth, fruity beer with a reddish colour and amber tones. Rochefort 6 has a smooth body, earthy and herbal flavours. Strong malty aroma with a hint of caramel.  A slightly bitter taste on the finish. Its fine flavour makes it a delight to the palate. Two different hops are used in its production, which gives it a special flavour.",
+      "percentage_alcohol": 7.5,
+      "ibu": 35
+    },
+    {
+      "handle": "trappistes-rochefort-8-33cl",
+      "description_en": "The Rochefort 8 is a reddish brown beer with complex fruity, herbaceous and slightly bitter aroma. A sweet alcoholic and dry taste spreads gradually. The aftertaste is long, slightly bitter and dry. Not too dense, to be savoured at your leisure.",
+      "percentage_alcohol": 9.2,
+      "ibu": 22
+    },
+    {
+      "handle": "trappistes-rochefort-10-33cl",
+      "description_en": "Rochefort 10 has a deep dark brown colour. Dense, long-lasting foam. Its great strength and full body are balanced by a complexity of spicy and earthy flavours, with notes of chestnuts and bitter chocolate and hints of Oport wine, leather, apricots and oak. For pairing with dishes containing truffles, or meats with very intense reduction sauces. Very suitable as a dessert beer as it goes perfectly with darker Belgian chocolates.",
+      "percentage_alcohol": 11.3,
+      "ibu": 27
+    },
+    {
+      "handle": "rebel-local-33cl",
+      "description_en": "Blonde beer, 8.5% vol. alc. On the nose, a hoppy aroma, with fruity and slightly sweet notes, pungent on the tongue and dry on the palate, with very light lemon notes and a medium astringency on the finish. A considerable bitterness in the aftertaste balances out the beer perfectly.",
+      "percentage_alcohol": 8,
+      "ibu": 40
+    },
+    {
+      "handle": "golden-tricky-33cl",
+      "description_en": "Golden-blond with a fine sparkle and firm white head. The nose smells of exotic fruits, the palate has a nice bitterness of unique Australian hops, which lasts in the aftertaste. A nice balance between fruit and bitterness. Golden Tricky is brewed by the Verzet brewery.",
+      "percentage_alcohol": 7.5,
+      "ibu": 40
+    },
+    {
+      "handle": "papegaei-33cl",
+      "description_en": "Blond beer with an alcohol volume of 8%. Papegaei is a top fermented beer with a second fermentation in the bottle. Whit a rich bouquet of hops, the beer is brewed with fresh hop flowers. The mash of Papegaei contains barley, wheat and oats. The beer is neither filtered nor pasteurized.",
+      "percentage_alcohol": 8,
+      "ibu": null
+    },
+    {
+      "handle": "lupulus-hopera-33cl",
+      "description_en": "Lupulus Hopera is a golden-blonde Belgian pale ale, dry-hopped and re-fermented in the bottle. It takes on an orange-blonde colour covered by a cloudy head of white froth. The beer is both unfiltered and unpasteurised. Hopera is a mild, quaffable beer with aromas of malt, hops, flowers and hay.The hop bitterness is beautifully tamed in this dry beer with its subtle hints of fruit and herbs and spices. The finish is dry-bitter.",
+      "percentage_alcohol": 6,
+      "ibu": 42
+    },
+    {
+      "handle": "lupulus-organicus-33cl",
+      "description_en": "A triple biologic beer.  Lupulus Organicus has a golden color, thinly voiled and a creamy ivory foam. It presents floral aromas and light flavour of yeast. Of frutty and grassy flavours with an pleasant bitterness at the end.",
+      "percentage_alcohol": 8.5,
+      "ibu": 32
+    },
+    {
+      "handle": "lupulus-triple-33cl",
+      "description_en": "A triple beer. Lupuls Triple is a blond beer with a golden color and thinly voiled. It presents a creamy ivory foam. The beer has citrus and malt aromas, subtly hoppy with a fresh and controlled bitterness, and a light spicy touch of thyme.",
+      "percentage_alcohol": 8.5,
+      "ibu": 30
+    },
+    {
+      "handle": "mobius-dry-hopping-bio-75cl",
+      "description_en": "Organic lager style IPA refermented in the bottle. Mobius Dry-Hopping Bio is a coppery blonde beer with an expressive nose, thanks to a variety of hops that give it delicious citrus notes. Its slight bitterness gives it a lot of freshness.",
+      "percentage_alcohol": 6.5,
+      "ibu": null
+    },
+    {
+      "handle": "antigoon-33cl",
+      "description_en": "Antigoon is a light, golden lager with a creamy foamy head of very fine bubbles. The aroma is pleasantly fruity with notes of apple, citrus and flowers and a light herbal spiciness. The mouthfeel is medium sweetness and well balanced giving a long lasting flavour, while some fruity and spicy notes emerge, ending in a soft bitter finish. All flavours are well balanced and gradually fade after the last sip.",
+      "percentage_alcohol": 6,
+      "ibu": 35
+    },
+    {
+      "handle": "cantillon-gueuze-organic-37-5cl",
+      "description_en": "A golden yellow beer, Gueuze is a blend of lambics produced during different years. Beer with a slightly acidic and fruity taste, delicate and woody fragrance and a dry finish that lingers on the palate. Beer with taste evolution that will keep for a long time in a good cellar.",
+      "percentage_alcohol": 5.5,
+      "ibu": 30
+    },
+    {
+      "handle": "cantillon-kriek-lambic-bio-75cl",
+      "description_en": "Kriek is a beer with a slightly acidic taste of red fruit complemented with subtle almond flavours. This beer is a mix of lambics and sour cherries : 200 g of cherries per litre of beer. It brings out its maximum “fruitiness” when drunk young. With age the lambic will take the upper hand, but this is at the expense of the fruit component.",
+      "percentage_alcohol": 5,
+      "ibu": 25
+    },
+    {
+      "handle": "13-craft-pilsner-25cl",
+      "description_en": "A golden yellow beer colours topped with a creamy white head, releasing delicious aromas of malt, hops, herbs and yeast. Craft Plisner has a subtle bitterness and a dry finish.",
+      "percentage_alcohol": 4,
+      "ibu": 35
+    },
+    {
+      "handle": "curtius-37-5cl",
+      "description_en": "Curtius is a blond beer brewed from top quality products, with a light taste and refreshing flavours. The base of the beer is composed of different barley and wheat malts, which gives it a pleasant lightness, while the blend of aromatic hop flowers gives it a subtle bitter, flowery and fruity taste. Its unique and evolving taste is the result of several fermentation stages, carried out over several months.",
+      "percentage_alcohol": 7,
+      "ibu": 16
+    },
+    {
+      "handle": "gageleer-33cl",
+      "description_en": "Gageleer Original is a golden colored beer with a white foam. Gageleer undergoes a secondary fermentation and a long maturation in the bottle, giving him his distinctive taste. It presents a delightful balance between the malty, the sweet, fruity and a spicy aroma and a subtle bitterness. The taste of the bog myrtle is typical and unique: spicy with a taste of pepper and eucalyptus. It is a refreshing but strong beer.",
+      "percentage_alcohol": 7.5,
+      "ibu": 22
+    },
+    {
+      "handle": "geuze-mariage-parfait-37-5cl",
+      "description_en": "Geuze Mariage Parfait is a refined combination containing the fruitiness of lime zest and tangerine, smooth vanilla, slightly tart, palate refreshing acidity and a warming mouthfeel. This beer is unsweetened, unfiltered and unpasteurized. To complete the perfect marriage, it is bottle conditioned and can be stored up to 20 years.",
+      "percentage_alcohol": 8,
+      "ibu": 20
+    },
+    {
+      "handle": "grisette-bio-blonde-25cl",
+      "description_en": "Brewed by the Saint Feuillien Brewery in Belgium, the Grisette range of beers are all brewed with products from organic farming. Grisette Blonde is a light blonde beer with a light head. It is a thirst-quenching beer, but with a lot of character, with nice malt notes and a well-built bitterness at the end. On top of that, this beer is gluten-free, ideal for intolerant people in need of a good hop product.",
+      "percentage_alcohol": 5.5,
+      "ibu": 7
+    },
+    {
+      "handle": "houppe-blonde-33cl",
+      "description_en": "The Houppe is a lager with a copper sheen colour,  with a fine and balanced bitterness . An aromatic nose betrays the subtle blend of 3 varieties of hops. The attack is smooth on the pallet and brings out certain notes of citrus fruit. The fruity and slightly sweet taste on the palate makes room for the bitterness achieved thanks to the mix of hops.",
+      "percentage_alcohol": 7.5,
+      "ibu": 35
+    },
+    {
+      "handle": "houppe-jambe-en-l-air-33cl",
+      "description_en": "Golden-coloured lager. It has an engaging nose that subsequently room for an aromatic beer. The Houppe gives off a fruity aroma reminiscent of notes of citrus fruit and scents of hops. On the palate, the fruity and slightly sweet taste on the palate makes room for the bitterness achieved thanks to 3 different of hops.",
+      "percentage_alcohol": 4.8,
+      "ibu": null
+    },
+    {
+      "handle": "simplex-33cl",
+      "description_en": "Despite Simplex being an ale, it has all the characteristics of an old-styled pils. The beer is  blond, unfiltered, unpasteurized, hoppy and bitter beer that remains low in alcohol. Resulting in a straw blonde, highly drinkable beer with plenty of flavor and character. The taste is refreshing, light and with a firm bitterness",
+      "percentage_alcohol": 4.5,
+      "ibu": 50
     }
   ]
 }
