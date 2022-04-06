@@ -195,6 +195,12 @@
       "ibu": 30
     },
     {
+      "handle": "lupulus-triple-75cl",
+      "description_en": "A triple beer. Lupuls Triple is a blond beer with a golden color and thinly voiled. It presents a creamy ivory foam. The beer has citrus and malt aromas, subtly hoppy with a fresh and controlled bitterness, and a light spicy touch of thyme.",
+      "percentage_alcohol": 8.5,
+      "ibu": 30
+    },
+    {
       "handle": "mobius-dry-hopping-bio-75cl",
       "description_en": "Organic lager style IPA refermented in the bottle. Mobius Dry-Hopping Bio is a coppery blonde beer with an expressive nose, thanks to a variety of hops that give it delicious citrus notes. Its slight bitterness gives it a lot of freshness.",
       "percentage_alcohol": 6.5,
@@ -265,6 +271,66 @@
       "description_en": "Despite Simplex being an ale, it has all the characteristics of an old-styled pils. The beer is  blond, unfiltered, unpasteurized, hoppy and bitter beer that remains low in alcohol. Resulting in a straw blonde, highly drinkable beer with plenty of flavor and character. The taste is refreshing, light and with a firm bitterness",
       "percentage_alcohol": 4.5,
       "ibu": 50
+    },
+    {
+      "handle": "neroes-tripel-33cl",
+      "description_en": "An authentic brew after a recipe by Dirk Heroes from Alsemberg. With a pure aroma, malted, rather hoppy but elegant.   neRoes has a full-bodied, soft in taste, with a typical triple fruitiness and a touch of alcohol in the mouth.",
+      "percentage_alcohol": 7.8,
+      "ibu": null
+    },
+    {
+      "handle": "saint-bernardus-33cl",
+      "description_en": "This is a dark beer with a robust head that is ivory in colour. St.Bernardus Abt 12 has a very fruity aroma. It brims over with different, complex tastes and stands out through its long, bittersweet finish. Thanks to its mild, rounded taste and perfect balance between bitter and sweet, this beer goes down very easily.",
+      "percentage_alcohol": 10,
+      "ibu": 20
+    },
+    {
+      "handle": "triporteur-bling-bling-imperial-king-33cl",
+      "description_en": "For this beer, BOM-Brewery drew inspiration from the Hip-Hop world. The beer was brewed with real 24-carat gold malt and Bling Bling hops. B.O.M.  A four-grain full malt beer with real pieces of 24-carat gold pumped into the \"triporteur golden ale\". That 8.88% alcohol is not a coincidence. 888 is the Chinese lucky number for triple happiness.",
+      "percentage_alcohol": 8.8,
+      "ibu": null
+    },
+    {
+      "handle": "witkap-pater-stimulo-blond-33cl",
+      "description_en": "Witkap Pater Stimulo is light and sparkling on the tongue, this beer pours a hazy golden blond, rich, rounded and aromatic. It presents complex flavours and mouthfeel.",
+      "percentage_alcohol": 6,
+      "ibu": null
+    },
+    {
+      "handle": "witkap-pater-tripel-33cl",
+      "description_en": "A beer with light golden color, slightly hazy, with a high white foam. Witkap Pater Tripel has a pleasant aroma with a light spicy touch and some fruity notes. Its taste is a slightly sweet and fruity character with  light citrus touch. Also recognizable as a small banana flavour and a light, spicy aftertaste. Moderate hops in the end.",
+      "percentage_alcohol": 7.5,
+      "ibu": null
+    },
+    {
+      "handle": "tripick-4-33cl",
+      "description_en": "Tripick 4 is a light blond beer, 4.2%, refermented in the bottle. It is a high fermentation and light beer at the same time. Hoppy and malty with a nice long finish, Tripick 4 brings a certain balance between specialty beers and thirst-quenching beers.",
+      "percentage_alcohol": 4.2,
+      "ibu": 25
+    },
+    {
+      "handle": "tripick-5-33cl",
+      "description_en": "A dry hopping beer. Tripick 5 is a blond beer. It contains an American yeast with 3 types of hops + an Australian hop called Galaxy, which brings a citrus, peach and passion fruit aroma, especially when used as a late addition.",
+      "percentage_alcohol": 5.5,
+      "ibu": 25
+    },
+    {
+      "handle": "tripick-6-33cl",
+      "description_en": "A blond beer with an alcohol content of 6 degrees. This bottle-fermented beer is a lighter and less bitter version of Tripick 8°, which makes it a more accessible and milder beer. With a rich, subtle aroma and beautiful, creamy head, Tripick 6° leaves no one indifferent.",
+      "percentage_alcohol": 6,
+      "ibu": 30
+    },
+    {
+      "handle": "tripick-7-33cl",
+      "description_en": "Tripick 7° has an amber colour and is made of 4 malts and 3 hops carefully selected to offer an unique taste. It gives off rich and intense aromas with notes of caramel.",
+      "percentage_alcohol": 6.8,
+      "ibu": 25
+    },
+    {
+      "handle": "tripick-8-33cl",
+      "description_en": "Tripick 8° is a triple blond beer with an alcohol content of 8 degrees and refermented in the bottle. The subtle character of this beer is expressed through its hoppiness, with a present but skilfully controlled bitterness. The aromas are accentuated by the use of noble hops with spicy notes, for an outstanding taste experience.",
+      "percentage_alcohol": 8,
+      "ibu": 35
     }
   ]
 }
