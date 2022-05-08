@@ -5,6 +5,7 @@ import {
   PrimaryButton,
 } from './style';
 import Icon from '../icon';
+import { forwardRef } from 'react';
 
 const getButton = (variant) =>
   ({
@@ -13,23 +14,23 @@ const getButton = (variant) =>
     primary: PrimaryButton,
   }[variant]);
 
-export default function Button({
-  children,
-  variant = 'default',
-  iconLeft,
-  onClick,
-  ...props
-}) {
-  const ButtonComponent = getButton(variant);
+const Button = forwardRef(
+  ({ children, variant = 'default', iconLeft, onClick, ...props }, ref) => {
+    const ButtonComponent = getButton(variant);
 
-  return (
-    <ButtonComponent onClick={onClick} {...props}>
-      {iconLeft && (
-        <IconContainer>
-          <Icon name={iconLeft} />
-        </IconContainer>
-      )}
-      {children}
-    </ButtonComponent>
-  );
-}
+    return (
+      <ButtonComponent onClick={onClick} ref={ref} {...props}>
+        {iconLeft && (
+          <IconContainer>
+            <Icon name={iconLeft} />
+          </IconContainer>
+        )}
+        {children}
+      </ButtonComponent>
+    );
+  }
+);
+
+Button.displayName = 'Button';
+
+export default Button;
