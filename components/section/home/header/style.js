@@ -5,10 +5,11 @@ export const AdvertisementContainer = styled.div`
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 500px;
+  height: 350px;
   position: relative;
   border-radius: 6px;
   overflow: hidden;
+  margin-top: 50px;
 
   img {
     object-fit: cover;
