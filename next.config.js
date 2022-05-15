@@ -5,6 +5,6 @@ module.exports = {
     locales: ['en'],
   },
   images: {
-    domains: ['localhost', 'cdn.shopify.com'],
+    domains: ['vercel.app', 'localhost', 'cdn.shopify.com'],
   },
 };
