@@ -5,6 +5,6 @@ module.exports = {
     locales: ['en'],
   },
   images: {
-    domains: ['cdn.shopify.com'],
+    domains: ['localhost', 'cdn.shopify.com'],
   },
 };

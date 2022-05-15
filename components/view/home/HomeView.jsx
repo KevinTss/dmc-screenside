@@ -8,7 +8,7 @@ export default function HomeView() {
 
   return (
     <Template>
-      <PageHeader title={t('page.home.title')} />
+      {/* <PageHeader title={t('page.home.title')} /> */}
       <HomeHeaderSection />
     </Template>
   );

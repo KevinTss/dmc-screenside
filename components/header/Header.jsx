@@ -4,7 +4,7 @@ import { Header as HeaderEl, Container, RightContainer } from './style';
 import { Wrapper } from '../../styles';
 // import { useLocale } from '../../hooks';
 import Nav from '../nav';
-import { Button } from '../ui';
+import { Button, Logo } from '../ui';
 import CardDrawer from '../cart/drawer';
 import { useCart } from '../../hooks';
 
@@ -18,6 +18,7 @@ const Header = () => {
     <HeaderEl>
       <Wrapper>
         <Container>
+          <Logo />
           <Nav />
           <RightContainer>
             <Button iconLeft='cart' variant='minimal' onClick={open} />

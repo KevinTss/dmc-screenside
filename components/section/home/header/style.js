@@ -7,6 +7,8 @@ export const AdvertisementContainer = styled.div`
   width: 100%;
   height: 500px;
   position: relative;
+  border-radius: 6px;
+  overflow: hidden;
 
   img {
     object-fit: cover;
