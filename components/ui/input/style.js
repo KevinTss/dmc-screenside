@@ -17,6 +17,7 @@ export const Input = styled.input`
   font-size: ${({ theme }) => theme.font.size.m};
   font-weight: ${({ theme }) => theme.font.weight.normal};
   border: 0;
+  width: 100%;
 
   ::placeholder {
     font-size: ${({ theme }) => theme.font.size.xs};
@@ -29,6 +30,9 @@ export const Textarea = styled.textarea`
   font-size: ${({ theme }) => theme.font.size.m};
   font-weight: ${({ theme }) => theme.font.weight.normal};
   border: 0;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
 
   ::placeholder {
     font-size: ${({ theme }) => theme.font.size.xs};

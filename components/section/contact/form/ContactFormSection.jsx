@@ -1,9 +1,12 @@
 import { useFormik } from 'formik';
+import { useState } from 'react';
 
 import { Button, Form, Field } from '../../../ui';
 import { useLocale } from '../../../../hooks';
+import { StatusText } from './styles';
 
 export default function ContactFormSection() {
+  const [status, setStatus] = useState(null);
   const { t } = useLocale();
   const { handleChange, values, handleSubmit } = useFormik({
     initialValues: {
@@ -11,8 +14,28 @@ export default function ContactFormSection() {
       email: '',
       message: '',
     },
-    onSubmit: (values) => {
-      console.log(JSON.stringify(values, null, 2));
+    onSubmit: (values, { resetForm }) => {
+      fetch('/api/hello', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(values), // body data type must match "Content-Type" header
+      })
+        .then((response) => {
+          if (!response.ok) {
+            console.warn(response);
+            setStatus('error');
+          } else {
+            setStatus('success');
+            resetForm();
+          }
+        })
+        .catch((e) => {
+          console.warn(e);
+          setStatus('error');
+        });
     },
   });
 
@@ -45,6 +68,13 @@ export default function ContactFormSection() {
       <Button type='submit'>
         {t('component.ContactFormSection.formSubmitButton')}
       </Button>
+      {status && (
+        <StatusText>
+          {status === 'error'
+            ? 'Internal error, try again later'
+            : 'You message has been sent'}
+        </StatusText>
+      )}
     </Form>
   );
 }
