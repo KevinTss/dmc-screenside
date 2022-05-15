@@ -3,6 +3,7 @@ import ContactFormSection from '../../section/contact/form';
 import PageHeader from '../../page-header';
 import Template from '../../template/default';
 import { ContentContainer, Iframe, RightContainer } from './styles';
+import { Text } from '../../ui';
 
 export default function ContactView() {
   const { t } = useLocale();
@@ -18,6 +19,11 @@ export default function ContactView() {
             loading='lazy'
             referrerpolicy='no-referrer-when-downgrade'
           />
+          <Text>Rue Vanderkindere 404</Text>
+          <Text>1180 Uccle</Text>
+          <Text>Belgium</Text>
+          <Text>dmc.concept.sprl@gmail.com</Text>
+          <Text>+32 (0)484 61 20 06</Text>
         </RightContainer>
       </ContentContainer>
     </Template>

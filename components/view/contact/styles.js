@@ -4,6 +4,10 @@ import { Wrapper } from '../../../styles';
 export const ContentContainer = styled(Wrapper)`
   display: flex;
   gap: 20px;
+
+  form {
+    padding-right: 50px;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -14,4 +18,5 @@ export const RightContainer = styled.div`
 
 export const Iframe = styled.iframe`
   border: none;
+  margin-bottom: 50px;
 `;
