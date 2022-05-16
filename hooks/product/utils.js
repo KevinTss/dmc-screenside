@@ -56,6 +56,17 @@ export const getFormattedData = (response) => {
   };
 };
 
+export const getFormattedSingleData = (product) => {
+  return {
+    id: product.id,
+    title: product.title,
+    handle: product.handle,
+    imageUrl: getProductImage(product.handle),
+    price: getProductPrice(product),
+    variantId: getVariantId(product),
+  };
+};
+
 export const getQueryString = (search, tags) => {
   let result = '';
 

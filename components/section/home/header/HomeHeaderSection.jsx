@@ -15,7 +15,7 @@ import backgroundUrl2 from '../../../../assets/test.png';
 
 export default function HomeHeaderSection() {
   const { locale, t } = useLocale();
-  console.log('backgroundUrl2.src', backgroundUrl2.src);
+
   return (
     <Wrapper>
       <AdvertisementContainer>

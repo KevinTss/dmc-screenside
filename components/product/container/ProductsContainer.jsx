@@ -8,7 +8,7 @@ export default function ProductsList({ products }) {
     <Section>
       <MainContainer>
         {products.map((product) => (
-          <ItemContainer key={product.cursor}>
+          <ItemContainer key={product.handle}>
             <ProductCard product={product} />
           </ItemContainer>
         ))}

@@ -182,3 +182,88 @@ query ($search: String!) {
   }
 }
 `;
+
+export const GET_FEATURED_PRODUCTS = `
+query getFeaturedProducts {
+  one: productByHandle(handle: "geuze-mariage-parfait-37-5cl") {
+    id
+    handle
+    title
+    variants(first: 1) {
+      edges {
+        node {
+          id
+          priceV2 {
+            amount
+            currencyCode
+          }
+          compareAtPriceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+  two: productByHandle(handle: "dipatout-double-ipa-33cl") {
+    id
+    handle
+    title
+    variants(first: 1) {
+      edges {
+        node {
+          id
+          priceV2 {
+            amount
+            currencyCode
+          }
+          compareAtPriceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+  three: productByHandle(handle: "cantillon-kriek-lambic-bio-75cl") {
+    id
+    handle
+    title
+    variants(first: 1) {
+      edges {
+        node {
+          id
+          priceV2 {
+            amount
+            currencyCode
+          }
+          compareAtPriceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+  four: productByHandle(handle: "bmx-ipa-33cl") {
+    id
+    handle
+    title
+    variants(first: 1) {
+      edges {
+        node {
+          id
+          priceV2 {
+            amount
+            currencyCode
+          }
+          compareAtPriceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+}
+`;
