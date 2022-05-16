@@ -23,7 +23,7 @@ export default function ContactView() {
           <Text>1180 Uccle</Text>
           <Text>Belgium</Text>
           <Text>dmc.concept.sprl@gmail.com</Text>
-          <Text>+32 (0)484 61 20 06</Text>
+          <Text>+32 (0)486 99 94 01</Text>
         </RightContainer>
       </ContentContainer>
     </Template>
