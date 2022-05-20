@@ -8,7 +8,7 @@ import EmptyState from '../empty-state';
 
 export default function CartDrawer() {
   const { data, isOpen, close } = useCart();
-  const isCardEmpty = !data?.lines;
+  const isCardEmpty = !data?.lines?.length;
 
   return (
     <Drawer isOpen={isOpen} onClose={close}>

@@ -24,6 +24,7 @@ export const CartProvider = ({ children }) => {
       }),
     {
       onSuccess(response) {
+        // console.log('onSuccess', response);
         let isSuccess = !response?.data?.errors?.length;
         if (isSuccess) {
           const newLines =
@@ -40,9 +41,13 @@ export const CartProvider = ({ children }) => {
           setCart(newCart);
         } else {
           setErrors(response.data.errors.map((err) => err.message));
+          removeCartFromLocalStorage();
+          // setCart(null);
+          // createCart();
         }
       },
-      onError() {
+      onError(p) {
+        // console.log('onError', p);
         setErrors(() => [ErrorCode._GENERIC]);
       },
     }
@@ -55,15 +60,27 @@ export const CartProvider = ({ children }) => {
       }),
     {
       onSuccess(response) {
-        const newCart = {
-          id: cart.id,
-          checkoutUrl: cart.checkoutUrl,
-          estimatedCost: response?.data?.data?.cart?.estimatedCost,
-          lines: response?.data?.data?.cart?.lines?.edges,
-        };
-        setCartToLocalStorage(newCart);
-        setCart(newCart);
+        const isSuccess = !!response?.data?.data?.cart;
+
+        if (isSuccess) {
+          // console.log('success load cart', response);
+          const newCart = {
+            id: cart.id,
+            checkoutUrl: cart.checkoutUrl,
+            estimatedCost: response?.data?.data?.cart?.estimatedCost,
+            lines: response?.data?.data?.cart?.lines?.edges,
+          };
+          setCartToLocalStorage(newCart);
+          setCart(newCart);
+        } else {
+          removeCartFromLocalStorage();
+          setCart(null);
+          createCart();
+        }
       },
+      // onError(p) {
+      //   console.log('on error load', p);
+      // },
     }
   );
   const { mutate: createCart } = useMutation(
