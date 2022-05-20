@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Container, ImageContainer, Body, Name, Price } from './style';
+import { Container, ImageContainer, Body, Title, Name, Price } from './style';
 import { Button } from '../../ui';
 import { useCart, useLocale } from '../../../hooks';
 import { Wrapper } from '../../../styles';
@@ -16,7 +16,7 @@ export default function ProductSheet({ product }) {
           <Image src={product.imageUrl} alt={product.title} layout='fill' />
         </ImageContainer>
         <Body>
-          <Name>{product.title}</Name>
+          <Title>{product.title}</Title>
           <Name>{product.description}</Name>
           <Price>€{product.price.amount}</Price>
           <Button

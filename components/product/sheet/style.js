@@ -25,8 +25,14 @@ export const Body = styled.div`
   align-items: flex-start;
 `;
 
+export const Title = styled.p`
+  font-size: ${({ theme }) => theme.font.size.xl};
+  padding-bottom: 16px;
+`;
+
 export const Name = styled.p`
   font-size: ${({ theme }) => theme.font.size.m};
+  padding-bottom: 16px;
 `;
 
 export const Price = styled.p`
