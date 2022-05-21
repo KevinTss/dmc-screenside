@@ -4,6 +4,7 @@ export const lightTheme = {
     background: '#f7f7f7',
     text: '#24262f',
     border: '#f7f7f7',
+    danger: '#D20F0F',
   },
   font: {
     family: `'Lato', sans-serif`,
@@ -11,6 +12,7 @@ export const lightTheme = {
       xl: '3rem',
       l: '1.5rem',
       m: '1rem',
+      s: '0.75rem',
     },
     weight: {
       normal: 300,

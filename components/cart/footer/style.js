@@ -7,3 +7,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
+
+export const ErrorMessage = styled.p`
+  font-size: ${({ theme }) => theme.font.size.s};
+  color: ${({ theme }) => theme.color.danger};
+  font-weight: ${({ theme }) => theme.font.weight.bold};
+  text-align: center;
+  margin-bottom: 20px;
+`;

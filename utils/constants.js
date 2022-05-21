@@ -14,6 +14,7 @@ export const MediaQuery = {
 
 export const ErrorCode = {
   _GENERIC: 'generic',
+  ONLY_MULTIPLE_OF_12_ALLOWED: 'only-multiple-of-12',
 };
 
 export const Tags = {
