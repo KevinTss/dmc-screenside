@@ -1,4 +1,5 @@
 // import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 import { Header as HeaderEl, Container, RightContainer } from './style';
 import { Wrapper } from '../../styles';
@@ -6,22 +7,29 @@ import { Wrapper } from '../../styles';
 import Nav from '../nav';
 import { Button, Logo } from '../ui';
 import CardDrawer from '../cart/drawer';
-import { useCart } from '../../hooks';
+import { useCart, WIDTH, useMediaQuery } from '../../hooks';
+import MobileNav from '../mobile-nav';
 
 const Header = () => {
   const { open } = useCart();
-
-  // const { push, asPath } = useRouter();
-  // const { locale, t } = useLocale();
+  const isMobile = useMediaQuery(WIDTH.MOBILE);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <HeaderEl>
       <Wrapper>
         <Container>
           <Logo />
-          <Nav />
+          {!isMobile && <Nav />}
           <RightContainer>
             <Button iconLeft='cart' variant='minimal' onClick={open} />
+            {isMobile && (
+              <Button
+                iconLeft='list'
+                variant='minimal'
+                onClick={() => setIsOpen(true)}
+              />
+            )}
           </RightContainer>
           {/* <div>
         Lang:{' '}
@@ -38,6 +46,7 @@ const Header = () => {
         </Container>
       </Wrapper>
       <CardDrawer />
+      {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />}
     </HeaderEl>
   );
 };

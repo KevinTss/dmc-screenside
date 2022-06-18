@@ -2,12 +2,12 @@ import { Nav as NavEl, Items, Item } from './style';
 import { NavLink } from '../ui';
 import { useLocale } from '../../hooks';
 
-export default function Nav() {
+export default function Nav({ isVertical }) {
   const { locale, t } = useLocale();
 
   return (
     <NavEl>
-      <Items>
+      <Items isVertical={isVertical}>
         <Item>
           <NavLink href='/' locale={locale} passHref>
             {t('header.nav.home')}

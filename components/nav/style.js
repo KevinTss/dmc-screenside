@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Nav = styled.nav``;
 
@@ -7,6 +7,13 @@ export const Items = styled.ul`
   display: flex;
   align-items: center;
   height: 100%;
+  ${(p) =>
+    p.isVertical &&
+    css`
+      flex-direction: column;
+      margin-top: 50px;
+      gap: 10px;
+    `};
 `;
 
 export const Item = styled.li`

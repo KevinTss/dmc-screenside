@@ -35,6 +35,7 @@ export const DrawerEl = styled.div`
   flex-direction: column;
   min-height: 100%;
   width: 400px;
+  max-width: 100vw;
   background-color: white;
   box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
@@ -42,7 +43,7 @@ export const DrawerEl = styled.div`
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   padding: ${({ theme }) => theme.spacing.m};
   transform: ${({ $isVisible }) =>
-    $isVisible ? 'translateX(-400px)' : 'translateX(0)'};
+    $isVisible ? 'translateX(-100%)' : 'translateX(0)'};
   transition: all 0.3s ease;
   z-index: 11;
 `;
