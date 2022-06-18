@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export * from './theme';
+import { MediaQuery } from '../utils';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -32,4 +33,20 @@ export const Section = styled.section`
   max-width: 1440px;
   width: 100%;
   margin: auto;
+`;
+
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  ${MediaQuery.S_AND_DOWN} {
+    flex-direction: column;
+  }
 `;
