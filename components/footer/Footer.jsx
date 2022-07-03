@@ -27,7 +27,7 @@ export default function Footer() {
             <Text>
               Lundi - Vendredi: 9:00 - 19:00
               <br />
-              Samedi: 9:00 - 20:00
+              Samedi: Sur réservation
               <br />
               Dimanche: Fermé
             </Text>
