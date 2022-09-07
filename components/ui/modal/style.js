@@ -8,6 +8,7 @@ export const Container = styled.div`
   top: 0;
   right: 0;
   z-index: 10;
+  pointer-events: none;
 `;
 
 export const Overlay = styled.div`
@@ -23,6 +24,7 @@ export const Overlay = styled.div`
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  pointer-events: all;
 `;
 
 export const DrawerEl = styled.div`
@@ -43,4 +45,5 @@ export const DrawerEl = styled.div`
   transition: all 0.3s ease;
   z-index: 11;
   border-radius: 12px;
+  pointer-events: all;
 `;
