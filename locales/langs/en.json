@@ -22,6 +22,7 @@
   },
   "component": {
     "HomeHeaderSection": {
+      "title": "L'art de la table",
       "cta": "Discover the E-Shop"
     },
     "ProductCard": {

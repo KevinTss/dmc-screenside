@@ -3,11 +3,10 @@ import styled from 'styled-components';
 export const AdvertisementContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
-  height: 350px;
+  height: 75vh;
   position: relative;
-  border-radius: 6px;
   overflow: hidden;
 
   img {
@@ -15,9 +14,23 @@ export const AdvertisementContainer = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const Container = styled.div`
   z-index: 1;
-  margin-bottom: ${({ theme }) => theme.spacing.l};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+`;
+
+export const Title = styled.h1`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 130px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: white;
 `;
 
 export const Image = styled.img`

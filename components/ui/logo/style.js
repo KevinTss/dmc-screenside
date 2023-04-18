@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 60px;
-  height: 60px;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  img {
-    object-fit: contain;
+  svg {
+    fill: white;
+    width: 75px;
+    height: 75px;
   }
 `;
