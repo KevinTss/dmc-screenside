@@ -14,7 +14,7 @@ export default function HomeFeaturedProductsSection() {
         <Cockpit>
           <Title>Featured products</Title>
           <Link href='/shop' variant='minimal'>
-            <a>View all</a>
+            View all
           </Link>
         </Cockpit>
         {!!data && <ProductsList products={data} />}
