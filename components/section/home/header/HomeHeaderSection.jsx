@@ -5,7 +5,6 @@ import { AdvertisementContainer, Container, Title } from './style';
 import { Button, Overlay } from '../../../ui';
 import { useLocale } from '../../../../hooks';
 import backgroundUrl2 from '../../../../assets/background.jpg';
-console.log('backgroundUrl2', backgroundUrl2);
 
 export default function HomeHeaderSection() {
   const { locale, t } = useLocale();
