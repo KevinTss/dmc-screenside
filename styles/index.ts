@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export * from './theme';
+export * from './theme.constants';
 import { MediaQuery } from '../utils';
 
 export const GlobalStyles = createGlobalStyle`
@@ -26,7 +27,7 @@ export const Wrapper = styled.div`
   max-width: 1240px;
   width: 100%;
   margin: auto;
-  padding: 0 ${({ theme }) => theme.spacing.m};
+  padding: 0 ${({ theme }) => theme.space.S16};
 `;
 
 export const Section = styled.section`
