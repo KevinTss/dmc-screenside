@@ -8,7 +8,7 @@ import {
   Right,
   SearchContainer,
   Input,
-} from './style';
+} from './Header.styles';
 import { Wrapper } from '../../styles';
 // import { useLocale } from '../../hooks';
 import Nav from '../nav';
@@ -17,8 +17,8 @@ import CardDrawer from '../cart/drawer';
 import { useCart, WIDTH, useMediaQuery } from '../../hooks';
 import MobileNav from '../mobile-nav';
 
-const Header = () => {
-  const { open } = useCart();
+export const Header = () => {
+  // const { open } = useCart();
   const isMobile = useMediaQuery(WIDTH.MOBILE);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,8 +39,6 @@ const Header = () => {
     </HeaderEl>
   );
 };
-
-export default Header;
 
 const Search = () => {
   return (

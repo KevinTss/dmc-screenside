@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { AdvertisementContainer, Container, Title } from './HomeHeaderSection.styles';
+import { AdvertisementContainer, Container, Title, CTA, Overlay } from './HomeHeaderSection.styles';
 
-const { Button, Overlay } = require('../../../ui');
 const { useLocale } = require('../../../../hooks')
 const backgroundUrl2 = require('../../../../assets/background.jpg')
 
@@ -16,11 +15,9 @@ export const HomeHeaderSection = () => {
       <Overlay />
       <Container>
         <Title>{t('component.HomeHeaderSection.title')}</Title>
-        <Link href='/shop' locale={locale} passHref>
-          <Button as='span' variant='primary'>
+        <CTA href='/shop' locale={locale}>
             {t('component.HomeHeaderSection.cta')}
-          </Button>
-        </Link>
+        </CTA>
       </Container>
     </AdvertisementContainer>
   );

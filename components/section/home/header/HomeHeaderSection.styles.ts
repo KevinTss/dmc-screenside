@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 export const AdvertisementContainer = styled.div`
   display: flex;
@@ -40,4 +41,25 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const CTA = styled(Link)`
+  background-color: #ffffff;
+  padding: 20px 24px;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #1b1b1b;
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
 `;

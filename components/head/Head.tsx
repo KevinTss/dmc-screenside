@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 
-const Head = () => (
+export const Head = () => (
   <NextHead>
     <title>Exclusive Spirits | Table</title>
     <meta
@@ -10,5 +10,3 @@ const Head = () => (
     <link rel='icon' href='/favicon.ico' />
   </NextHead>
 );
-
-export default Head;
