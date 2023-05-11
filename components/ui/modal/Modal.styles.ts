@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import type { IsVisibleProps } from './Modal.types';
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ export const Container = styled.div`
   pointer-events: none;
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled.div<IsVisibleProps>`
   z-index: 10;
   position: absolute;
   top: 0;
@@ -27,7 +28,7 @@ export const Overlay = styled.div`
   pointer-events: all;
 `;
 
-export const DrawerEl = styled.div`
+export const DrawerEl = styled.div<IsVisibleProps>`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,7 +40,7 @@ export const DrawerEl = styled.div`
   box-sizing: border-box;
   cursor: default;
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
-  padding: ${({ theme }) => theme.spacing.m};
+  padding: ${({ theme }) => theme.space.S16}px;
   transform: ${({ $isVisible }) =>
     $isVisible ? 'translate(-50%, -50%)' : 'translate(-100%, -50%)'};
   transition: all 0.3s ease;

@@ -30,7 +30,7 @@ export const Header = () => {
       <Middle></Middle>
       {/* {!isMobile && <Nav />} */}
       <Right>
-        <Search />
+        {/* <Search /> */}
         <HeartIcon />
         <ShoppingBagIcon />
       </Right>

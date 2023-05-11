@@ -26,7 +26,8 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-style: normal;
-  font-weight: 400;
+  font-family: 'Outfit';
+  font-weight: 800;
   font-size: 96px;
   line-height: 130px;
   text-align: center;

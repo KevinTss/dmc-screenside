@@ -1,9 +1,18 @@
 import { useState } from 'react';
 import { Modal, Button } from '../ui';
-import { Container, Title, P, ButtonsGroup } from './styles';
+import { Container, Title, P, ButtonsGroup } from './AgeCheckingModal.styles';
 
-export const AgeCheckingModal = ({ onConfirm }) => {
+import { isAgeChecked, checkAge } from '../../utils'
+
+export const AgeCheckingModal = () => {
+  if (isAgeChecked()) return null
+
+  return <AgeCheckingModalContent />
+};
+
+const AgeCheckingModalContent = () => {
   const [isOpen, setIsOpen] = useState(true);
+
   return (
     <Modal isOpen={isOpen}>
       <Container>
@@ -12,7 +21,7 @@ export const AgeCheckingModal = ({ onConfirm }) => {
         <ButtonsGroup>
           <Button
             onClick={() => {
-              onConfirm();
+              checkAge();
               setIsOpen(false);
             }}
           >
@@ -27,4 +36,4 @@ export const AgeCheckingModal = ({ onConfirm }) => {
       </Container>
     </Modal>
   );
-};
+}
