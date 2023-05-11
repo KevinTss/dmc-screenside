@@ -103,11 +103,6 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "incremental": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "hooks/product/utils.js"],
+  "exclude": ["node_modules"]
 }
