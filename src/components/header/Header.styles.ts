@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
+type HeaderProps = {
+  $isWhite: boolean;
+};
+
+export const Header = styled.header<HeaderProps>`
   width: 100%;
   height: 85px;
   display: grid;
@@ -10,6 +14,7 @@ export const Header = styled.header`
   left: 0;
   z-index: 1;
   border-bottom: 1px solid rgba(242, 242, 244, 0.3);
+  background-color: ${(p) => (p.$isWhite ? 'white' : 'none')};
 `;
 
 export const Left = styled.div`

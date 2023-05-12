@@ -1,4 +1,3 @@
-export { default as Button } from './button';
 export { default as Checkbox } from './checkbox';
 export { default as Drawer } from './drawer';
 export { default as Field } from './field';
@@ -12,4 +11,5 @@ export { default as Logo } from './logo';
 export { default as NavLink } from './nav-link';
 export { default as Overlay } from './overlay';
 export { default as Text } from './text';
+export * from './button';
 export * from './modal';

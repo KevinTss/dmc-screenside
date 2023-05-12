@@ -4,11 +4,11 @@ import {
   Title,
   Cockpit,
 } from './HomeFeaturedProductsSection.styles';
-// import { useFeaturedProducts } from '../../../../hooks';
-// import ProductsList from '../../../product/container';
+import { useProductsFeatured } from 'src/hooks';
+import { ProductsList } from 'src/components/product-list';
 
 export const HomeFeaturedProductsSection = () => {
-  // const { data } = useFeaturedProducts();
+  const { data } = useProductsFeatured();
 
   return (
     <Container id="hey">
@@ -18,7 +18,7 @@ export const HomeFeaturedProductsSection = () => {
             View all
           </Link> */}
         </Cockpit>
-      {/* {!!data && <ProductsList products={data} />} */}
+      {!!data && <ProductsList products={data} />}
     </Container>
   );
 };

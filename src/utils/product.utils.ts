@@ -1,7 +1,7 @@
 import { ProductFromShopify } from 'src/types';
 import { PRODUCT_CONTENT } from 'src/constants';
 
-const getProductImage = (handle: string) => {
+export const getProductImage = (handle: string) => {
   let imageUrl = '/assets/fallback.png';
 
   try {
@@ -14,7 +14,7 @@ const getProductImage = (handle: string) => {
     if ('message' in e) {
       console.warn('Error in import product image', e.message);
     }
-    return '';
+    return imageUrl;
   }
 
   return imageUrl;

@@ -1,5 +1,5 @@
 // import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import {
   Header as HeaderEl,
@@ -9,8 +9,8 @@ import {
   SearchContainer,
   Input,
 } from './Header.styles';
-import { Wrapper } from '../../src/styles';
-// import { useLocale } from '../../hooks';
+// import { Wrapper } from '../../src/styles';
+import { useIsElOnTop } from 'src/hooks';
 import Nav from '../nav';
 import { Button, Logo } from '../ui';
 import CardDrawer from '../cart/drawer';
@@ -18,12 +18,14 @@ import { useCart, WIDTH, useMediaQuery } from '../../hooks';
 import MobileNav from '../mobile-nav';
 
 export const Header = () => {
+  const headerEl = useRef<HTMLDivElement>(null)
   // const { open } = useCart();
   const isMobile = useMediaQuery(WIDTH.MOBILE);
   const [isOpen, setIsOpen] = useState(false);
+  const isHeaderOnTop = useIsElOnTop(headerEl.current || undefined)
 
   return (
-    <HeaderEl>
+    <HeaderEl ref={headerEl} $isWhite={!isHeaderOnTop}>
       <Left>
         <Logo />
       </Left>

@@ -32,3 +32,12 @@ export type ProductContent = {
   percentage_alcohol: number;
   ibu?: number;
 };
+
+export type Product = {
+  id: string;
+  handle: string;
+  title: string;
+  imageUrl: string;
+  price: number;
+  variantId: string;
+};

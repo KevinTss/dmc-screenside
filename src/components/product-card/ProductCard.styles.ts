@@ -4,11 +4,10 @@ export const Container = styled.a`
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  padding: ${({ theme }) => theme.spacing.m};
   text-decoration: none;
 
   &:hover {
-    background-color: ${({ theme }) => theme.color.background};
+    background-color: ${({ theme }) => theme.color.neutral[200]};
   }
 `;
 
@@ -23,7 +22,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const CardBody = styled.div`
-  padding: ${({ theme }) => theme.spacing.m};
+  padding: ${({ theme }) => theme.space.S04};
 
   button {
     width: 100%;
@@ -31,12 +30,12 @@ export const CardBody = styled.div`
 `;
 
 export const Name = styled.p`
-  font-size: ${({ theme }) => theme.font.size.m};
-  color: ${({ theme }) => theme.color.text};
+  font-size: ${({ theme }) => theme.font.size[16]};
+  color: ${({ theme }) => theme.font.color[800]};
 `;
 
 export const Price = styled.p`
-  font-size: ${({ theme }) => theme.font.size.l};
-  margin-bottom: ${({ theme }) => theme.spacing.m};
-  color: ${({ theme }) => theme.color.text};
+  font-size: ${({ theme }) => theme.font.size[16]};
+  margin-bottom: ${({ theme }) => theme.space.S04};
+  color: ${({ theme }) => theme.font.color[800]};
 `;

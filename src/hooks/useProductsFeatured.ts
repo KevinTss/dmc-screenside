@@ -1,4 +1,4 @@
-
+import { getProductImage } from 'src/utils';
 
 export const useProductsFeatured = () => {
   // const { data, isFetching } = useQuery(
@@ -28,9 +28,30 @@ export const useProductsFeatured = () => {
 
   return {
     data: [
-      getFormattedSingleData({
-        id: 
-      })
-    ]
+      {
+        id: '1',
+        title: 'Geuze Mariage Parfait 37,5cl',
+        handle: 'achel-blonde-33cl',
+        imageUrl: getProductImage('achel-blonde-33cl'),
+        price: 12,
+        variantId: '1',
+      },
+      {
+        id: '2',
+        title: 'Geuze Mariage Parfait 37,5cl',
+        handle: 'achel-blonde-33cl',
+        imageUrl: getProductImage('achel-blonde-33cl'),
+        price: 12,
+        variantId: '1',
+      },
+      {
+        id: '3',
+        title: 'Geuze Mariage Parfait 37,5cl',
+        handle: 'achel-blonde-33cl',
+        imageUrl: getProductImage('achel-blonde-33cl'),
+        price: 12,
+        variantId: '1',
+      },
+    ],
   };
 };
