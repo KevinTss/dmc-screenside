@@ -2,10 +2,10 @@ import { ProductFromShopify } from 'src/types';
 import { PRODUCT_CONTENT } from 'src/constants';
 
 export const getProductImage = (handle: string) => {
-  let imageUrl = '/assets/fallback.png';
+  let imageUrl = 'src/assets/fallback.png';
 
   try {
-    const productImage = require(`assets/products/${handle}.png`);
+    const productImage = require(`src/assets/products/${handle}.png`);
 
     if (!productImage?.default?.src) throw Error('Asset not found');
 

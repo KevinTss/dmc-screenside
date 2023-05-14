@@ -1,7 +1,7 @@
-import { MainContainer, ItemContainer } from './ProductsList.styles';
+import { ProductCard } from 'src/components';
 import { Product } from 'src/types';
 
-import { ProductCard } from 'src/components';
+import { MainContainer, ItemContainer } from './ProductsList.styles';
 
 type ProductListProps = {
   products: Product[]

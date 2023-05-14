@@ -1,4 +1,4 @@
-import { Container, Container } from './PageHeader.styles';
+import { Container, Container1 } from './PageHeader.styles';
 import { Heading } from '../ui';
 
 type PageHeaderProps = {
@@ -7,9 +7,9 @@ type PageHeaderProps = {
 
 export const PageHeader = ({ title }: PageHeaderProps) => (
   <Container>
-    <Container>
+    <Container1>
       <Heading>{title}</Heading>
-    </Container>
+    </Container1>
   </Container>
 );
 

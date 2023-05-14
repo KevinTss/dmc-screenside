@@ -4,4 +4,8 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  compiler: {
+    // Enables the styled-components SWC transform
+    styledComponents: true,
+  },
 };

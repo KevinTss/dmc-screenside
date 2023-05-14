@@ -1,11 +1,11 @@
-// import Link from 'next/link';
+import { ProductsList } from 'src/components/product-list';
+import { useProductsFeatured } from 'src/hooks';
+
 import {
   Container,
   Title,
   Cockpit,
 } from './HomeFeaturedProductsSection.styles';
-import { useProductsFeatured } from 'src/hooks';
-import { ProductsList } from 'src/components/product-list';
 
 export const HomeFeaturedProductsSection = () => {
   const { data } = useProductsFeatured();
@@ -14,10 +14,7 @@ export const HomeFeaturedProductsSection = () => {
     <Container id="hey">
       <Cockpit>
         <Title>Trending this week</Title>
-        {/* <Link href='/shop' variant='minimal'>
-            View all
-          </Link> */}
-        </Cockpit>
+      </Cockpit>
       {!!data && <ProductsList products={data} />}
     </Container>
   );

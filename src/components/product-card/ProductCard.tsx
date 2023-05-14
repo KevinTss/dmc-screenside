@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MouseEvent } from 'react';
+import { Product } from 'src/types';
 
 import { Container, ImageContainer, CardBody, Name, Price } from './ProductCard.styles';
-import { Button } from '../ui';
 import { useCart, useLocale } from '../../hooks';
+import { Button } from '../ui';
 
-import { Product } from 'src/types';
 
 type ProductCardProps = {
   product: Product
