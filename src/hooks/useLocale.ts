@@ -35,11 +35,11 @@ export const useLocale = () => {
       return accumulator[currentValue];
     }, null);
 
-    if (final === undefined) {
+    if (!final) {
       return '**' + translationKey + '**';
     }
 
-    return final;
+    return final as string;
   };
 
   return {

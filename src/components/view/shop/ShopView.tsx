@@ -1,13 +1,11 @@
-import Template from '../../template/default';
-import ProductsContainer from '../../product/container';
-import PageHeader from '../../page-header';
-import { useLocale, useProducts, useSearchProducts } from '../../../hooks';
-import { Content, Aside, LoadMoreButtonContainer } from './style';
-import { Input, Checkbox, Button } from '../../ui';
-// import { useFormik } from 'formik';
-import { Wrapper } from '../../../styles';
+import { ProductsList, DefaultTemplate, PageHeader } from 'src/components';
 
-export default function ShopView() {
+import { Content, Aside, LoadMoreButtonContainer } from './ShopView.styles';
+import { useLocale, useProducts, useSearchProducts } from '../../../hooks';
+// import { useFormik } from 'formik';
+import { Input, Checkbox, Button } from '../../ui';
+
+export const ShopView = () => {
   const { t } = useLocale();
   const { data: products, page, hasNextPage, fetchNextPage } = useProducts();
   const {
@@ -29,18 +27,17 @@ export default function ShopView() {
   const productsToDisplay = isSearchActive ? searchProducts?.data : products;
 
   return (
-    <Template>
+    <DefaultTemplate>
       <PageHeader title={t('page.shop.title')} />
-      <Wrapper>
-        <Content>
-          <Aside>
-            <Input
-              iconLeft='search'
-              placeholder={t('page.shop.searchPlaceholder')}
-              type='text'
-              onChange={search}
-            />
-            {/* {JSON.stringify(selectedTags)}
+      <Content>
+        <Aside>
+          <Input
+            iconLeft='search'
+            placeholder={t('page.shop.searchPlaceholder')}
+            type='text'
+            onChange={search}
+          />
+          {/* {JSON.stringify(selectedTags)}
           <div>
           {tags.map((tag) => (
               <Checkbox
@@ -55,17 +52,16 @@ export default function ShopView() {
               ))}
               <button onClick={onSubmit}>sub</button>
           </div> */}
-          </Aside>
-          <ProductsContainer products={productsToDisplay || []} />
-          {hasNextPage && (
-            <LoadMoreButtonContainer>
-              <Button variant='primary' onClick={fetchNextPage}>
-                {t('page.shop.loadMore')}
-              </Button>
-            </LoadMoreButtonContainer>
-          )}
-        </Content>
-      </Wrapper>
-    </Template>
+        </Aside>
+        <ProductsList products={productsToDisplay || []} />
+        {hasNextPage && (
+          <LoadMoreButtonContainer>
+            <Button onClick={fetchNextPage}>
+              {t('page.shop.loadMore')}
+            </Button>
+          </LoadMoreButtonContainer>
+        )}
+      </Content>
+    </DefaultTemplate>
   );
 }

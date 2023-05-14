@@ -1,3 +1,3 @@
-import ShopView from '../../components/view/shop';
+import { ShopView } from 'src/components';
 
 export default ShopView;
