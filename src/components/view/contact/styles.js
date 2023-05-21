@@ -1,6 +1,7 @@
+import { MediaQuery } from 'src/constants';
 import styled from 'styled-components';
+
 import { Wrapper } from '../../../styles';
-import { MediaQuery } from '../../../utils';
 
 export const ContentContainer = styled(Wrapper)`
   display: flex;

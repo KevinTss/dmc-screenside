@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
+// import Link from 'next/link';
 
 import { AdvertisementContainer, Container, Title, CTA, Overlay } from './HomeHeaderSection.styles';
 
-const { useLocale } = require('../../../../hooks')
 const backgroundUrl2 = require('../../../../assets/background.jpg')
+const { useLocale } = require('../../../../hooks')
 
 export const HomeHeaderSection = () => {
   const { locale, t } = useLocale();

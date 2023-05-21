@@ -1,5 +1,6 @@
 // import { useRouter } from 'next/router';
 import { useRef, useState } from 'react';
+import { useIsElOnTop } from 'src/hooks';
 
 import {
   Header as HeaderEl,
@@ -10,12 +11,11 @@ import {
   Input,
 } from './Header.styles';
 // import { Wrapper } from '../../src/styles';
-import { useIsElOnTop } from 'src/hooks';
+import { useCart, WIDTH, useMediaQuery } from '../../hooks';
+import CardDrawer from '../cart/drawer';
+import MobileNav from '../mobile-nav';
 import Nav from '../nav';
 import { Button, Logo } from '../ui';
-import CardDrawer from '../cart/drawer';
-import { useCart, WIDTH, useMediaQuery } from '../../hooks';
-import MobileNav from '../mobile-nav';
 
 export const Header = () => {
   const headerEl = useRef<HTMLDivElement>(null)

@@ -1,5 +1,5 @@
+import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
-import { SectionCSS } from '../../../../styles';
 
 export const Container = styled.section`
   ${SectionCSS}
@@ -23,4 +23,6 @@ export const Cockpit = styled.div`
 
 export const Title = styled.h2`
   flex: 1;
+  font-size: ${(p) => p.theme.font.size[48]};
+  font-weight: ${(p) => p.theme.font.weight[500]};
 `;

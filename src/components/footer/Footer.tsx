@@ -1,29 +1,29 @@
-import { FooterContainer, BottomContainer } from './style';
-import { useLocale } from '../../hooks';
-import { Text, Link } from '../ui';
-import { Wrapper, Col, Row } from '../../styles';
+import { useLocale } from 'src/hooks';
+import { Col, Row } from 'src/styles';
 
-export default function Footer() {
+import { FooterContainer, FooterWrapper, BottomContainer, SubTitle, Text } from './Footer.styles';
+// import { Link } from '../ui';
+
+export const Footer = () => {
   const { t } = useLocale();
 
   return (
     <FooterContainer>
-      <Wrapper gap={20}>
+      <FooterWrapper>
         <Row>
           <Col>
-            <Text>Table Brussels</Text>
-            <br />
+            Logo here
+          </Col>
+          <Col>
+            <SubTitle>Address</SubTitle>
             <Text>
               Rue Vanderkindere 404
               <br />
-              1180 Uccle
+              1180 Ucclefig
               <br />
               Belgium
             </Text>
-          </Col>
-          <Col>
-            <Text>Horaires</Text>
-            <br />
+            <SubTitle>Horaires</SubTitle>
             <Text>
               Lundi - Vendredi: 9:00 - 19:00
               <br />
@@ -47,7 +47,7 @@ export default function Footer() {
           </Text> */}
           </BottomContainer>
         </Row>
-      </Wrapper>
+      </FooterWrapper>
     </FooterContainer>
   );
 }

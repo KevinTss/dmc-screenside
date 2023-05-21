@@ -2,15 +2,10 @@ import styled, { createGlobalStyle, css } from 'styled-components';
 
 export * from './theme';
 export * from './theme.constants';
-import { MediaQuery } from '../utils';
+import { resetCSS } from './reset.styles';
 
 export const GlobalStyles = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    outline: none;
-  }
+ ${resetCSS}
 
   body {
     font-family: ${({ theme }) => theme.font.family};
@@ -32,6 +27,7 @@ export const SectionCSS = css`
   display: flex;
   flex-direction: column;
   gap: 42px;
+  box-sizing: border-box;
 `;
 
 export const Section = styled.section`
@@ -50,8 +46,4 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-
-  ${MediaQuery.S_AND_DOWN} {
-    flex-direction: column;
-  }
 `;

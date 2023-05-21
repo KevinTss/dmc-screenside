@@ -1,6 +1,5 @@
+import { MediaQuery } from 'src/constants';
 import styled from 'styled-components';
-
-import { MediaQuery } from '../../utils';
 
 export const MainContainer = styled.ul`
   display: grid;

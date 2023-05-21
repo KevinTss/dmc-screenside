@@ -52,6 +52,14 @@ export const useProductsFeatured = () => {
         price: 12,
         variantId: '1',
       },
+      {
+        id: '4',
+        title: 'Geuze Mariage Parfait 37,5cl',
+        handle: 'achel-blonde-33cl',
+        imageUrl: getProductImage('achel-blonde-33cl'),
+        price: 12,
+        variantId: '1',
+      },
     ],
   };
 };

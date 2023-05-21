@@ -1,9 +1,7 @@
 import { ReactNode } from 'react'
+import { Header, Head, Footer } from 'src/components';
 
 import { Main } from './DefaultTemplate.styles';
-// import Footer from '../../footer';
-import { Header } from '../../header';
-import { Head } from '../../head';
 
 type Props = {
   children: ReactNode
@@ -14,6 +12,6 @@ export const DefaultTemplate = ({ children }: Props) => (
     <Head />
     <Header />
     <Main>{children}</Main>
-    {/* <Footer /> */}
+    <Footer />
   </>
 );

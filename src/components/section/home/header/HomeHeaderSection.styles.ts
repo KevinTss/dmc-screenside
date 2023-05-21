@@ -1,7 +1,7 @@
-import styled from 'styled-components';
 import Link from 'next/link';
+import styled from 'styled-components';
 
-export const AdvertisementContainer = styled.div`
+export const AdvertisementContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
