@@ -1,7 +1,9 @@
 {
+  "component.Footer.allRightReserved": "All rights reserved",
   "component.Header.nav.contact": "Contact",
   "component.Header.nav.home": "Home",
   "component.Header.nav.shop": "Shop",
   "component.HomeHeaderSection.cta": "Discover the E-Shop",
-  "component.HomeHeaderSection.title": "L'art de la table"
+  "component.HomeHeaderSection.title": "L'art de la table",
+  "component.ShopView.title": "Nos produits"
 }

@@ -1,17 +1,16 @@
 import Image from 'next/image';
-// import Link from 'next/link';
+import backgroundImage from 'src/assets/background.jpg'
+import { useLocale } from 'src/hooks'
 
 import { AdvertisementContainer, Container, Title, CTA, Overlay } from './HomeHeaderSection.styles';
 
-const backgroundUrl2 = require('../../../../assets/background.jpg')
-const { useLocale } = require('../../../../hooks')
 
 export const HomeHeaderSection = () => {
   const { locale, t } = useLocale();
 
   return (
     <AdvertisementContainer>
-      <Image src={backgroundUrl2.default.src} alt='background-image' fill />
+      <Image src={backgroundImage.src} alt='background-image' fill />
       <Overlay />
       <Container>
         <Title>{t('component.HomeHeaderSection.title')}</Title>

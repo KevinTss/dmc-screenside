@@ -1,13 +1,28 @@
+import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: ${({ theme }) => `${theme.space.S16}px 0`};
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    z-index: 1;
+  }
 `;
 
-export const Container1 = styled.div`
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.color.neutral[500]};
-  padding-bottom: ${({ theme }) => theme.space.S16};
+export const TitleWrapper = styled.div`
+  ${SectionCSS}
+  z-index: 2;
+`;
+
+export const H1 = styled.h1`
+  color: white;
+  font-size: ${(p) => p.theme.font.size[96]};
+  font-weight: ${(p) => p.theme.font.weight[800]};
 `;

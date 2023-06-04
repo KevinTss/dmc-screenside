@@ -1,4 +1,9 @@
-import { Container, Container1 } from './PageHeader.styles';
+import Image from 'next/image';
+import backgroundImage from 'src/assets/background.jpg'
+
+// const backgroundUrl2 = require('../../../../assets/background.jpg')
+
+import { Container, TitleWrapper, H1 } from './PageHeader.styles';
 import { Heading } from '../ui';
 
 type PageHeaderProps = {
@@ -7,9 +12,10 @@ type PageHeaderProps = {
 
 export const PageHeader = ({ title }: PageHeaderProps) => (
   <Container>
-    <Container1>
-      <Heading>{title}</Heading>
-    </Container1>
+    <Image src={backgroundImage.src} alt='background-image' fill />
+    <TitleWrapper>
+      <H1>{title}</H1>
+    </TitleWrapper>
   </Container>
 );
 

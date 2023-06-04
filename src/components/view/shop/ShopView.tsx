@@ -24,19 +24,19 @@ export const ShopView = () => {
   //   },
   // });
 
-  const productsToDisplay = isSearchActive ? searchProducts?.data : products;
+  // const productsToDisplay = isSearchActive ? searchProducts?.data : products;
 
   return (
     <DefaultTemplate>
-      <PageHeader title={t('page.shop.title')} />
+      <PageHeader title={t('component.ShopView.title')} />
       <Content>
         <Aside>
-          <Input
+          {/* <Input
             iconLeft='search'
             placeholder={t('page.shop.searchPlaceholder')}
             type='text'
             onChange={search}
-          />
+          /> */}
           {/* {JSON.stringify(selectedTags)}
           <div>
           {tags.map((tag) => (
@@ -53,14 +53,14 @@ export const ShopView = () => {
               <button onClick={onSubmit}>sub</button>
           </div> */}
         </Aside>
-        <ProductsList products={productsToDisplay || []} />
-        {hasNextPage && (
+        {/* <ProductsList products={productsToDisplay || []} /> */}
+        {/* {hasNextPage && (
           <LoadMoreButtonContainer>
             <Button onClick={fetchNextPage}>
               {t('page.shop.loadMore')}
             </Button>
           </LoadMoreButtonContainer>
-        )}
+        )} */}
       </Content>
     </DefaultTemplate>
   );
