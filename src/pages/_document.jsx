@@ -2,7 +2,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-class MyDocument extends Document {
+import { i18n } from '../../next.config';
+
+class AppDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -31,8 +33,10 @@ class MyDocument extends Document {
   }
 
   render() {
+    const currentLocale = i18n.defaultLocale;
+
     return (
-      <Html>
+      <Html lang={currentLocale}>
         <Head>
           <link rel='icon' type='image/x-icon' href='favicon.ico' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -56,4 +60,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default AppDocument;

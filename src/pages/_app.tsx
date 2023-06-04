@@ -7,9 +7,9 @@ import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { CartProvider, AppStateProvider } from 'src/contexts';
+import { LocalesProvider } from 'src/locales'
 import { GlobalStyles, ThemeLight } from 'src/styles';
 import { ThemeProvider } from 'styled-components';
-
 
 // import { AgeCheckingModal } from '../components/age-checking-modal';
 
@@ -37,7 +37,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <GlobalStyles />
         <QueryClientProvider client={queryClient}>
           <CartProvider>
-            <Component {...pageProps} />
+            <LocalesProvider>
+              <Component {...pageProps} />
+            </LocalesProvider>
           </CartProvider>
         </QueryClientProvider>
         {/* <AgeCheckingModal /> */}
@@ -46,4 +48,4 @@ const App = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default App;
+export default App

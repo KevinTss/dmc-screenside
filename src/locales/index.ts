@@ -5,3 +5,5 @@ export const locales = {
   en,
   // fr,
 };
+
+export * from './LocalesProvider';

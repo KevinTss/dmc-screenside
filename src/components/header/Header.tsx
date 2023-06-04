@@ -1,15 +1,15 @@
-import { useRef, useState } from 'react';
+import { useRouter } from 'next/router'
+import { useState } from 'react';
 import { Logo } from 'src/components';
-import { useElementAtTop, useIsWindowScrolled } from 'src/hooks';
+import { useIsWindowScrolled, useLocale } from 'src/hooks';
 
-console.log('Logo', Logo)
 import {
   Header as HeaderEl,
   Left,
   Middle,
   Right,
-  SearchContainer,
-  Input,
+  // SearchContainer,
+  // Input,
   // Logo,
   NavLink
 } from './Header.styles';
@@ -23,6 +23,8 @@ export const Header = () => {
   const isMobile = useMediaQuery(WIDTH.MOBILE);
   const [isOpen, setIsOpen] = useState(false);
   const isWindowScrolled = useIsWindowScrolled()
+  const { t } = useLocale();
+  const router = useRouter()
 
   return (
     <HeaderEl $isWhite={isWindowScrolled}>
@@ -30,9 +32,9 @@ export const Header = () => {
         <Logo />
       </Left>
       <Middle>
-        <NavLink href='/' locale={'en'} passHref>Home</NavLink>
-        <NavLink href='/shop' locale={'en'} passHref>Shop</NavLink>
-        <NavLink href='/contact' locale={'en'} passHref>Contact</NavLink>
+        <NavLink href='/' locale={router.locale} passHref>{t("component.Header.nav.home")}</NavLink>
+        <NavLink href='/shop' locale={router.locale} passHref>{t("component.Header.nav.shop")}</NavLink>
+        <NavLink href='/contact' locale={router.locale} passHref>{t("component.Header.nav.contact")}</NavLink>
       </Middle>
       {/* {!isMobile && <Nav />} */}
       <Right>
@@ -43,15 +45,6 @@ export const Header = () => {
       {/* <CardDrawer /> */}
       {/* {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />} */}
     </HeaderEl>
-  );
-};
-
-const Search = () => {
-  return (
-    <SearchContainer>
-      <SearchIcon />
-      <Input />
-    </SearchContainer>
   );
 };
 
