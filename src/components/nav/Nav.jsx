@@ -1,6 +1,6 @@
 import { Nav as NavEl, Items, Item } from './style';
-import { NavLink } from '../ui';
 import { useLocale } from '../../hooks';
+import { NavLink } from '../ui';
 
 export default function Nav({ isVertical }) {
   const { locale, t } = useLocale();

@@ -1,7 +1,8 @@
-// import { useRouter } from 'next/router';
 import { useRef, useState } from 'react';
-import { useIsElOnTop } from 'src/hooks';
+import { Logo } from 'src/components';
+import { useElementAtTop, useIsWindowScrolled } from 'src/hooks';
 
+console.log('Logo', Logo)
 import {
   Header as HeaderEl,
   Left,
@@ -9,27 +10,30 @@ import {
   Right,
   SearchContainer,
   Input,
+  // Logo,
+  NavLink
 } from './Header.styles';
-// import { Wrapper } from '../../src/styles';
 import { useCart, WIDTH, useMediaQuery } from '../../hooks';
 import CardDrawer from '../cart/drawer';
 import MobileNav from '../mobile-nav';
 import Nav from '../nav';
-import { Button, Logo } from '../ui';
 
 export const Header = () => {
-  const headerEl = useRef<HTMLDivElement>(null)
   // const { open } = useCart();
   const isMobile = useMediaQuery(WIDTH.MOBILE);
   const [isOpen, setIsOpen] = useState(false);
-  const isHeaderOnTop = useIsElOnTop(headerEl.current || undefined)
+  const isWindowScrolled = useIsWindowScrolled()
 
   return (
-    <HeaderEl ref={headerEl} $isWhite={!isHeaderOnTop}>
+    <HeaderEl $isWhite={isWindowScrolled}>
       <Left>
         <Logo />
       </Left>
-      <Middle></Middle>
+      <Middle>
+        <NavLink href='/' locale={'en'} passHref>Home</NavLink>
+        <NavLink href='/shop' locale={'en'} passHref>Shop</NavLink>
+        <NavLink href='/contact' locale={'en'} passHref>Contact</NavLink>
+      </Middle>
       {/* {!isMobile && <Nav />} */}
       <Right>
         {/* <Search /> */}
@@ -68,8 +72,13 @@ const SearchIcon = () => (
   </svg>
 );
 
-const ShoppingBagIcon = () => (
+type SvgProps = {
+  className?: string
+}
+
+const ShoppingBagIcon = ({ className }: SvgProps) => (
   <svg
+    className={className}
     width='24'
     height='24'
     viewBox='0 0 24 24'
@@ -85,8 +94,9 @@ const ShoppingBagIcon = () => (
   </svg>
 );
 
-const HeartIcon = () => (
+const HeartIcon = ({ className }: SvgProps) => (
   <svg
+    className={className}
     width='20'
     height='17'
     viewBox='0 0 20 17'
