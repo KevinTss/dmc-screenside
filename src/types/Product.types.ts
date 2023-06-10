@@ -7,13 +7,13 @@ export type ProductFromShopify = {
   id: string;
   handle: string;
   title: string;
-  images: {
-    edges: {
-      node: {
-        originalSrc: string;
-      };
-    }[];
-  };
+  // images: {
+  //   edges: {
+  //     node: {
+  //       originalSrc: string;
+  //     };
+  //   }[];
+  // };
   variants: {
     edges: {
       node: {

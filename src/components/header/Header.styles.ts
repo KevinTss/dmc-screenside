@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import { Logo } from 'src/components';
 import styled, { css } from 'styled-components';
-
-type HeaderProps = {
-  $isWhite: boolean;
-};
 
 // TODO: fix the error with undefined element in import, probably related to SSR config
 // export const Logo = styled(LogoUI)``;
@@ -35,7 +30,11 @@ export const Right = styled.div`
   padding-right: 72px;
 `;
 
-export const Header = styled.header<HeaderProps>`
+type ContainerProps = {
+  $isWhite: boolean;
+};
+
+export const Container = styled.header<ContainerProps>`
   width: 100%;
   height: 85px;
   display: grid;
@@ -45,7 +44,8 @@ export const Header = styled.header<HeaderProps>`
   left: 0;
   z-index: 10;
   border-bottom: 1px solid rgba(242, 242, 244, 0.3);
-  background-color: ${(p) => (p.$isWhite ? 'white' : 'none')};
+  background-color: ${(p) =>
+    p.$isWhite ? p.theme.color.background.main : 'none'};
   transition: background-color 0.2s ease;
 
   ${(p) =>

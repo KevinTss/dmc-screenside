@@ -60,6 +60,10 @@ export const ThemeLight = {
     transparent: 'rgba(255, 255, 255, 0)',
     neutral: color.n,
     primary: color.p,
+    background: {
+      main: '#FAF7F0',
+      mainSoft: '#F1EEE5',
+    },
   },
   font: {
     color: color.t,

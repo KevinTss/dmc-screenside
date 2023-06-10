@@ -1,20 +1,21 @@
-import { ProductsList, DefaultTemplate, PageHeader } from 'src/components';
+import { PageHeader } from 'src/components/page-header';
+import { ProductsList } from 'src/components/product-list';
+import { DefaultTemplate } from 'src/components/template';
+import { Button } from 'src/components/ui';
+import { useLocale, useProducts } from 'src/hooks';
 
 import { Content, Aside, LoadMoreButtonContainer } from './ShopView.styles';
-import { useLocale, useProducts, useSearchProducts } from '../../../hooks';
-// import { useFormik } from 'formik';
-import { Input, Checkbox, Button } from '../../ui';
 
 export const ShopView = () => {
   const { t } = useLocale();
   const { data: products, page, hasNextPage, fetchNextPage } = useProducts();
-  const {
-    search,
-    data: searchProducts,
-    isSearchActive,
-    // tags,
-    // selectedTags,
-  } = useSearchProducts();
+  // const {
+  //   search,
+  //   data: searchProducts,
+  //   isSearchActive,
+  //   // tags,
+  //   // selectedTags,
+  // } = useSearchProducts();
   // const { values, onChange, onSubmit } = useFormik({
   //   initialValues: {
   //     tags: [],

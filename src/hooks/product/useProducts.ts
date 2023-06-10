@@ -1,13 +1,8 @@
 import type { AxiosResponse } from 'axios';
 import { useState } from 'react';
 import { useQuery } from 'react-query';
-import { Product } from 'src/types';
-import {
-  shopifyQuery,
-  getProductImage,
-  getProductPrice,
-  getVariantId,
-} from 'src/utils';
+import { Product, ProductFromShopify } from 'src/types';
+import { shopifyQuery, getProductFromShopifyProduct } from 'src/utils';
 
 import { GET_PRODUCTS } from './queries';
 
@@ -44,37 +39,19 @@ export const useProducts = () => {
   return { data: products, page, hasNextPage, fetchNextPage };
 };
 
-type FetchProductResponse = {
+type FetchProductsResponse = {
   products: {
     pageInfo: {
       hasNextPage: boolean;
     };
     edges: {
       cursor: string;
-      node: {
-        handle: string;
-        title: string;
-        variants: {
-          edges: {
-            node: {
-              id: string;
-              compareAtPriceV2: {
-                amount: string;
-                currencyCode: string;
-              };
-              priceV2: {
-                amount: string;
-                currencyCode: string;
-              };
-            };
-          }[];
-        };
-      };
+      node: ProductFromShopify;
     }[];
   };
 };
 
-type ShopifyResponse = AxiosResponse<FetchProductResponse>;
+type ShopifyResponse = AxiosResponse<FetchProductsResponse>;
 
 async function fetchProducts(pageSize: number, cursor?: string) {
   try {
@@ -98,15 +75,11 @@ type GetFormattedDataReturn = {
 
 function getFormattedData({
   products,
-}: FetchProductResponse): GetFormattedDataReturn {
+}: FetchProductsResponse): GetFormattedDataReturn {
   return {
     data: products.edges.map((product) => ({
       cursor: product.cursor,
-      title: product.node.title,
-      handle: product.node.handle,
-      imageUrl: getProductImage(product.node.handle),
-      price: getProductPrice(product.node),
-      variantId: getVariantId(product.node),
+      ...getProductFromShopifyProduct({ product: product.node }),
     })),
     meta: {
       hasNextPage: products.pageInfo.hasNextPage,

@@ -1,10 +1,10 @@
-import { ProductCard } from 'src/components';
+import { ProductCard } from 'src/components/product-card';
 import { Product } from 'src/types';
 
 import { MainContainer, ItemContainer } from './ProductsList.styles';
 
 type ProductListProps = {
-  products: Product[]
+  products: (Product & { cursor?: string })[]
 }
 
 export const ProductsList = ({ products }: ProductListProps) => (

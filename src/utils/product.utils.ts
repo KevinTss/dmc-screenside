@@ -1,5 +1,5 @@
 import { PRODUCT_CONTENT } from 'src/constants';
-import { ProductFromShopify } from 'src/types';
+import { ProductFromShopify, Product } from 'src/types';
 
 export const getProductImage = (handle: string) => {
   // let imageUrl = 'src/assets/fallback.png';
@@ -47,16 +47,16 @@ const getProductDescription = (handle: string) => {
   return product.description_en;
 };
 
-/**
- * Retrieve product complete data based on fetched result on spotify
- */
-export const getProductData = (product: ProductFromShopify) => {
-  return {
-    id: product.id,
-    title: product.title,
-    handle: product.handle,
-    imageUrl: getProductImage(product.handle),
-    price: getProductPrice(product),
-    variantId: getVariantId(product),
-  };
+type GetProductFromShopifyProductParams = {
+  product: ProductFromShopify;
 };
+
+export const getProductFromShopifyProduct = ({
+  product,
+}: GetProductFromShopifyProductParams): Product => ({
+  title: product.title,
+  handle: product.handle,
+  imageUrl: getProductImage(product.handle),
+  price: getProductPrice(product),
+  variantId: getVariantId(product),
+});

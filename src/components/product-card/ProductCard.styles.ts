@@ -11,7 +11,7 @@ export const Image = styled(NextImage)`
 export const ImageContainer = styled.div`
   position: relative;
   height: 320px;
-  background-color: ${(p) => p.theme.color.neutral[100]};
+  background-color: ${(p) => p.theme.color.background.mainSoft};
   border-radius: 8px;
 `;
 

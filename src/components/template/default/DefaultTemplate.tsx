@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
-import { Header, Head, Footer } from 'src/components';
+import { Footer } from 'src/components/footer'
+import { Head } from 'src/components/head'
+import { Header } from 'src/components/header'
 
 import { Main } from './DefaultTemplate.styles';
 

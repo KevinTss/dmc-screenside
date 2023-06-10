@@ -8,14 +8,14 @@ import {
 } from './HomeFeaturedProductsSection.styles';
 
 export const HomeFeaturedProductsSection = () => {
-  const { data } = useProductsFeatured();
+  const { products } = useProductsFeatured();
 
   return (
     <Container id="hey">
       <Cockpit>
         <Title>Trending this week</Title>
       </Cockpit>
-      {!!data && <ProductsList products={data} />}
+      {!!products.length && <ProductsList products={products} />}
     </Container>
   );
 };

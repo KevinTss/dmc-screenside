@@ -5,7 +5,7 @@ type ShopifyQueryResponse<T> = AxiosPromise<T>;
 
 type ShopifyQueryParams = {
   query: string;
-  variables: any;
+  variables?: any;
 };
 
 export const shopifyQuery = <T>(

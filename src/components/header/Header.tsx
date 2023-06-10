@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react';
-import { Logo } from 'src/components';
+// import { useState } from 'react';
+import { Logo } from 'src/components/ui/logo';
 import { useIsWindowScrolled, useLocale } from 'src/hooks';
 
 import {
-  Header as HeaderEl,
+  Container,
   Left,
   Middle,
   Right,
@@ -13,21 +13,21 @@ import {
   // Logo,
   NavLink
 } from './Header.styles';
-import { useCart, WIDTH, useMediaQuery } from '../../hooks';
-import CardDrawer from '../cart/drawer';
-import MobileNav from '../mobile-nav';
-import Nav from '../nav';
+// import { useCart, WIDTH, useMediaQuery } from '../../hooks';
+// import CardDrawer from '../cart/drawer';
+// import MobileNav from '../mobile-nav';
+// import Nav from '../nav';
 
 export const Header = () => {
   // const { open } = useCart();
-  const isMobile = useMediaQuery(WIDTH.MOBILE);
-  const [isOpen, setIsOpen] = useState(false);
+  // const isMobile = useMediaQuery(WIDTH.MOBILE);
+  // const [isOpen, setIsOpen] = useState(false);
   const isWindowScrolled = useIsWindowScrolled()
   const { t } = useLocale();
   const router = useRouter()
 
   return (
-    <HeaderEl $isWhite={isWindowScrolled}>
+    <Container $isWhite={isWindowScrolled}>
       <Left>
         <Logo />
       </Left>
@@ -44,26 +44,26 @@ export const Header = () => {
       </Right>
       {/* <CardDrawer /> */}
       {/* {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />} */}
-    </HeaderEl>
+    </Container>
   );
 };
 
-const SearchIcon = () => (
-  <svg
-    width='20'
-    height='20'
-    viewBox='0 0 20 20'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <path
-      d='M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z'
-      stroke='#F8F8F8'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    />
-  </svg>
-);
+// const SearchIcon = () => (
+//   <svg
+//     width='20'
+//     height='20'
+//     viewBox='0 0 20 20'
+//     fill='none'
+//     xmlns='http://www.w3.org/2000/svg'
+//   >
+//     <path
+//       d='M17.5 17.5L12.5 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z'
+//       stroke='#F8F8F8'
+//       strokeLinecap='round'
+//       strokeLinejoin='round'
+//     />
+//   </svg>
+// );
 
 type SvgProps = {
   className?: string
