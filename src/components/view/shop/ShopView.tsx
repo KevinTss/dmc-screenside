@@ -53,14 +53,14 @@ export const ShopView = () => {
               <button onClick={onSubmit}>sub</button>
           </div> */}
         </Aside>
-        {/* <ProductsList products={productsToDisplay || []} /> */}
-        {/* {hasNextPage && (
+        <ProductsList products={products} />
+        {hasNextPage && (
           <LoadMoreButtonContainer>
             <Button onClick={fetchNextPage}>
-              {t('page.shop.loadMore')}
+              {t('component.ShopView.loadMore')}
             </Button>
           </LoadMoreButtonContainer>
-        )} */}
+        )}
       </Content>
     </DefaultTemplate>
   );

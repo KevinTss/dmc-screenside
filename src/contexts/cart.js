@@ -1,7 +1,7 @@
 import { useEffect, useState, createContext } from 'react';
 import { useMutation } from 'react-query';
 
-import { shopifyQuery } from '../services/shopify-queries';
+import { shopifyQuery } from '../utils/shopify.utils';
 import {
   setCartToLocalStorage,
   getCartFromLocalStorage,

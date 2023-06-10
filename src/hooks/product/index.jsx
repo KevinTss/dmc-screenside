@@ -1,8 +1,8 @@
-import { useQuery } from 'react-query';
-import { useState, useEffect, useMemo } from 'react';
 import debounce from 'lodash.debounce';
+import { useState, useEffect, useMemo } from 'react';
+import { useQuery } from 'react-query';
+import { shopifyQuery } from 'src/utils/shopify.utils';
 
-import { shopifyQuery } from '../../services/shopify-queries';
 import {
   GET_PRODUCTS,
   GET_PRODUCT_BY_HANDLE,
@@ -20,49 +20,7 @@ import {
 } from './utils.js';
 import { Tags } from '../../utils/constants';
 
-const PAGE_SIZE = 16;
-
-async function fetchProducts(pageSize, cursor) {
-  try {
-    const response = await shopifyQuery({
-      query: GET_PRODUCTS,
-      variables: { pageSize, cursor },
-    });
-
-    const result = response?.data?.data;
-    const formattedData = getFormattedData(result);
-
-    return formattedData;
-  } catch (error) {
-    throw Error(error.message);
-  }
-}
-
-export const useProducts = () => {
-  const [products, setProducts] = useState([]);
-  const [page, setPage] = useState(0);
-  const [hasNextPage, setHasNextPage] = useState(false);
-  const [nextPageCursor, setNextPageCursor] = useState(null);
-  const resp = useQuery(
-    ['getProducts', nextPageCursor],
-    () => fetchProducts(PAGE_SIZE, nextPageCursor),
-    {
-      keepPreviousData: true,
-      onSuccess(response) {
-        setPage(page + 1);
-        setHasNextPage(response?.meta?.hasNextPage || false);
-        setProducts([...products, ...response.data]);
-      },
-    }
-  );
-
-  const fetchNextPage = () => {
-    const lastItemCursor = products[products.length - 1].cursor;
-    setNextPageCursor(lastItemCursor);
-  };
-
-  return { data: products, page, hasNextPage, fetchNextPage };
-};
+export * from './useProducts';
 
 export const useProduct = (handle) => {
   const { data, isLoading } = useQuery(

@@ -1,3 +1,8 @@
+type ProductPrice = {
+  amount: string;
+  currencyCode: string;
+};
+
 export type ProductFromShopify = {
   id: string;
   handle: string;
@@ -13,14 +18,8 @@ export type ProductFromShopify = {
     edges: {
       node: {
         id: string;
-        priceV2: {
-          amount: string;
-          currency: string;
-        };
-        compareAtPriceV2: {
-          amount: string;
-          currencyCode: string;
-        };
+        priceV2: ProductPrice;
+        compareAtPriceV2: ProductPrice;
       };
     }[];
   };
@@ -34,10 +33,9 @@ export type ProductContent = {
 };
 
 export type Product = {
-  id: string;
   handle: string;
   title: string;
   imageUrl: string;
-  price: number;
+  price: ProductPrice;
   variantId: string;
 };

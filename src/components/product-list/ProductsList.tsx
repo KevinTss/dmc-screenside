@@ -9,9 +9,9 @@ type ProductListProps = {
 
 export const ProductsList = ({ products }: ProductListProps) => (
   <MainContainer>
-    {products.map((product) => (
-      <ItemContainer key={product.id}>
-        <ProductCard product={product} />
+    {products.map((product, index) => (
+      <ItemContainer key={product.handle}>
+        <ProductCard product={product} isImagePriority={index < 4} />
       </ItemContainer>
     ))}
   </MainContainer>

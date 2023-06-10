@@ -1,8 +1,9 @@
-import { ProductFromShopify } from 'src/types';
 import { PRODUCT_CONTENT } from 'src/constants';
+import { ProductFromShopify } from 'src/types';
 
 export const getProductImage = (handle: string) => {
-  let imageUrl = 'src/assets/fallback.png';
+  // let imageUrl = 'src/assets/fallback.png';
+  let imageUrl = require('src/assets/fallback.png');
 
   try {
     const productImage = require(`src/assets/products/${handle}.png`);
@@ -20,20 +21,22 @@ export const getProductImage = (handle: string) => {
   return imageUrl;
 };
 
-const getProductPrice = (product: ProductFromShopify) => {
+export const getProductPrice = (
+  product: Pick<ProductFromShopify, 'variants'>
+) => {
   const amount = product?.variants?.edges?.[0].node.priceV2.amount;
-  const currency = product?.variants?.edges?.[0].node.priceV2.currency;
+  const currencyCode = product?.variants?.edges?.[0].node.priceV2.currencyCode;
 
   return {
-    amount: Number.isNaN(Number(amount)) ? 0 : Number(amount),
-    currency: currency || 'EUR',
+    amount,
+    currencyCode: currencyCode || 'EUR',
   };
 };
 
-const getVariantId = (product: ProductFromShopify) => {
-  const variantId = product?.variants?.edges?.[0].node.id;
+export const getVariantId = (product: Pick<ProductFromShopify, 'variants'>) => {
+  const variantId = product.variants.edges[0].node.id;
 
-  return variantId || null;
+  return variantId;
 };
 
 const getProductDescription = (handle: string) => {

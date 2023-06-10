@@ -5,5 +5,6 @@
   "component.Header.nav.shop": "Shop",
   "component.HomeHeaderSection.cta": "Discover the E-Shop",
   "component.HomeHeaderSection.title": "L'art de la table",
+  "component.ShopView.loadMore": "Load more",
   "component.ShopView.title": "Nos produits"
 }
