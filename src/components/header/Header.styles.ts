@@ -31,7 +31,7 @@ export const Right = styled.div`
 `;
 
 type ContainerProps = {
-  $isWhite: boolean;
+  $isBlack: boolean;
 };
 
 export const Container = styled.header<ContainerProps>`
@@ -45,11 +45,11 @@ export const Container = styled.header<ContainerProps>`
   z-index: 10;
   border-bottom: 1px solid rgba(242, 242, 244, 0.3);
   background-color: ${(p) =>
-    p.$isWhite ? p.theme.color.background.main : 'none'};
+    p.$isBlack ? p.theme.color.background.main : 'none'};
   transition: background-color 0.2s ease;
 
   ${(p) =>
-    p.$isWhite &&
+    p.$isBlack &&
     css`
       ${Left} svg {
         fill: black !important;

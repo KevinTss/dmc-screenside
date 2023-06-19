@@ -6,13 +6,14 @@ import { Header } from 'src/components/header'
 import { Main } from './DefaultTemplate.styles';
 
 type Props = {
-  children: ReactNode
+  children: ReactNode;
+  forceHeaderBlack?: boolean
 }
 
-export const DefaultTemplate = ({ children }: Props) => (
+export const DefaultTemplate = ({ children, forceHeaderBlack = false }: Props) => (
   <>
     <Head />
-    <Header />
+    <Header isBlack={forceHeaderBlack} />
     <Main>{children}</Main>
     <Footer />
   </>

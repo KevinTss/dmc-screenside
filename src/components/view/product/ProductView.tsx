@@ -11,7 +11,7 @@ export const ProductView = () => {
   const { data: product, isLoading } = useProduct(handle as string);
 
   return (
-    <DefaultTemplate>
+    <DefaultTemplate forceHeaderBlack>
       {isLoading && <p>Loading...</p>}
       {!isLoading && !product && <p>No product found</p>}
       {!isLoading && product && <ProductSheet product={product} />}

@@ -18,16 +18,19 @@ import {
 // import MobileNav from '../mobile-nav';
 // import Nav from '../nav';
 
-export const Header = () => {
+type HeaderProps = {
+  isBlack: boolean
+}
+
+export const Header = ({ isBlack }: HeaderProps) => {
   // const { open } = useCart();
   // const isMobile = useMediaQuery(WIDTH.MOBILE);
   // const [isOpen, setIsOpen] = useState(false);
   const isWindowScrolled = useIsWindowScrolled()
   const { t } = useLocale();
   const router = useRouter()
-
   return (
-    <Container $isWhite={isWindowScrolled}>
+    <Container $isBlack={isBlack ? isBlack : isWindowScrolled}>
       <Left>
         <Logo />
       </Left>
