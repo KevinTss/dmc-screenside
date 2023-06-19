@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { MediaQuery } from 'src/constants';
 import styled from 'styled-components';
 
 export const AdvertisementContainer = styled.section`
@@ -9,6 +10,10 @@ export const AdvertisementContainer = styled.section`
   height: 75vh;
   position: relative;
   overflow: hidden;
+
+  ${MediaQuery.M_AND_DOWN} {
+    height: 50vh;
+  }
 
   img {
     object-fit: cover;
@@ -33,6 +38,11 @@ export const Title = styled.h1`
   text-align: center;
   letter-spacing: 0.05em;
   color: white;
+
+  ${MediaQuery.M_AND_DOWN} {
+    font-size: 48px;
+    line-height: 120%;
+  }
 `;
 
 export const Image = styled.img`

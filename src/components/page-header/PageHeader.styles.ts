@@ -1,3 +1,4 @@
+import { MediaQuery } from 'src/constants';
 import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
 
@@ -9,6 +10,13 @@ export const Container = styled.section`
   height: 40vh;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+
+  ${MediaQuery.M_AND_DOWN} {
+    height: 200px;
+    align-items: flex-end;
+    padding-bottom: 28px;
+  }
 
   img {
     object-fit: cover;
@@ -25,4 +33,8 @@ export const H1 = styled.h1`
   color: white;
   font-size: ${(p) => p.theme.font.size[96]};
   font-weight: ${(p) => p.theme.font.weight[800]};
+
+  ${MediaQuery.M_AND_DOWN} {
+    font-size: ${(p) => p.theme.font.size[32]};
+  }
 `;

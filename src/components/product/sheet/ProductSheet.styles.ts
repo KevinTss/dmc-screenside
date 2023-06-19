@@ -1,3 +1,4 @@
+import { MediaQuery } from 'src/constants';
 import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
 
@@ -13,6 +14,10 @@ export const Container = styled.article`
 export const Body = styled.div`
   display: flex;
   gap: 75px;
+
+  ${MediaQuery.M_AND_DOWN} {
+    flex-direction: column;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -21,6 +26,10 @@ export const ImageContainer = styled.div`
   width: 100%;
   height: auto;
   min-height: 600px;
+
+  ${MediaQuery.M_AND_DOWN} {
+    min-height: 200px;
+  }
 
   img {
     object-fit: contain;
