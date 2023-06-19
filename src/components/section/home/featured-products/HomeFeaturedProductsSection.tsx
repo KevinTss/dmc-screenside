@@ -11,7 +11,7 @@ export const HomeFeaturedProductsSection = () => {
   const { products } = useProductsFeatured();
 
   return (
-    <Container id="hey">
+    <Container>
       <Cockpit>
         <Title>Trending this week</Title>
       </Cockpit>

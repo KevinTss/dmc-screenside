@@ -1,6 +1,8 @@
+import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
 
 export const Content = styled.div`
+  ${SectionCSS}
   display: flex;
   flex-direction: column;
 `;
