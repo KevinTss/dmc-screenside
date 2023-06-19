@@ -1,3 +1,3 @@
-import ProductView from '../../../components/view/product';
+import { ProductView } from 'src/components/view/product';
 
 export default ProductView;

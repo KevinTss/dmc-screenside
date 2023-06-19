@@ -42,9 +42,9 @@ export const getVariantId = (product: Pick<ProductFromShopify, 'variants'>) => {
 const getProductDescription = (handle: string) => {
   const product = PRODUCT_CONTENT.find((product) => product.handle === handle);
 
-  if (!product) return null;
+  if (!product) return '';
 
-  return product.description_en;
+  return product.description_en || '';
 };
 
 type GetProductFromShopifyProductParams = {
@@ -59,4 +59,5 @@ export const getProductFromShopifyProduct = ({
   imageUrl: getProductImage(product.handle),
   price: getProductPrice(product),
   variantId: getVariantId(product),
+  description: getProductDescription(product.handle),
 });

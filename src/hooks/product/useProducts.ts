@@ -15,7 +15,7 @@ export const useProducts = () => {
   const [page, setPage] = useState(0);
   const [hasNextPage, setHasNextPage] = useState(false);
   const [nextPageCursor, setNextPageCursor] = useState<string | null>(null);
-  const resp = useQuery(
+  useQuery(
     ['getProducts', nextPageCursor],
     () => fetchProducts(PAGE_SIZE, nextPageCursor || undefined),
     {

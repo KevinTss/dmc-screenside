@@ -3,58 +3,13 @@ import { useState, useEffect, useMemo } from 'react';
 import { useQuery } from 'react-query';
 import { shopifyQuery } from 'src/utils/shopify.utils';
 
-import {
-  GET_PRODUCTS,
-  GET_PRODUCT_BY_HANDLE,
-  GET_PRODUCTS_BY_SEARCH,
-} from './queries';
-import {
-  getFormattedData,
-  getProductDescription,
-  getProductImage,
-  getProductPrice,
-  getQueryString,
-  getVariantId,
-} from './utils.js';
+import { GET_PRODUCTS_BY_SEARCH } from './queries';
+import { getFormattedData, getQueryString } from './utils.js';
 import { Tags } from '../../utils/constants';
 
+export * from './useProduct';
 export * from './useProducts';
 export * from './useProductsFeatured';
-
-export const useProduct = (handle) => {
-  const { data, isLoading } = useQuery(
-    ['getProduct', handle],
-    async () => {
-      try {
-        const response = await shopifyQuery({
-          query: GET_PRODUCT_BY_HANDLE,
-          variables: { handle },
-        });
-
-        const product = response?.data?.data?.productByHandle;
-
-        const formattedData = {
-          id: product?.id,
-          handle: product?.handle,
-          title: product?.title,
-          description: getProductDescription(product?.handle),
-          imageUrl: getProductImage(product?.handle),
-          price: getProductPrice(product),
-          variantId: getVariantId(product),
-        };
-
-        return formattedData;
-      } catch (error) {
-        throw Error(error.message);
-      }
-    },
-    {
-      enabled: !!handle,
-    }
-  );
-
-  return { data, isLoading };
-};
 
 export const useSearchProducts = () => {
   const [tags, setTags] = useState([]);

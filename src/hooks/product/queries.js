@@ -140,16 +140,7 @@ query getProductByHandle($handle: String!) {
     id
     handle
     title
-    productType
-    description
-    images(first: 1) {
-      edges {
-        node {
-          originalSrc
-        }
-      }
-    }
-    variants(first: 5) {
+    variants(first: 1) {
       edges {
         node {
           id

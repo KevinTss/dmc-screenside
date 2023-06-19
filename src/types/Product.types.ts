@@ -38,4 +38,5 @@ export type Product = {
   imageUrl: string;
   price: ProductPrice;
   variantId: string;
+  description: string;
 };
