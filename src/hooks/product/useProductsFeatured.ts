@@ -105,15 +105,13 @@ export const useProductsFeatured = () => {
         const response = await shopifyQuery<ShopifyResponse>({
           query: GET_FEATURED_PRODUCTS,
         });
-        console.log('response', response.data.data);
         const formattedData = [
           getProductFromShopifyProduct({ product: response.data.data.one }),
           getProductFromShopifyProduct({ product: response.data.data.two }),
           getProductFromShopifyProduct({ product: response.data.data.three }),
           getProductFromShopifyProduct({ product: response.data.data.four }),
         ];
-
-        return response;
+        return formattedData;
       } catch (error: any) {
         throw Error(error.message);
       }
@@ -123,43 +121,8 @@ export const useProductsFeatured = () => {
     }
   );
 
-  console.log('++', data);
-
   return {
-    products: [],
-    data: [
-      {
-        id: '1',
-        title: 'Geuze Mariage Parfait 37,5cl',
-        handle: 'achel-blonde-33cl',
-        imageUrl: getProductImage('achel-blonde-33cl'),
-        price: 12,
-        variantId: '1',
-      },
-      {
-        id: '2',
-        title: 'Geuze Mariage Parfait 37,5cl',
-        handle: 'achel-blonde-33cl',
-        imageUrl: getProductImage('achel-blonde-33cl'),
-        price: 12,
-        variantId: '1',
-      },
-      {
-        id: '3',
-        title: 'Geuze Mariage Parfait 37,5cl',
-        handle: 'achel-blonde-33cl',
-        imageUrl: getProductImage('achel-blonde-33cl'),
-        price: 12,
-        variantId: '1',
-      },
-      {
-        id: '4',
-        title: 'Geuze Mariage Parfait 37,5cl',
-        handle: 'achel-blonde-33cl',
-        imageUrl: getProductImage('achel-blonde-33cl'),
-        price: 12,
-        variantId: '1',
-      },
-    ],
+    data: data || [],
+    isLoading: isFetching,
   };
 };
