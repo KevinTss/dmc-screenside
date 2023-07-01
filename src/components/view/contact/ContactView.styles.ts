@@ -1,9 +1,9 @@
 import { MediaQuery } from 'src/constants';
+import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
 
-import { Wrapper } from '../../../styles';
-
-export const ContentContainer = styled(Wrapper)`
+export const ContentContainer = styled.section`
+  ${SectionCSS}
   display: flex;
   gap: 20px;
 
