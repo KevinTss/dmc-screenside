@@ -32,19 +32,19 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, []);
 
   return (
-    <AppStateProvider>
-      <ThemeProvider theme={ThemeLight}>
-        <GlobalStyles />
-        <QueryClientProvider client={queryClient}>
-          <CartProvider>
-            <LocalesProvider>
+    <ThemeProvider theme={ThemeLight}>
+      <GlobalStyles />
+      <QueryClientProvider client={queryClient}>
+        <CartProvider>
+          <LocalesProvider>
+            <AppStateProvider>
               <Component {...pageProps} />
-            </LocalesProvider>
-          </CartProvider>
-        </QueryClientProvider>
-        {/* <AgeCheckingModal /> */}
-      </ThemeProvider>
-    </AppStateProvider>
+            </AppStateProvider>
+          </LocalesProvider>
+        </CartProvider>
+      </QueryClientProvider>
+      {/* <AgeCheckingModal /> */}
+    </ThemeProvider>
   );
 };
 

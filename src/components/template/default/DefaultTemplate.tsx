@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { CartDrawer } from 'src/components/cart-drawer'
 import { Footer } from 'src/components/footer'
 import { Head } from 'src/components/head'
 import { Header } from 'src/components/header'
@@ -16,5 +17,6 @@ export const DefaultTemplate = ({ children, forceHeaderBlack = false }: Props) =
     <Header isBlack={forceHeaderBlack} />
     <Main>{children}</Main>
     <Footer />
+    <CartDrawer />
   </>
 );

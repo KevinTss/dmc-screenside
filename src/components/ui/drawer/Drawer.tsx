@@ -1,15 +1,15 @@
 import { ReactNode } from 'react'
 import { Portal } from 'src/components/ui/portal';
 
-import { Container, Overlay, DrawerEl } from './Modal.styles';
+import { Container, Overlay, DrawerEl } from './Drawer.styles';
 
-type ModalProps = {
+type DrawerProps = {
   children: ReactNode,
   isOpen: boolean,
-  onClose?: VoidFunction
+  onClose: VoidFunction
 }
 
-export const Modal = ({ children, isOpen, onClose }: ModalProps) => (
+export const Drawer = ({ children, isOpen, onClose }: DrawerProps) => (
   <Portal>
     <Container>
       <Overlay onClick={onClose} $isVisible={isOpen} />

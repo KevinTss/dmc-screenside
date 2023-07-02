@@ -82,3 +82,15 @@ export const Input = styled.input`
   background: none;
   color: white;
 `;
+
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+`;
+

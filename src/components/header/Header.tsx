@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 // import { useState } from 'react';
 import { Logo } from 'src/components/ui/logo';
-import { useIsWindowScrolled, useLocale } from 'src/hooks';
+import { useIsWindowScrolled, useLocale, useAppState } from 'src/hooks';
 
 import {
   Container,
@@ -11,7 +11,8 @@ import {
   // SearchContainer,
   // Input,
   // Logo,
-  NavLink
+  NavLink,
+  Button,
 } from './Header.styles';
 // import { useCart, WIDTH, useMediaQuery } from '../../hooks';
 // import CardDrawer from '../cart/drawer';
@@ -29,6 +30,8 @@ export const Header = ({ isBlack }: HeaderProps) => {
   const isWindowScrolled = useIsWindowScrolled()
   const { t } = useLocale();
   const router = useRouter()
+  const { toggleAsideCart } = useAppState()
+
   return (
     <Container $isBlack={isBlack ? isBlack : isWindowScrolled}>
       <Left>
@@ -42,10 +45,11 @@ export const Header = ({ isBlack }: HeaderProps) => {
       {/* {!isMobile && <Nav />} */}
       <Right>
         {/* <Search /> */}
-        <HeartIcon />
-        <ShoppingBagIcon />
+        {/* <HeartIcon /> */}
+        <Button onClick={toggleAsideCart}>
+          <ShoppingBagIcon />
+        </Button>
       </Right>
-      {/* <CardDrawer /> */}
       {/* {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />} */}
     </Container>
   );

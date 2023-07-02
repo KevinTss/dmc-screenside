@@ -10,7 +10,11 @@ export const Container = styled.div`
   z-index: 10;
 `;
 
-export const Overlay = styled.div`
+type OverlayProps = {
+  $isVisible: boolean;
+};
+
+export const Overlay = styled.div<OverlayProps>`
   z-index: 10;
   position: absolute;
   top: 0;
@@ -25,7 +29,9 @@ export const Overlay = styled.div`
   cursor: pointer;
 `;
 
-export const DrawerEl = styled.div`
+type DrawerElProps = OverlayProps;
+
+export const DrawerEl = styled.div<DrawerElProps>`
   position: absolute;
   top: 0;
   left: 0;
@@ -41,7 +47,7 @@ export const DrawerEl = styled.div`
   box-sizing: border-box;
   cursor: default;
   opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
-  padding: ${({ theme }) => theme.spacing.m};
+  padding: ${({ theme }) => theme.space.S12};
   transform: ${({ $isVisible }) =>
     $isVisible ? 'translateX(-100%)' : 'translateX(0)'};
   transition: all 0.3s ease;

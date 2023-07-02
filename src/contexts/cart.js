@@ -1,14 +1,14 @@
 import { useEffect, useState, createContext } from 'react';
 import { useMutation } from 'react-query';
 
-import { shopifyQuery } from '../utils/shopify.utils';
+import { CREATE_CART, LOAD_CART, ADD_TO_CART } from '../hooks/cart/queries';
 import {
   setCartToLocalStorage,
   getCartFromLocalStorage,
   removeCartFromLocalStorage,
 } from '../hooks/cart/utils';
-import { CREATE_CART, LOAD_CART, ADD_TO_CART } from '../hooks/cart/queries';
 import { ErrorCode } from '../utils';
+import { shopifyQuery } from '../utils/shopify.utils';
 
 export const CartContext = createContext({ data: null });
 
@@ -103,14 +103,14 @@ export const CartProvider = ({ children }) => {
     }
   );
 
-  useEffect(() => {
-    if (cart?.id) {
-      loadCart(cart.id);
-    } else if (!cart) {
-      createCart();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   if (cart?.id) {
+  //     loadCart(cart.id);
+  //   } else if (!cart) {
+  //     createCart();
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   const add = (productToAdd) => {
     if (!cart?.id) return;
