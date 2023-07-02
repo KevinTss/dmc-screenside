@@ -1,7 +1,6 @@
 export { default as Checkbox } from './checkbox';
 export { default as Field } from './field';
 export { default as Heading } from './heading';
-export { default as Icon } from './icon';
 export { default as Label } from './label';
 export { default as Link } from './link';
 export { default as NavLink } from './nav-link';
@@ -10,6 +9,7 @@ export { default as Text } from './text';
 export * from './button';
 export * from './drawer';
 export * from './form';
+export * from './icon';
 export * from './input';
 export * from './logo';
 export * from './modal';

@@ -1,10 +1,10 @@
 import { EmptyState } from 'src/components/cart-empty-state';
 import { CartFooter } from 'src/components/cart-footer';
+import { CartHeader } from 'src/components/cart-header';
 import { Drawer } from 'src/components/ui';
 import { useAppState } from 'src/hooks';
 
 // import { getTotalCartProductsLength } from '../../utils';
-// import CartHeader from '../cart/header';
 // import ProductCartPreview from '../product/cart-preview';
 
 export const CartDrawer = () => {
@@ -14,7 +14,7 @@ export const CartDrawer = () => {
 
   return (
     <Drawer isOpen={isAsideCartOpen} onClose={toggleAsideCart}>
-      {/* <CartHeader totalProduct={getTotalCartProductsLength(data)} /> */}
+      <CartHeader />
       {/* {!isCardEmpty &&
         data?.lines?.map((item, index) => (
           <ProductCartPreview key={index} cartItem={item} />
