@@ -50,6 +50,6 @@ export const DrawerEl = styled.div<DrawerElProps>`
   padding: ${({ theme }) => theme.space.S12};
   transform: ${({ $isVisible }) =>
     $isVisible ? 'translateX(-100%)' : 'translateX(0)'};
-  transition: all 0.3s ease;
+  transition: all 0.15s ease-out;
   z-index: 11;
 `;

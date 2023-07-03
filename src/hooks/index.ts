@@ -1,6 +1,6 @@
-export * from './cart';
 export * from './product';
 export * from './useAppState';
+export * from './useCart';
 export * from './useElementAtTop';
 export * from './useIsWindowScrolled';
 export * from './useLocale';

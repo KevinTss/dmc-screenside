@@ -1,4 +1,4 @@
-import { EmptyState } from 'src/components/cart-empty-state';
+import { CartBody } from 'src/components/cart-body';
 import { CartFooter } from 'src/components/cart-footer';
 import { CartHeader } from 'src/components/cart-header';
 import { Drawer } from 'src/components/ui';
@@ -15,12 +15,12 @@ export const CartDrawer = () => {
   return (
     <Drawer isOpen={isAsideCartOpen} onClose={toggleAsideCart}>
       <CartHeader />
+      <CartBody />
       {/* {!isCardEmpty &&
         data?.lines?.map((item, index) => (
           <ProductCartPreview key={index} cartItem={item} />
         ))} */}
       {/* {isCardEmpty && <EmptyState />} */}
-      <EmptyState />
       <CartFooter />
     </Drawer>
   );
