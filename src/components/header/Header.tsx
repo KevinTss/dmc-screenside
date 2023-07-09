@@ -13,6 +13,7 @@ import {
   // Logo,
   NavLink,
   Button,
+  Badge
 } from './Header.styles';
 // import { useCart, WIDTH, useMediaQuery } from '../../hooks';
 // import CardDrawer from '../cart/drawer';
@@ -30,7 +31,6 @@ export const Header = ({ isBlack }: HeaderProps) => {
   const isWindowScrolled = useIsWindowScrolled()
   const { t } = useLocale();
   const router = useRouter()
-  const { toggleAsideCart } = useAppState()
 
   return (
     <Container $isBlack={isBlack ? isBlack : isWindowScrolled}>
@@ -46,14 +46,23 @@ export const Header = ({ isBlack }: HeaderProps) => {
       <Right>
         {/* <Search /> */}
         {/* <HeartIcon /> */}
-        <Button onClick={toggleAsideCart}>
-          <ShoppingBagIcon />
-        </Button>
+        <CartButton />
       </Right>
       {/* {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />} */}
     </Container>
   );
 };
+
+const CartButton = () => {
+  const { state: { productInCart }, toggleAsideCart } = useAppState()
+
+  return (
+    <Button onClick={toggleAsideCart}>
+      <ShoppingBagIcon />
+      {productInCart.length && <Badge>{productInCart.length}</Badge>}
+    </Button>
+  )
+}
 
 // const SearchIcon = () => (
 //   <svg
@@ -94,20 +103,20 @@ const ShoppingBagIcon = ({ className }: SvgProps) => (
   </svg>
 );
 
-const HeartIcon = ({ className }: SvgProps) => (
-  <svg
-    className={className}
-    width='20'
-    height='17'
-    viewBox='0 0 20 17'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <path
-      d='M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z'
-      stroke='white'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    />
-  </svg>
-);
+// const HeartIcon = ({ className }: SvgProps) => (
+//   <svg
+//     className={className}
+//     width='20'
+//     height='17'
+//     viewBox='0 0 20 17'
+//     fill='none'
+//     xmlns='http://www.w3.org/2000/svg'
+//   >
+//     <path
+//       d='M2.31802 2.31802C0.56066 4.07538 0.56066 6.92462 2.31802 8.68198L10.0001 16.364L17.682 8.68198C19.4393 6.92462 19.4393 4.07538 17.682 2.31802C15.9246 0.56066 13.0754 0.56066 11.318 2.31802L10.0001 3.63609L8.68198 2.31802C6.92462 0.56066 4.07538 0.56066 2.31802 2.31802Z'
+//       stroke='white'
+//       strokeLinecap='round'
+//       strokeLinejoin='round'
+//     />
+//   </svg>
+// );

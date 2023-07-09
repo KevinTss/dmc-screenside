@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.a`
   display: flex;
-  margin: ${({ theme }) => `${theme.spacing.m} 0`};
+  margin: ${({ theme }) => `${theme.space.S12} 0`};
 `;
 
 export const ImageContainer = styled.div`
@@ -10,8 +10,8 @@ export const ImageContainer = styled.div`
   width: 60px;
   min-width: 60px;
   height: 60px;
-  border-radius: ${({ theme }) => theme.border.radius};
-  margin-right: ${({ theme }) => theme.spacing.s};
+  border-radius: 4px;
+  margin-right: ${({ theme }) => theme.space.S12};
 
   img {
     object-fit: contain;
@@ -27,18 +27,18 @@ export const CardBody = styled.div`
 export const CardActions = styled.div``;
 
 export const Name = styled.p`
-  font-size: ${({ theme }) => theme.font.size.m};
+  font-size: 10px;
 `;
 
 export const Quantity = styled.p`
-  font-size: ${({ theme }) => theme.font.size.m};
+  font-size: 10px;
 `;
 
 export const Price = styled.p`
-  font-size: ${({ theme }) => theme.font.size.m};
-  margin-bottom: ${({ theme }) => theme.spacing.s};
+  font-size: 10px;
+  margin-bottom: 10px;
 `;
 
 export const TotalPrice = styled.p`
-  font-size: ${({ theme }) => theme.font.size.l};
+  font-size: 10px;
 `;

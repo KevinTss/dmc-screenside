@@ -88,9 +88,25 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  position: relative;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
 `;
 
+export const Badge = styled.span`
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -8px;
+  right: -8px;
+  background-color: ${(p) => p.theme.color.primary[600]};
+  color: white;
+  font-size: 10px;
+  line-height: 10px;
+`;

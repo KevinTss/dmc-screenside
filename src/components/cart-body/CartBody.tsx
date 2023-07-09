@@ -1,5 +1,6 @@
 // import { useState, useEffect } from 'react';
 import { EmptyState } from 'src/components/cart-empty-state';
+import { ProductCartPreview } from 'src/components/product-cart-preview';
 import { useLocale, useCart } from 'src/hooks';
 
 import { Container, List } from './CartBody.styles';
@@ -29,7 +30,13 @@ export const CartBody = () => {
 
   return (
     <Container>
-      {products.length ? <List>list</List> : <EmptyState />}
+      {products.length
+        ? (
+          <List>
+            {products.map(p => <ProductCartPreview key={p.handle} productHandle={p.handle} quantity={p.quantity} />)}
+          </List>
+        )
+        : <EmptyState />}
     </Container>
   );
 }

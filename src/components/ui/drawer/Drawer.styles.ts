@@ -31,15 +31,17 @@ export const Overlay = styled.div<OverlayProps>`
 
 type DrawerElProps = OverlayProps;
 
+const SPACE = 28;
+
 export const DrawerEl = styled.div<DrawerElProps>`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: ${SPACE / 2}px;
+  left: -${SPACE / 2}px;
   right: -100vw;
   bottom: -100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: calc(100% - ${SPACE}px);
   width: 400px;
   max-width: 100vw;
   background-color: white;
@@ -52,4 +54,5 @@ export const DrawerEl = styled.div<DrawerElProps>`
     $isVisible ? 'translateX(-100%)' : 'translateX(0)'};
   transition: all 0.15s ease-out;
   z-index: 11;
+  border-radius: 16px;
 `;
