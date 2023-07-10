@@ -1,3 +1,4 @@
+export * from './cart.utils';
 export * from './constants';
 export * from './dom.utils';
 export * from './helpers';

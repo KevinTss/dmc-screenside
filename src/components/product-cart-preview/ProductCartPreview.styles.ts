@@ -2,16 +2,20 @@ import styled from 'styled-components';
 
 export const Container = styled.a`
   display: flex;
-  margin: ${({ theme }) => `${theme.space.S12} 0`};
+  padding: ${(p) => p.theme.space.S16}px ${(p) => p.theme.space.S16}px;
+  gap: ${(p) => p.theme.space.S16}px;
+
+  & + & {
+    border-top: 1px solid ${(p) => p.theme.color.neutral[400]};
+  }
 `;
 
 export const ImageContainer = styled.div`
   position: relative;
-  width: 60px;
-  min-width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   border-radius: 4px;
-  margin-right: ${({ theme }) => theme.space.S12};
+  flex-shrink: 0;
 
   img {
     object-fit: contain;
@@ -27,7 +31,7 @@ export const CardBody = styled.div`
 export const CardActions = styled.div``;
 
 export const Name = styled.p`
-  font-size: 10px;
+  font-size: ${(p) => p.theme.font.size[16]}px;
 `;
 
 export const Quantity = styled.p`

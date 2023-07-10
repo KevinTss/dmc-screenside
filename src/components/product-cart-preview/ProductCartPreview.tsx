@@ -18,7 +18,7 @@ type ProductCartPreviewProps = {
   quantity: number
 }
 
-export const ProductCartPreview = ({ productHandle }: ProductCartPreviewProps) => {
+export const ProductCartPreview = ({ productHandle, quantity }: ProductCartPreviewProps) => {
   const { t } = useLocale();
   const { data } = useProduct(productHandle);
 
@@ -31,17 +31,11 @@ export const ProductCartPreview = ({ productHandle }: ProductCartPreviewProps) =
   return (
     <Container>
       <ImageContainer>
-        {/* {data?.imageUrl && (
-          <Image src={data?.imageUrl} alt={data?.title} layout='fill' />
-        )} */}
+        <Image src={data.imageUrl} alt={data.title} layout='fill' />
       </ImageContainer>
       <CardBody>
         <Name>{data.title}</Name>
         <Price>€{data.price.amount}</Price>
-        <Quantity>
-          {/* {t('component.ProductCartPreview.quantity')}:{' '} */}
-          {/* {cartItem?.node?.quantity} */}one
-        </Quantity>
         {/* <Button
           onClick={(e) => {
             e.preventDefault();
@@ -54,6 +48,10 @@ export const ProductCartPreview = ({ productHandle }: ProductCartPreviewProps) =
       </CardBody>
       <CardActions>
         {/* <TotalPrice>€{totalItemPrice}</TotalPrice> */}
+        <Quantity>
+          {/* {t('component.ProductCartPreview.quantity')}:{' '} */}
+          {quantity}
+        </Quantity>
       </CardActions>
     </Container>
   );

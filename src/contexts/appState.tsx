@@ -1,12 +1,10 @@
-import { createContext, ReactNode, useCallback, useState } from 'react';
+import { createContext, ReactNode, useCallback, useState, useMemo } from 'react';
+import { LocalCartProduct } from 'src/types'
 
 type AppState = {
   theme: 'light';
   isAsideCartOpen: boolean,
-  productInCart: {
-    handle: string,
-    quantity: number
-  }[]
+  productInCart: LocalCartProduct[]
 };
 
 type AppContextValue = {
@@ -80,11 +78,34 @@ export const AppStateProvider = ({ children }: AppStateProviderProps) => {
     }
   }, [state.productInCart])
 
-  const contextValue = {
+  const removeFromCart = useCallback((productHandle: string, options?: { all?: boolean }) => {
+    const itemIndex = state.productInCart.findIndex(p => p.handle === productHandle)
+    if (itemIndex === -1) return
+    setState(oldState => {
+      return {
+        ...oldState,
+        productInCart: options?.all
+          ? state.productInCart.filter(p => p.handle !== productHandle)
+          : state.productInCart
+            .map(p => p.handle === productHandle
+              ? { handle: p.handle, quantity: p.quantity - 1 }
+              : p)
+            .filter(p => p.quantity > 0)
+      }
+    })
+  }, [state.productInCart])
+
+  const contextValue = useMemo(() => ({
+    addToCart,
+    removeFromCart,
     state,
     toggleAsideCart,
-    addToCart
-  }
+  }), [
+    addToCart,
+    removeFromCart,
+    state,
+    toggleAsideCart
+  ])
 
   return (
     <AppStateContext.Provider value={contextValue}>
