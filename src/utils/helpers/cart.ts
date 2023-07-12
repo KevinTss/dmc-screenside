@@ -1,4 +1,4 @@
-export const getTotalCartProductsLength = (data: any) =>
+const getTotalCartProductsLength = (data: any) =>
   data?.lines?.reduce((acc, curr) => {
     // console.log('curr', curr);
     return acc + (curr?.node?.quantity || 0);

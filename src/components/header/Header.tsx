@@ -56,6 +56,7 @@ export const Header = ({ isBlack }: HeaderProps) => {
 
 const CartButton = () => {
   const { state: { productInCart }, toggleAsideCart } = useAppState()
+
   const totalProductQuantity = getTotalProductsQuantity(productInCart)
 
   return (

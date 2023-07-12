@@ -1,9 +1,11 @@
-import { BsCart2, BsSearch, BsList, BsXLg } from 'react-icons/bs';
+import { BsCart2, BsSearch, BsList, BsXLg, BsPlus, BsDash } from 'react-icons/bs';
 
 const icons = {
   cart: BsCart2,
   cross: BsXLg,
   list: BsList,
+  minus: BsDash,
+  plus: BsPlus,
   search: BsSearch,
 }
 

@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(getCartFromLocalStorage());
   const [errors, setErrors] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const { mutate: addToCart, isLoading: isAddLoading } = useMutation(
+  const { mutate, isLoading: isAddLoading } = useMutation(
     ({ cartId, variantId }) =>
       shopifyQuery({
         query: ADD_TO_CART,
@@ -115,7 +115,7 @@ export const CartProvider = ({ children }) => {
   const add = (productToAdd) => {
     if (!cart?.id) return;
 
-    addToCart({ cartId: cart.id, variantId: productToAdd.variantId });
+    mutate({ cartId: cart.id, variantId: productToAdd.variantId });
   };
 
   const reset = () => {

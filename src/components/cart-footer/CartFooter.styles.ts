@@ -6,6 +6,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 16px;
+  border-top: 1px solid ${(p) => p.theme.color.neutral[400]};
+`;
+
+export const Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Bottom = styled.div`
+  > button {
+    width: 100%;
+  }
 `;
 
 export const ErrorMessage = styled.p`

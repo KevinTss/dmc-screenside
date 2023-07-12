@@ -69,4 +69,5 @@ export const Button = styled.button`
   padding: ${(p) => `${p.theme.space.S16}px ${p.theme.space.S24}px`};
   margin-top: ${(p) => p.theme.space.S12}px;
   cursor: pointer;
+  border-radius: 4px;
 `;

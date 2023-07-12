@@ -1,13 +1,14 @@
 // import { useState, useEffect } from 'react';
-import { useLocale } from 'src/hooks';
+import { Button } from 'src/components/product-card/ProductCard.styles';
+import { useLocale, useCart } from 'src/hooks';
+import { getTotalProductsPrice } from 'src/utils'
 
-import { Container, ErrorMessage } from './CartFooter.styles';
+import { Container, Top, Bottom } from './CartFooter.styles';
 // import { ErrorCode, canGoToCheckout } from '../../utils';
-// import { Button } from '../ui';
 
 export const CartFooter = () => {
   const { t } = useLocale();
-  // const { data, reset } = useCart();
+  const { products } = useCart();
   // const [error, setError] = useState('');
 
   // useEffect(() => {
@@ -27,7 +28,20 @@ export const CartFooter = () => {
   // };
 
   return (
-    <Container>footer
+    <Container>
+      <Top>
+        <span>
+          Total (Tax included)
+        </span>
+        <span>
+          €{getTotalProductsPrice(products)}
+        </span>
+      </Top>
+      <Bottom>
+        <Button>
+          Order
+        </Button>
+      </Bottom>
       {/* {!!data?.lines?.length && (
         <>
           {!!error && (

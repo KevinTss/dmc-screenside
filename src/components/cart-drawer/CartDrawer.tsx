@@ -9,9 +9,13 @@ export const CartDrawer = () => {
 
   return (
     <Drawer isOpen={isAsideCartOpen} onClose={toggleAsideCart}>
-      <CartHeader />
-      <CartBody />
-      <CartFooter />
+      {isAsideCartOpen && (
+        <>
+          <CartHeader />
+          <CartBody />
+          <CartFooter />
+        </>
+      )}
     </Drawer>
   );
 }

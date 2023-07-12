@@ -31,7 +31,7 @@ export const Overlay = styled.div<OverlayProps>`
 
 type DrawerElProps = OverlayProps;
 
-const SPACE = 28;
+const SPACE = 20;
 
 export const DrawerEl = styled.div<DrawerElProps>`
   position: absolute;
@@ -54,5 +54,5 @@ export const DrawerEl = styled.div<DrawerElProps>`
     $isVisible ? 'translateX(-100%)' : 'translateX(0)'};
   transition: all 0.15s ease-out;
   z-index: 11;
-  border-radius: 16px;
+  border-radius: 8px;
 `;

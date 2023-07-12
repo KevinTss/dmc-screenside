@@ -1,17 +1,18 @@
 import Image from 'next/image';
-import { useLocale, useProduct } from 'src/hooks';
+import { useAppState, useProduct } from 'src/hooks';
 
 import {
   Container,
   ImageContainer,
   CardBody,
   Name,
+  Desc,
   Price,
   CardActions,
-  Quantity,
-  TotalPrice,
+  QuantityBox,
+  QuantityButton,
 } from './ProductCartPreview.styles';
-import { Button } from '../ui';
+import { Icon } from '../ui';
 
 type ProductCartPreviewProps = {
   productHandle: string,
@@ -19,12 +20,8 @@ type ProductCartPreviewProps = {
 }
 
 export const ProductCartPreview = ({ productHandle, quantity }: ProductCartPreviewProps) => {
-  const { t } = useLocale();
   const { data } = useProduct(productHandle);
-
-  // const quantity = cartItem?.node?.quantity || 0;
-  // const unitPrice = data?.price?.amount || 0;
-  // const totalItemPrice = quantity * unitPrice;
+  const { addToCart, removeFromCart } = useAppState()
 
   if (!data) return null
 
@@ -35,23 +32,19 @@ export const ProductCartPreview = ({ productHandle, quantity }: ProductCartPrevi
       </ImageContainer>
       <CardBody>
         <Name>{data.title}</Name>
-        <Price>€{data.price.amount}</Price>
-        {/* <Button
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log(cartItem);
-          }}
-        >
-          {t('component.ProductCartPreview.quantity')}
-        </Button> */}
+        <Desc>Beer</Desc>
       </CardBody>
       <CardActions>
-        {/* <TotalPrice>€{totalItemPrice}</TotalPrice> */}
-        <Quantity>
-          {/* {t('component.ProductCartPreview.quantity')}:{' '} */}
-          {quantity}
-        </Quantity>
+        <Price>€{data.price.amount}</Price>
+        <QuantityBox>
+          <QuantityButton onClick={() => removeFromCart(productHandle)}>
+            <Icon name='minus' />
+          </QuantityButton>
+          <span>{quantity}</span>
+          <QuantityButton onClick={() => addToCart(productHandle, Number(data.price.amount))}>
+            <Icon name='plus' />
+          </QuantityButton>
+        </QuantityBox>
       </CardActions>
     </Container>
   );

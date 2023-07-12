@@ -12,7 +12,6 @@ export const useElementAtTop = (el?: HTMLElement, options?: Options) => {
     if (!isSSR() && !!el) {
       const handleScroll = () => {
         const rect = el.getBoundingClientRect();
-        console.log('rect.top', rect.top);
         setIsAtTop(rect.top <= 0);
       };
 
