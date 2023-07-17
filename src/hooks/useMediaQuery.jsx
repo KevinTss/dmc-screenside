@@ -22,17 +22,17 @@ export const useMediaQuery = (minWidth) => {
     const currentWindowWidth = getWindowWidth();
     const isDesiredWidth = currentWindowWidth < minWidth;
     setState({ windowWidth: currentWindowWidth, isDesiredWidth });
-  }, []);
+  }, [minWidth]);
 
   useEffect(() => {
     window.addEventListener('resize', resizeHandler);
 
     return () => window.removeEventListener('resize', resizeHandler);
-  }, [state.windowWidth]);
+  }, [resizeHandler, state.windowWidth]);
 
   useEffect(() => {
     resizeHandler();
-  }, []);
+  }, [resizeHandler]);
 
   return state.isDesiredWidth;
 };

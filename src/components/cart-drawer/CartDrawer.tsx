@@ -12,6 +12,7 @@ export const CartDrawer = () => {
       {isAsideCartOpen && (
         <>
           <CartHeader />
+          {/* <CartProgress /> */}
           <CartBody />
           <CartFooter />
         </>

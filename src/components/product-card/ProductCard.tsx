@@ -39,11 +39,15 @@ export const ProductCard = ({ product, isImagePriority = false }: ProductCardPro
         <Category>Beer</Category>
       </RowBottom>
         <RowBottom>
-          <Button onClick={(e) => {
-            e.preventDefault()
-            e.stopPropagation()
-            addToCart(product.handle, Number(product.price.amount))
-          }}>Add to cart</Button>
+          <Button
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              addToCart(product.handle, Number(product.price.amount))
+            }}
+          >
+            Add to cart
+          </Button>
         </RowBottom>
     </CardBody>
   </Container>

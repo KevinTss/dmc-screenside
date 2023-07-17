@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import type { IsVisibleProps } from './Modal.types';
 
 export const Container = styled.div`

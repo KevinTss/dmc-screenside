@@ -1,9 +1,9 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
+import { useLocale } from 'src/hooks';
 
-import { Button, Form, Field } from '../../../ui';
-import { useLocale } from '../../../../hooks';
 import { StatusText } from './styles';
+import { Button, Form, Field } from '../../../ui';
 
 export default function ContactFormSection() {
   const [status, setStatus] = useState(null);

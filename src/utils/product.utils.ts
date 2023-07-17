@@ -3,22 +3,20 @@ import { ProductFromShopify, Product } from 'src/types';
 
 export const getProductImage = (handle: string) => {
   // let imageUrl = 'src/assets/fallback.png';
-  let imageUrl = require('src/assets/fallback.png');
+  // let imageUrl = require('src/assets/fallback.png');
 
   try {
     const productImage = require(`src/assets/products/${handle}.png`);
 
     if (!productImage?.default?.src) throw Error('Asset not found');
 
-    imageUrl = productImage.default.src;
+    return (productImage.default.src as string) || undefined;
   } catch (e: any) {
     if ('message' in e) {
       console.warn('Error in import product image', e.message);
     }
-    return imageUrl;
+    return;
   }
-
-  return imageUrl;
 };
 
 export const getProductPrice = (

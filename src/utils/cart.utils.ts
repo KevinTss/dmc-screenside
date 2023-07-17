@@ -19,3 +19,12 @@ export const getTotalProductsPrice = (productsInCart?: LocalCartProduct[]) => {
     0
   );
 };
+
+const isMultipleOf = (quantity: number, number: number = 12) =>
+  quantity % number !== 0;
+
+export const canGoToCheckout = (productsInCart?: LocalCartProduct[]) => {
+  const quantity = getTotalProductsQuantity(productsInCart);
+
+  return isMultipleOf(quantity);
+};

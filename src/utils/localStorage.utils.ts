@@ -1,4 +1,4 @@
-import { LocalStorageKey } from 'src/types/LocalStorage';
+import { LocalStorageKey } from 'src/types';
 
 export const addToLocalStorage = (key: LocalStorageKey, value: any): void => {
   // if (typeof window === 'undefined') return;
