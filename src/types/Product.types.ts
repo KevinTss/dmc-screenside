@@ -35,7 +35,7 @@ export type ProductContent = {
 export type Product = {
   handle: string;
   title: string;
-  imageUrl: string;
+  imageUrl?: string;
   price: ProductPrice;
   variantId: string;
   description: string;

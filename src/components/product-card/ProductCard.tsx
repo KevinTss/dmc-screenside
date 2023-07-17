@@ -1,3 +1,4 @@
+import { Icon } from 'src/components/ui/icon'
 import { useAppState } from 'src/hooks';
 import { Product } from 'src/types';
 
@@ -27,12 +28,14 @@ export const ProductCard = ({ product, isImagePriority = false }: ProductCardPro
   return (
   <Container href={`/shop/${product.handle}`} passHref>
     <ImageContainer>
-      <Image src={product.imageUrl} alt={product.title} fill priority={isImagePriority} />
+        {product.imageUrl
+          ? <Image src={product.imageUrl} alt={product.title} fill priority={isImagePriority} />
+          : <Icon name='image' />}
     </ImageContainer>
     <CardBody>
       <Name>{product.title}</Name>
       <RowBottom>
-        <Price>€{product.price.amount}</Price>
+          <Price>€{Number(product.price.amount)}</Price>
         <Category>Beer</Category>
       </RowBottom>
         <RowBottom>

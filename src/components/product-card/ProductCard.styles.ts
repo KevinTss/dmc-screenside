@@ -13,6 +13,16 @@ export const ImageContainer = styled.div`
   height: 320px;
   background-color: ${(p) => p.theme.color.background.mainSoft};
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > svg {
+    width: 75px;
+    height: 75px;
+    fill: ${(p) => p.theme.color.primary[200]};
+    opacity: 0.3;
+  }
 `;
 
 export const Container = styled(Link)`
@@ -70,4 +80,9 @@ export const Button = styled.button`
   margin-top: ${(p) => p.theme.space.S12}px;
   cursor: pointer;
   border-radius: 4px;
+
+  &[disabled] {
+    cursor: not-allowed;
+    filter: grayscale(60%);
+  }
 `;
