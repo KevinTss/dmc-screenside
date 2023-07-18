@@ -21,7 +21,7 @@ export const useLocale = () => {
         defaultMessage: `Missing **${key}** key`,
         id: key,
       },
-      { options }
+      { ...(options || {}) }
     );
   };
 

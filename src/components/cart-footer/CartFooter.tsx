@@ -19,8 +19,8 @@ export const CartFooter = () => {
         </span>
       </Top>
       <Bottom>
-        <Button disabled={canGoToCheckout(products)}>
-          Order
+        <Button disabled={!canGoToCheckout(products)}>
+          {t('component.CartFooter.cta')}
         </Button>
       </Bottom>
     </Container>

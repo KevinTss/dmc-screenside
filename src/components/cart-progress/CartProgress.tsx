@@ -1,21 +1,42 @@
-import { Icon } from 'src/components/ui';
-import { useAppState, useLocale } from 'src/hooks';
+import { useCart, useLocale } from 'src/hooks';
+import { getProductLeftBeforeOrder, getPercentageToNextMultiple } from 'src/utils';
 
-import { Container, Title, Right, Left, Button } from './CartProgress.styles';
+import { Container, Text, ProgressContainer, ProgressBar } from './CartProgress.styles';
 
 export const CartProgress = () => {
   const { t } = useLocale();
-  const { toggleAsideCart } = useAppState()
+  const { products } = useCart()
+
+  const productLeft = getProductLeftBeforeOrder(products)
+  const percentage = getPercentageToNextMultiple(products)
 
   return (
     <Container>
-      <Left>
-        <Button onClick={toggleAsideCart}>
-          <Icon name='cross' />
-        </Button>
-      </Left>
-      <Title>{t('component.CartHeader.title')}</Title>
-      <Right />
+      <Text
+        dangerouslySetInnerHTML={{
+          __html: productLeft
+            ? t(
+              'component.CartProgress.sentence',
+              {
+                articleLeft: `<b>${t(
+                  'component.CartProgress.moreArticle',
+                  {
+                    number: productLeft,
+                    plural: productLeft > 1 ? 's' : ''
+                  }
+                )}</b>`
+              }
+            )
+            : t('component.CartProgress.canOrder')
+        }}
+      />
+      <ProgressContainer>
+        <ProgressBar
+          style={{
+            width: `${percentage}%`
+          }}
+        />
+      </ProgressContainer>
     </Container>
   );
 }

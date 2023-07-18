@@ -18,12 +18,22 @@ export const ImageContainer = styled.div`
   border-radius: 4px;
   flex-shrink: 0;
   overflow: hidden;
-  background-color: #f1eee5;
+  background-color: ${(p) => p.theme.color.background.mainSoft};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     object-fit: contain;
     transform: scale(1.2);
     margin-top: -10px;
+  }
+
+  > svg {
+    width: 25px;
+    height: 25px;
+    fill: ${(p) => p.theme.color.primary[200]};
+    opacity: 0.3;
   }
 `;
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Icon } from 'src/components/ui'
 import { useAppState, useProduct } from 'src/hooks';
 
 import {
@@ -12,7 +13,7 @@ import {
   QuantityBox,
   QuantityButton,
 } from './ProductCartPreview.styles';
-import { Icon } from '../ui';
+
 
 type ProductCartPreviewProps = {
   productHandle: string,
@@ -28,7 +29,9 @@ export const ProductCartPreview = ({ productHandle, quantity }: ProductCartPrevi
   return (
     <Container>
       <ImageContainer>
-        <Image src={data.imageUrl} alt={data.title} layout='fill' />
+        {data.imageUrl
+          ? <Image src={data.imageUrl} alt={data.title} layout='fill' />
+          : <Icon name='image' />}
       </ImageContainer>
       <CardBody>
         <Name>{data.title}</Name>

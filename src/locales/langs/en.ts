@@ -1,8 +1,12 @@
 export const en = {
+  'component.CartBody.title': 'My articles ({number} article{plural})',
+  'component.CartFooter.cta': 'Go to checkout',
   'component.CartFooter.label': 'Total (Tax included)',
-  'component.CartProgress.label':
-    '<strong>${number}</strong> more article(s) to activate the cart',
   'component.CartHeader.title': 'Cart',
+  'component.CartProgress.canOrder':
+    'Click on the button at the top to finalize',
+  'component.CartProgress.moreArticle': '{number} more article{plural}',
+  'component.CartProgress.sentence': '{articleLeft} to activate the cart…',
   'component.Footer.allRightReserved': 'All rights reserved',
   'component.Header.nav.contact': 'Contact',
   'component.Header.nav.home': 'Home',

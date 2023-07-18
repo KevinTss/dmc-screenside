@@ -1,4 +1,4 @@
-import { Icon } from 'src/components/ui/icon'
+import { Icon } from 'src/components/ui'
 import { useAppState } from 'src/hooks';
 import { Product } from 'src/types';
 
