@@ -6,6 +6,7 @@ export const ContentContainer = styled.section`
   ${SectionCSS}
   display: flex;
   gap: 20px;
+  padding-top: 100px;
 
   ${MediaQuery.S_AND_DOWN} {
     flex-direction: column;

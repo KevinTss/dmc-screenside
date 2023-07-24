@@ -1,11 +1,11 @@
 export { default as Checkbox } from './checkbox';
-export { default as Field } from './field';
 export { default as Heading } from './heading';
 export { default as Label } from './label';
 export { default as Link } from './link';
 export { default as NavLink } from './nav-link';
 export { default as Overlay } from './overlay';
 export { default as Text } from './text';
+export { Field } from './field';
 export * from './button';
 export * from './drawer';
 export * from './form';

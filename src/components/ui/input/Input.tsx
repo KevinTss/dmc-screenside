@@ -1,15 +1,17 @@
-import { InputContainer, Input, Textarea, IconLeftContainer } from './input.styles';
+import { ChangeEventHandler } from 'react';
 
-type InputElementProps = {
-  type: 'textarea' | 'text'
+import { InputContainer, Input as InputElement, Textarea, IconLeftContainer } from './input.styles';
+
+export type InputProps = {
+  type: 'textarea' | 'text' | 'email',
+  id: string,
+  name: string,
+  value: string,
+  onChange: ChangeEventHandler
 }
 
-export const InputElement = ({ type, ...props }: InputElementProps) => {
-  let input = <Input type={type} {...props} />;
-
-  if (type === 'textarea') {
-    input = <Textarea {...props} />;
-  }
+export const Input = ({ type, ...props }: InputProps) => {
+  let input = type === 'textarea' ? <Textarea {...props} /> : <InputElement type={type} {...props} />;
 
   return (
     <InputContainer>

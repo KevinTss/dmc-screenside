@@ -1,19 +1,21 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
+import { Button, Form, Field } from 'src/components/ui';
 import { useLocale } from 'src/hooks';
 
-import { StatusText } from './styles';
-import { Button, Form, Field } from '../../../ui';
+import { StatusText } from './ContactForm.styles';
 
-export default function ContactFormSection() {
-  const [status, setStatus] = useState(null);
+const initialFormValue = {
+  name: '',
+  email: '',
+  message: '',
+}
+
+export const ContactForm = () => {
+  const [status, setStatus] = useState<'error' | 'success' | null>(null);
   const { t } = useLocale();
-  const { handleChange, values, handleSubmit } = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
+  const { handleChange, values, handleSubmit } = useFormik<typeof initialFormValue>({
+    initialValues: initialFormValue,
     onSubmit: (values, { resetForm }) => {
       fetch('/api/hello', {
         method: 'POST',
@@ -40,9 +42,9 @@ export default function ContactFormSection() {
   });
 
   return (
-    <Form onSubmit={handleSubmit} style={{ flex: '1' }}>
+    <Form onSubmit={(e) => console.log('submit', e)}>
       <Field
-        label={t('component.ContactFormSection.formLabelFullName')}
+        label={t('component.ContactForm.label.name')}
         id='name'
         name='name'
         type='text'
@@ -50,7 +52,7 @@ export default function ContactFormSection() {
         value={values.name}
       />
       <Field
-        label={t('component.ContactFormSection.formLabelEmail')}
+        label={t('component.ContactForm.label.email')}
         id='email'
         name='email'
         type='email'
@@ -58,7 +60,7 @@ export default function ContactFormSection() {
         value={values.email}
       />
       <Field
-        label={t('component.ContactFormSection.formLabelMessage')}
+        label={t('component.ContactForm.label.message')}
         id='message'
         name='message'
         type='textarea'
@@ -66,7 +68,7 @@ export default function ContactFormSection() {
         value={values.message}
       />
       <Button type='submit'>
-        {t('component.ContactFormSection.formSubmitButton')}
+        {t('component.ContactForm.submit')}
       </Button>
       {status && (
         <StatusText>

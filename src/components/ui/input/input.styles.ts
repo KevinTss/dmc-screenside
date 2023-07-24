@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const InputContainer = styled.div`
   display: flex;
   border-radius: 4px;
-  border: 1px solid ${({ theme }) => theme.color.primary};
-  padding: ${({ theme }) => theme.space.S04};
+  border: 1px solid ${({ theme }) => theme.color.neutral[600]};
 `;
 
 export const IconLeftContainer = styled.div`
@@ -12,7 +11,7 @@ export const IconLeftContainer = styled.div`
 `;
 
 export const Input = styled.input`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.neutral[900]};
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size[16]};
   font-weight: ${({ theme }) => theme.font.weight[400]};
