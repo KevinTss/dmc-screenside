@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 26px auto 26px;
-  border-bottom: ${({ theme }) => `2px solid ${theme.color.primary[600]}`};
+  border-bottom: ${({ theme }) => `1px solid ${theme.color.primary[600]}`};
   padding: ${(p) => `${p.theme.space.S20}px ${p.theme.space.S16}px`};
 `;
 

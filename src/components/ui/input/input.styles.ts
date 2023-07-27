@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const InputContainer = styled.div`
   display: flex;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.color.neutral[600]};
+  overflow: hidden;
 `;
 
 export const IconLeftContainer = styled.div`
@@ -17,6 +18,8 @@ export const Input = styled.input`
   font-weight: ${({ theme }) => theme.font.weight[400]};
   border: 0;
   width: 100%;
+  padding: 14px 20px;
+  outline: none;
 
   ::placeholder {
     font-size: ${({ theme }) => theme.font.size[16]};
@@ -30,8 +33,10 @@ export const Textarea = styled.textarea`
   font-weight: ${({ theme }) => theme.font.weight[500]};
   border: 0;
   width: 100%;
-  min-height: 200px;
+  min-height: 120px;
   resize: vertical;
+  padding: 14px 20px;
+  outline: none;
 
   ::placeholder {
     font-size: ${({ theme }) => theme.font.size[16]};

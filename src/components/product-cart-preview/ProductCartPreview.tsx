@@ -18,9 +18,10 @@ import {
 type ProductCartPreviewProps = {
   productHandle: string,
   quantity: number
+  variantId: string
 }
 
-export const ProductCartPreview = ({ productHandle, quantity }: ProductCartPreviewProps) => {
+export const ProductCartPreview = ({ productHandle, quantity, variantId }: ProductCartPreviewProps) => {
   const { data } = useProduct(productHandle);
   const { addToCart, removeFromCart } = useAppState()
 
@@ -44,7 +45,7 @@ export const ProductCartPreview = ({ productHandle, quantity }: ProductCartPrevi
             <Icon name='minus' />
           </QuantityButton>
           <span>{quantity}</span>
-          <QuantityButton onClick={() => addToCart(productHandle, Number(data.price.amount))}>
+          <QuantityButton onClick={() => addToCart(productHandle, Number(data.price.amount), variantId)}>
             <Icon name='plus' />
           </QuantityButton>
         </QuantityBox>

@@ -2,7 +2,7 @@ import { createContext, ReactNode, useCallback, useState, useMemo, useEffect, us
 import { LocalCartProduct } from 'src/types'
 import { addToLocalStorage, getFromLocalStorage } from 'src/utils';
 
-type AddToCardFunc = (productHandle: string, productUnitPrice: number) => void
+type AddToCardFunc = (productHandle: string, productUnitPrice: number, productVariantId: string) => void
 type RemoveFromCartFunc = (productHandle: string, options?: { all?: boolean }) => void
 
 type AppState = {
@@ -55,14 +55,19 @@ export const AppStateProvider = ({ children }: AppStateProviderProps) => {
     }))
   }, [])
 
-  const addToCart: AddToCardFunc = useCallback((productHandle, productUnitPrice) => {
+  const addToCart: AddToCardFunc = useCallback((
+    productHandle,
+    productUnitPrice,
+    productVariantId
+  ) => {
     const itemIndex = state.productInCart.findIndex(p => p.handle === productHandle)
 
     let product: AppState['productInCart'][0] = itemIndex === -1
       ? {
         handle: productHandle,
         quantity: 1,
-        pricePerUnit: productUnitPrice
+        pricePerUnit: productUnitPrice,
+        variantId: productVariantId
       }
       : state.productInCart[itemIndex]
 
@@ -87,7 +92,8 @@ export const AppStateProvider = ({ children }: AppStateProviderProps) => {
               return {
                 handle: i.handle,
                 quantity: i.quantity + 1,
-                pricePerUnit: i.pricePerUnit
+                pricePerUnit: i.pricePerUnit,
+                variantId: i.variantId
               }
             } else {
               return i
@@ -110,7 +116,12 @@ export const AppStateProvider = ({ children }: AppStateProviderProps) => {
           ? state.productInCart.filter(p => p.handle !== productHandle)
           : state.productInCart
             .map(p => p.handle === productHandle
-              ? { handle: p.handle, quantity: p.quantity - 1, pricePerUnit: p.pricePerUnit }
+              ? {
+                handle: p.handle,
+                quantity: p.quantity - 1,
+                pricePerUnit: p.pricePerUnit,
+                variantId: p.variantId
+              }
               : p)
             .filter(p => p.quantity > 0)
       }

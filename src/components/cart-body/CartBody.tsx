@@ -22,7 +22,7 @@ export const CartBody = () => {
       {products.length
         ? (
           <List>
-            {products.map(p => <ProductCartPreview key={p.handle} productHandle={p.handle} quantity={p.quantity} />)}
+            {products.map(p => <ProductCartPreview key={p.handle} productHandle={p.handle} quantity={p.quantity} variantId={p.variantId} />)}
           </List>
         )
         : <EmptyState />}

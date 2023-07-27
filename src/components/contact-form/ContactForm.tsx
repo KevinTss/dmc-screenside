@@ -1,9 +1,9 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
-import { Button, Form, Field } from 'src/components/ui';
+import { Form, Field } from 'src/components/ui';
 import { useLocale } from 'src/hooks';
 
-import { StatusText } from './ContactForm.styles';
+import { FormContainer, StatusText, Button } from './ContactForm.styles';
 
 const initialFormValue = {
   name: '',
@@ -42,41 +42,43 @@ export const ContactForm = () => {
   });
 
   return (
-    <Form onSubmit={(e) => console.log('submit', e)}>
-      <Field
-        label={t('component.ContactForm.label.name')}
-        id='name'
-        name='name'
-        type='text'
-        onChange={handleChange}
-        value={values.name}
-      />
-      <Field
-        label={t('component.ContactForm.label.email')}
-        id='email'
-        name='email'
-        type='email'
-        onChange={handleChange}
-        value={values.email}
-      />
-      <Field
-        label={t('component.ContactForm.label.message')}
-        id='message'
-        name='message'
-        type='textarea'
-        onChange={handleChange}
-        value={values.message}
-      />
-      <Button type='submit'>
-        {t('component.ContactForm.submit')}
-      </Button>
-      {status && (
-        <StatusText>
-          {status === 'error'
-            ? 'Internal error, try again later'
-            : 'You message has been sent'}
-        </StatusText>
-      )}
-    </Form>
+    <FormContainer>
+      <Form onSubmit={(e) => console.log('submit', e)}>
+        <Field
+          label={t('component.ContactForm.label.name')}
+          id='name'
+          name='name'
+          type='text'
+          onChange={handleChange}
+          value={values.name}
+        />
+        <Field
+          label={t('component.ContactForm.label.email')}
+          id='email'
+          name='email'
+          type='email'
+          onChange={handleChange}
+          value={values.email}
+        />
+        <Field
+          label={t('component.ContactForm.label.message')}
+          id='message'
+          name='message'
+          type='textarea'
+          onChange={handleChange}
+          value={values.message}
+        />
+        <Button type='submit'>
+          {t('component.ContactForm.submit')}
+        </Button>
+        {status && (
+          <StatusText>
+            {status === 'error'
+              ? 'Internal error, try again later'
+              : 'You message has been sent'}
+          </StatusText>
+        )}
+      </Form>
+    </FormContainer>
   );
 }

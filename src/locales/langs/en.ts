@@ -1,4 +1,5 @@
 export const en = {
+  'common.loading': 'Loading…',
   'component.CartBody.title': 'My articles ({number} article{plural})',
   'component.CartFooter.cta': 'Go to checkout',
   'component.CartFooter.label': 'Total (Tax included)',
@@ -11,6 +12,7 @@ export const en = {
   'component.ContactForm.label.message': 'Message',
   'component.ContactForm.label.name': 'Name',
   'component.ContactForm.submit': 'Send',
+  'component.ContactView.title': 'Contact us',
   'component.Footer.allRightReserved': 'All rights reserved',
   'component.Header.nav.contact': 'Contact',
   'component.Header.nav.home': 'Home',

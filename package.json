@@ -9,6 +9,7 @@
     "check:ts": "tsc"
   },
   "dependencies": {
+    "@shopify/hydrogen-react": "^2023.7.0",
     "axios": "^0.24.0",
     "formik": "^2.4.1",
     "lodash.debounce": "^4.0.8",

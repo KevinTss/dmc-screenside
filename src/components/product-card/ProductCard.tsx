@@ -43,7 +43,7 @@ export const ProductCard = ({ product, isImagePriority = false }: ProductCardPro
             onClick={(e) => {
               e.preventDefault()
               e.stopPropagation()
-              addToCart(product.handle, Number(product.price.amount))
+              addToCart(product.handle, Number(product.price.amount), product.variantId)
             }}
           >
             Add to cart

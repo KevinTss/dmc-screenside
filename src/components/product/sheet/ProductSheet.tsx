@@ -29,7 +29,7 @@ export const ProductSheet = ({ product }: ProductSheetProps) => {
       </BreadcrumbsContainer>
       <Body>
       <ImageContainer>
-        <Image src={product.imageUrl} alt={product.title} layout='fill' />
+          <Image src={product.imageUrl || ''} alt={product.title} layout='fill' />
       </ImageContainer>
         <Content>
           <Title>
