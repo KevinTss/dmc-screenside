@@ -1,3 +1,3 @@
-import { ContactView } from 'src/components/view/contact';
+import { ContactView } from '../components/view/contact';
 
 export default ContactView;

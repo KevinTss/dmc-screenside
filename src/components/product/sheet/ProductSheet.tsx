@@ -1,7 +1,4 @@
 import Image from 'next/image';
-import { Button } from 'src/components/ui';
-import { useCart, useLocale } from 'src/hooks';
-import { Product } from 'src/types';
 
 import {
   Container,
@@ -14,6 +11,10 @@ import {
   Content,
   Separator
 } from './ProductSheet.styles';
+import { useCart, useLocale } from '../../../hooks';
+import type { Product } from '../../../types';
+import { Button } from '../../ui';
+
 
 type ProductSheetProps = {
   product: Product

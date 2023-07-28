@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
+
+import { SectionCSS } from '../../styles';
 
 export const FooterContainer = styled.footer`
   display: flex;

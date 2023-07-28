@@ -1,7 +1,7 @@
-import { useCart, useLocale } from 'src/hooks';
-import { getProductLeftBeforeOrder, getPercentageToNextMultiple } from 'src/utils';
-
 import { Container, Text, ProgressContainer, ProgressBar } from './CartProgress.styles';
+import { useCart, useLocale } from '../../hooks';
+import { getProductLeftBeforeOrder, getPercentageToNextMultiple } from '../../utils';
+
 
 export const CartProgress = () => {
   const { t } = useLocale();

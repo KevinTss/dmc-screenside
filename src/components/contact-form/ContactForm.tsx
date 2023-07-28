@@ -1,9 +1,10 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
-import { Form, Field } from 'src/components/ui';
-import { useLocale } from 'src/hooks';
 
 import { FormContainer, StatusText, Button } from './ContactForm.styles';
+import { Form, Field } from '../../components/ui';
+import { useLocale } from '../../hooks';
+
 
 const initialFormValue = {
   name: '',

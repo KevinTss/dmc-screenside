@@ -1,11 +1,11 @@
-import { ProductsList } from 'src/components/product-list';
-import { useProductsFeatured } from 'src/hooks';
-
 import {
   Container,
   Title,
   Cockpit,
 } from './HomeFeaturedProductsSection.styles';
+import { ProductsList } from '../../../../components/product-list';
+import { useProductsFeatured } from '../../../../hooks';
+
 
 export const HomeFeaturedProductsSection = () => {
   const { data } = useProductsFeatured();

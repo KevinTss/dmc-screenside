@@ -1,10 +1,11 @@
 import { ReactNode } from 'react'
-import { CartDrawer } from 'src/components/cart-drawer'
-import { Footer } from 'src/components/footer'
-import { Head } from 'src/components/head'
-import { Header } from 'src/components/header'
 
 import { Main } from './DefaultTemplate.styles';
+import { CartDrawer } from '../../../components/cart-drawer'
+import { Footer } from '../../../components/footer'
+import { Head } from '../../../components/head'
+import { Header } from '../../../components/header'
+
 
 type Props = {
   children: ReactNode;

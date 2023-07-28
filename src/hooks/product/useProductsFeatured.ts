@@ -1,11 +1,12 @@
 import type { AxiosResponse } from 'axios';
 import { useQuery } from 'react-query';
-import { ProductFromShopify } from 'src/types';
+
+import { ProductFromShopify } from '../../types';
 import {
   shopifyQuery,
   getProductImage,
   getProductFromShopifyProduct,
-} from 'src/utils';
+} from '../../utils';
 
 export const GET_FEATURED_PRODUCTS = `
 query getFeaturedProducts {

@@ -1,5 +1,6 @@
-import { MediaQuery } from 'src/constants';
 import styled from 'styled-components';
+
+import { MediaQuery } from '../../../constants';
 
 export const Main = styled.main`
   display: flex;

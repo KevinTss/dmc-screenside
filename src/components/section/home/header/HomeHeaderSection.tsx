@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import backgroundImage from 'src/assets/background.jpg'
-import { useLocale } from 'src/hooks'
 
 import { AdvertisementContainer, Container, Title, CTA, Overlay } from './HomeHeaderSection.styles';
+import backgroundImage from '../../../../assets/background.jpg'
+import { useLocale } from '../../../../hooks'
+
 
 
 export const HomeHeaderSection = () => {

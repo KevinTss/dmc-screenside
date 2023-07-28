@@ -1,9 +1,9 @@
-import { MediaQuery } from 'src/constants';
 import styled, { createGlobalStyle, css } from 'styled-components';
 
 export * from './theme';
 export * from './theme.constants';
 import { resetCSS } from './reset.styles';
+import { MediaQuery } from '../constants';
 
 export const GlobalStyles = createGlobalStyle`
  ${resetCSS}

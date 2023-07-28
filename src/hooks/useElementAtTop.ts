@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { isSSR } from 'src/utils';
+
+import { isSSR } from '../utils';
 
 type Options = {
   defaultValue?: boolean;

@@ -1,9 +1,6 @@
 import { useRouter } from 'next/router'
-// import { useState } from 'react';
-import { Logo } from 'src/components/ui/logo';
-import { useIsWindowScrolled, useLocale, useAppState } from 'src/hooks';
-import { getTotalProductsQuantity } from 'src/utils'
 
+// import { useState } from 'react';
 import {
   Container,
   Left,
@@ -16,6 +13,10 @@ import {
   Button,
   Badge
 } from './Header.styles';
+import { Logo } from '../../components/ui/logo';
+import { useIsWindowScrolled, useLocale, useAppState } from '../../hooks';
+import { getTotalProductsQuantity } from '../../utils'
+
 // import { useCart, WIDTH, useMediaQuery } from '../../hooks';
 // import CardDrawer from '../cart/drawer';
 // import MobileNav from '../mobile-nav';

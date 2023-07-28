@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
-import { Portal } from 'src/components/ui/portal';
 
 import { Container, Overlay, DrawerEl } from './Drawer.styles';
+import { Portal } from '../../../components/ui/portal';
+
 
 type DrawerProps = {
   children: ReactNode,

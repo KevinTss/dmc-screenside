@@ -1,9 +1,9 @@
-import { EmptyState } from 'src/components/cart-empty-state';
-import { ProductCartPreview } from 'src/components/product-cart-preview';
-import { useLocale, useCart } from 'src/hooks';
-import { getTotalProductsQuantity } from 'src/utils'
-
 import { Container, Title, List } from './CartBody.styles';
+import { EmptyState } from '../../components/cart-empty-state';
+import { ProductCartPreview } from '../../components/product-cart-preview';
+import { useLocale, useCart } from '../../hooks';
+import { getTotalProductsQuantity } from '../../utils'
+
 
 export const CartBody = () => {
   const { t } = useLocale();

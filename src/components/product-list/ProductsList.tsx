@@ -1,7 +1,6 @@
-import { ProductCard } from 'src/components/product-card';
-import { Product } from 'src/types';
-
 import { MainContainer, ItemContainer } from './ProductsList.styles';
+import { Product } from '../../types';
+import { ProductCard } from '../product-card';
 
 type ProductListProps = {
   products: (Product & { cursor?: string })[]

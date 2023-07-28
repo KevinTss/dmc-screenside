@@ -1,7 +1,7 @@
 // import debounce from 'lodash.debounce';
 // import { useState, useEffect, useMemo } from 'react';
 // import { useQuery } from 'react-query';
-// import { shopifyQuery } from 'src/utils/shopify.utils';
+// import { shopifyQuery } from '../../utils/shopify.utils';
 
 // import { GET_PRODUCTS_BY_SEARCH } from './queries';
 // import { getFormattedData, getQueryString } from './utils.js';

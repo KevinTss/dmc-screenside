@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import { Icon } from 'src/components/ui'
-import { useAppState, useProduct } from 'src/hooks';
 
 import {
   Container,
@@ -13,6 +11,9 @@ import {
   QuantityBox,
   QuantityButton,
 } from './ProductCartPreview.styles';
+import { useAppState, useProduct } from '../../hooks';
+import { Icon } from '../ui'
+
 
 
 type ProductCartPreviewProps = {

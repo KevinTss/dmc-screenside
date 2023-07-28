@@ -1,9 +1,10 @@
 import type { AxiosResponse } from 'axios';
 import { useQuery } from 'react-query';
-import { ProductFromShopify } from 'src/types';
-import { shopifyQuery, getProductFromShopifyProduct } from 'src/utils';
 
 import { GET_PRODUCT_BY_HANDLE } from './queries';
+import { ProductFromShopify } from '../../types';
+import { shopifyQuery, getProductFromShopifyProduct } from '../../utils';
+
 
 type FetchProductResponse = {
   productByHandle: ProductFromShopify;

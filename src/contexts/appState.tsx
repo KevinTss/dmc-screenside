@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useCallback, useState, useMemo, useEffect, useRef } from 'react';
-import { LocalCartProduct } from 'src/types'
-import { addToLocalStorage, getFromLocalStorage } from 'src/utils';
+
+import { LocalCartProduct } from '../types'
+import { addToLocalStorage, getFromLocalStorage } from '../utils';
 
 type AddToCardFunc = (productHandle: string, productUnitPrice: number, productVariantId: string) => void
 type RemoveFromCartFunc = (productHandle: string, options?: { all?: boolean }) => void
