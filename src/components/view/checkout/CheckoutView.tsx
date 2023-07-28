@@ -7,10 +7,10 @@
 // import { ContactForm } from '../../components/contact-form';
 // import { useRouter } from 'next/navigation'
 import { Container } from './CheckoutView.styles';
-import { CartBody } from '../../components/cart-body';
-import { DefaultTemplate } from '../../components/template';
+import { CartBody } from '../../../components/cart-body';
+import { DefaultTemplate } from '../../../components/template';
 // import { Text } from '../../components/ui';
-import { useCart, useShopifyCartCreate } from '../../hooks';
+import { useCart, useShopifyCartCreate } from '../../../hooks';
 
 
 export const CheckoutView = () => {

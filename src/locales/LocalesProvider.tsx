@@ -5,7 +5,7 @@ import { IntlProvider } from "react-intl";
 
 import { en } from './langs/en'
 import { i18n } from '../../next.config'
-import { Locales } from '../../types'
+import { Locales } from '../types'
 
 const messages: Record<Locales, typeof en> = {
   en
