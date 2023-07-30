@@ -67,7 +67,8 @@ export const Separator = styled.hr`
 `;
 
 export const Price = styled.p`
-  font-size: ${({ theme }) => theme.font.size[18]};
+  font-size: ${({ theme }) => theme.font.size[32]};
+  font-weight: ${({ theme }) => theme.font.weight[500]};
   margin-bottom: ${({ theme }) => theme.space.S12};
 `;
 
@@ -82,6 +83,11 @@ export const BreadcrumbsContainer = styled.div`
   }
 `;
 
+export const ButtonsGroup = styled.div`
+  display: flex;
+  gap: 16px;
+`;
+
 export const Button = styled.button`
   font-size: ${({ theme }) => theme.font.size[16]};
   background-color: ${({ theme }) => theme.color.primary[600]};
@@ -89,7 +95,6 @@ export const Button = styled.button`
   color: ${({ theme }) => theme.color.neutral[0]};
   font-weight: ${({ theme }) => theme.font.weight[500]};
   padding: ${(p) => `${p.theme.space.S16}px ${p.theme.space.S24}px`};
-  margin-top: ${(p) => p.theme.space.S12}px;
   cursor: pointer;
   border-radius: 4px;
 
@@ -97,4 +102,15 @@ export const Button = styled.button`
     cursor: not-allowed;
     filter: grayscale(60%);
   }
+`;
+
+export const ButtonSecondary = styled.button`
+  font-size: ${({ theme }) => theme.font.size[16]};
+  background-color: ${({ theme }) => theme.color.neutral[0]};
+  border: 1px solid ${({ theme }) => theme.color.primary[600]};
+  color: ${({ theme }) => theme.color.primary[600]};
+  font-weight: ${({ theme }) => theme.font.weight[500]};
+  padding: ${(p) => `${p.theme.space.S16}px ${p.theme.space.S24}px`};
+  cursor: pointer;
+  border-radius: 4px;
 `;
