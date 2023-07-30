@@ -6,11 +6,10 @@ import { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { CartProvider, AppStateProvider } from 'src/contexts';
+import { LocalesProvider } from 'src/locales'
+import { GlobalStyles, ThemeLight } from 'src/styles';
 import { ThemeProvider } from 'styled-components';
-
-import { CartProvider, AppStateProvider } from '../contexts';
-import { LocalesProvider } from '../locales'
-import { GlobalStyles, ThemeLight } from '../styles';
 
 // import { AgeCheckingModal } from '../components/age-checking-modal';
 

@@ -1,3 +1,7 @@
+import { Icon } from 'src/components/ui'
+import { useAppState } from 'src/hooks';
+import { Product } from 'src/types';
+
 import {
   CardBody,
   Category,
@@ -9,10 +13,6 @@ import {
   RowBottom,
   Button
 } from './ProductCard.styles';
-import { useAppState } from '../..//hooks';
-import type { Product } from '../../types';
-import { Icon } from '../ui'
-
 
 type ProductCardProps = {
   product: Product

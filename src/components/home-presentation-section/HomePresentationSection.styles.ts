@@ -1,8 +1,7 @@
 import Link from 'next/link';
+import { MediaQuery } from 'src/constants';
+import { SectionCSS } from 'src/styles';
 import styled from 'styled-components';
-
-import { MediaQuery } from '../../constants';
-import { SectionCSS } from '../../styles';
 
 export const Container = styled.section`
   display: flex;

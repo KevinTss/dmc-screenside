@@ -1,7 +1,6 @@
 import Link from 'next/link';
+import { MediaQuery } from 'src/constants';
 import styled from 'styled-components';
-
-import { MediaQuery } from '../../../../constants';
 
 export const AdvertisementContainer = styled.section`
   display: flex;

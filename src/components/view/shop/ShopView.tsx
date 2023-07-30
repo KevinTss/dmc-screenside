@@ -1,10 +1,10 @@
-import { Content, Aside, LoadMoreButtonContainer } from './ShopView.styles';
-import { PageHeader } from '../../../components/page-header';
-import { ProductsList } from '../../../components/product-list';
-import { DefaultTemplate } from '../../../components/template';
-import { Button } from '../../../components/ui';
-import { useLocale, useProducts } from '../../../hooks';
+import { PageHeader } from 'src/components/page-header';
+import { ProductsList } from 'src/components/product-list';
+import { DefaultTemplate } from 'src/components/template';
+import { Button } from 'src/components/ui';
+import { useLocale, useProducts } from 'src/hooks';
 
+import { Content, Aside, LoadMoreButtonContainer } from './ShopView.styles';
 
 export const ShopView = () => {
   const { t } = useLocale();

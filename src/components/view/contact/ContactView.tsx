@@ -1,9 +1,9 @@
 
-import { ContentContainer, Iframe, Title, Text } from './ContactView.styles';
-import { ContactForm } from '../../../components/contact-form';
-import { DefaultTemplate } from '../../../components/template';
-import { useLocale } from '../../../hooks';
+import { ContactForm } from 'src/components/contact-form';
+import { DefaultTemplate } from 'src/components/template';
+import { useLocale } from 'src/hooks';
 
+import { ContentContainer, Iframe, Title, Text } from './ContactView.styles';
 
 export const ContactView = () => {
   const { t } = useLocale();

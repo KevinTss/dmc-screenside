@@ -1,9 +1,9 @@
-import { CartBody } from '../../components/cart-body';
-import { CartFooter } from '../../components/cart-footer';
-import { CartHeader } from '../../components/cart-header';
-import { CartProgress } from '../../components/cart-progress';
-import { Drawer } from '../../components/ui';
-import { useAppState } from '../../hooks';
+import { CartBody } from 'src/components/cart-body';
+import { CartFooter } from 'src/components/cart-footer';
+import { CartHeader } from 'src/components/cart-header';
+import { CartProgress } from 'src/components/cart-progress';
+import { Drawer } from 'src/components/ui';
+import { useAppState } from 'src/hooks';
 
 export const CartDrawer = () => {
   const { state: { isAsideCartOpen }, toggleAsideCart } = useAppState()

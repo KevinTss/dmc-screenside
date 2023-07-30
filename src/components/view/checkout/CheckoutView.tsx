@@ -4,14 +4,13 @@
  * shopify checkout
  */
 
-// import { ContactForm } from '../../components/contact-form';
+// import { ContactForm } from 'src/components/contact-form';
 // import { useRouter } from 'next/navigation'
 import { CartBody } from 'src/components/cart-body';
 import { DefaultTemplate } from 'src/components/template';
 import { useCart, useShopifyCartCreate } from 'src/hooks';
 
 import { Container } from './CheckoutView.styles';
-
 
 export const CheckoutView = () => {
   // const { t } = useLocale();

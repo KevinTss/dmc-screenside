@@ -1,9 +1,9 @@
-import { PRODUCT_CONTENT } from '../constants';
-import { ProductFromShopify, Product } from '../types';
+import { PRODUCT_CONTENT } from 'src/constants';
+import { ProductFromShopify, Product } from 'src/types';
 
 export const getProductImage = (handle: string) => {
-  // let imageUrl = '../../assets/fallback.png';
-  // let imageUrl = require('../../assets/fallback.png');
+  // let imageUrl = 'src/assets/fallback.png';
+  // let imageUrl = require('src/assets/fallback.png');
 
   try {
     const productImage = require(`src/assets/products/${handle}.png`);

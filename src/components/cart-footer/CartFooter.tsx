@@ -1,8 +1,8 @@
-import { Container, Top, Bottom } from './CartFooter.styles';
-import { Button } from '../../components/product-card/ProductCard.styles';
-import { useLocale, useCart, useShopifyCartCreate } from '../../hooks';
-import { getTotalProductsPrice, canGoToCheckout } from '../../utils'
+import { Button } from 'src/components/product-card/ProductCard.styles';
+import { useLocale, useCart, useShopifyCartCreate } from 'src/hooks';
+import { getTotalProductsPrice, canGoToCheckout } from 'src/utils'
 
+import { Container, Top, Bottom } from './CartFooter.styles';
 
 export const CartFooter = () => {
   const { t } = useLocale();

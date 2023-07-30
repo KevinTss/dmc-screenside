@@ -1,8 +1,7 @@
 import NextImage from 'next/image';
 import Link from 'next/link';
+import { Row } from 'src/styles';
 import styled from 'styled-components';
-
-import { Row } from '../../styles';
 
 export const Image = styled(NextImage)`
   object-fit: contain;

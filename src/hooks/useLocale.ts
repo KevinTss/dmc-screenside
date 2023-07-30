@@ -4,8 +4,7 @@
  */
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
-
-import { en } from '../locales/langs/en';
+import { en } from 'src/locales/langs/en';
 
 type Key = keyof typeof en;
 

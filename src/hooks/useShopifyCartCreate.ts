@@ -1,8 +1,7 @@
 import type { AxiosResponse } from 'axios';
 import { useMutation } from 'react-query';
-
-import type { CartInput, CartLineInput } from '../types';
-import { shopifyQuery } from '../utils/shopify.utils';
+import type { CartInput, CartLineInput } from 'src/types';
+import { shopifyQuery } from 'src/utils/shopify.utils';
 
 /**
  * @see https://shopify.dev/docs/api/storefront/2023-04/mutations/cartCreate#top

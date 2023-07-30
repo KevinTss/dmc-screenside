@@ -1,11 +1,10 @@
 import type { AxiosResponse } from 'axios';
 import { useState } from 'react';
 import { useQuery } from 'react-query';
+import { Product, ProductFromShopify } from 'src/types';
+import { shopifyQuery, getProductFromShopifyProduct } from 'src/utils';
 
 import { GET_PRODUCTS } from './queries';
-import { Product, ProductFromShopify } from '../../types';
-import { shopifyQuery, getProductFromShopifyProduct } from '../../utils';
-
 
 const PAGE_SIZE = 16;
 

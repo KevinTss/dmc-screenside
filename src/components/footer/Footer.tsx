@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router'
+import { Logo } from 'src/components/ui/logo'
+import { useLocale } from 'src/hooks';
+import { Col, Row } from 'src/styles';
 
 import { FooterContainer, FooterWrapper, BottomContainer, SubTitle, Text, NavLink } from './Footer.styles';
-import { Logo } from '../../components/ui/logo'
-import { useLocale } from '../../hooks';
-import { Col, Row } from '../../styles';
-
 
 export const Footer = () => {
   const { t } = useLocale();

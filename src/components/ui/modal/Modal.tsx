@@ -1,8 +1,7 @@
 import { ReactNode } from 'react'
+import { Portal } from 'src/components/ui/portal';
 
 import { Container, Overlay, DrawerEl } from './Modal.styles';
-import { Portal } from '../../../components/ui/portal';
-
 
 type ModalProps = {
   children: ReactNode,

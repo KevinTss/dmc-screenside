@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { isAgeChecked, checkAge } from 'src/utils'
 
 import { Container, Title, P, ButtonsGroup } from './AgeCheckingModal.styles';
-import { isAgeChecked, checkAge } from '../../utils'
 import { Modal, Button } from '../ui';
 
 export const AgeCheckingModal = () => {

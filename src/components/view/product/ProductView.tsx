@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
-
-import { ProductSheet } from '../../../components/product/sheet';
-import { DefaultTemplate } from '../../../components/template/default';
-import { useProduct } from '../../../hooks';
+import { ProductSheet } from 'src/components/product/sheet';
+import { DefaultTemplate } from 'src/components/template/default';
+import { useProduct } from 'src/hooks';
 
 
 export const ProductView = () => {

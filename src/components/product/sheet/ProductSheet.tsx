@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useLocale, useAppState } from 'src/hooks';
+import { Product } from 'src/types';
 
 import {
   Container,
@@ -12,8 +14,6 @@ import {
   Separator,
   Button
 } from './ProductSheet.styles';
-import { useLocale, useAppState } from '../../../hooks';
-import type { Product } from '../../../types';
 
 
 type ProductSheetProps = {

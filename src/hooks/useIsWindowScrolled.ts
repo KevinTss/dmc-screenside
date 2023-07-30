@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-
-import { isSSR } from '../utils';
+import { isSSR } from 'src/utils';
 
 export const useIsWindowScrolled = () => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -1,4 +1,4 @@
-import { LocalCartProduct } from '../types';
+import { LocalCartProduct } from 'src/types';
 
 const DEFAULT_NUMBER_OF_PRODUCT_BEFORE_ORDER = 12;
 

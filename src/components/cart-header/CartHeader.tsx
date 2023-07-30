@@ -1,7 +1,7 @@
-import { Container, Title, Right, Left, Button } from './CartHeader.styles';
-import { Icon } from '../../components/ui';
-import { useAppState, useLocale } from '../../hooks';
+import { Icon } from 'src/components/ui';
+import { useAppState, useLocale } from 'src/hooks';
 
+import { Container, Title, Right, Left, Button } from './CartHeader.styles';
 
 export const CartHeader = () => {
   const { t } = useLocale();

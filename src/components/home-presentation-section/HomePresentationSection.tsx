@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import backgroundImage from 'src/assets/background.jpg'
+import { useLocale } from 'src/hooks'
 
 import { Wrapper, Container, Title, Description, CTA } from './HomePresentationSection.styles';
-import backgroundImage from '../../assets/background.jpg'
-import { useLocale } from '../../hooks'
+
 
 export const HomePresentationSection = () => {
   const { locale, t } = useLocale();
