@@ -45,7 +45,7 @@ export const ProductSheet = ({ product }: ProductSheetProps) => {
           </Description>
           <Separator />
           <Price>
-            €{product.price.amount}
+            €{Number(product.price.amount)}
           </Price>
           <Description>
             {t('component.ProductSheet.minArticle')}
