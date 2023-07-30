@@ -1,19 +1,17 @@
-import Link from 'next/link';
+import { NavLinkEl } from 'src/components/ui/nav-link/NavLink.styles';
+import { MediaQuery } from 'src/constants';
 import styled, { css } from 'styled-components';
 
 // TODO: fix the error with undefined element in import, probably related to SSR config
 // export const Logo = styled(LogoUI)``;
 
-export const NavLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  color: white;
-  padding: 0 8px;
-`;
-
 export const Left = styled.div`
   display: flex;
   padding-left: 72px;
+
+  ${MediaQuery.M_AND_DOWN} {
+    padding-left: 16px;
+  }
 `;
 
 export const Middle = styled.div`
@@ -28,6 +26,10 @@ export const Right = styled.div`
   align-items: center;
   gap: 16px;
   padding-right: 72px;
+
+  ${MediaQuery.M_AND_DOWN} {
+    padding-right: 16px;
+  }
 `;
 
 type ContainerProps = {
@@ -57,10 +59,17 @@ export const Container = styled.header<ContainerProps>`
       ${Right} svg path {
         stroke: black !important;
       }
-      ${NavLink} {
+      ${NavLinkEl} {
         color: black;
       }
     `}
+
+  ${MediaQuery.M_AND_DOWN} {
+    a {
+      background-color: red !important;
+      color: black;
+    }
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -83,7 +92,11 @@ export const Input = styled.input`
   color: white;
 `;
 
-export const Button = styled.button`
+type ButtonProps = {
+  $isBlack: boolean;
+};
+
+export const Button = styled.button<ButtonProps>`
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -92,6 +105,12 @@ export const Button = styled.button`
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  svg {
+    fill: ${(p) => (p.$isBlack ? 'black' : 'white')};
+    width: 24px;
+    height: 24px;
   }
 `;
 

@@ -1,7 +1,9 @@
-import { useRouter } from 'next/router'
-// import { useState } from 'react';
-import { Logo } from 'src/components/ui/logo';
-import { useIsWindowScrolled, useLocale, useAppState } from 'src/hooks';
+
+import { useState } from 'react';
+import { MobileNav } from 'src/components/mobile-nav';
+import { Nav } from 'src/components/nav';
+import { Logo, Icon } from 'src/components/ui';
+import { useIsWindowScrolled, useLocale, useAppState, useMediaQuery, WIDTH } from 'src/hooks';
 import { getTotalProductsQuantity } from 'src/utils'
 
 import {
@@ -12,26 +14,19 @@ import {
   // SearchContainer,
   // Input,
   // Logo,
-  NavLink,
   Button,
   Badge
 } from './Header.styles';
-// import { useCart, WIDTH, useMediaQuery } from '../../hooks';
-// import CardDrawer from '../cart/drawer';
-// import MobileNav from '../mobile-nav';
-// import Nav from '../nav';
 
 type HeaderProps = {
   isBlack: boolean
 }
 
 export const Header = ({ isBlack }: HeaderProps) => {
-  // const { open } = useCart();
-  // const isMobile = useMediaQuery(WIDTH.MOBILE);
-  // const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMediaQuery(WIDTH.MOBILE);
+  const [isOpen, setIsOpen] = useState(false);
   const isWindowScrolled = useIsWindowScrolled()
   const { t } = useLocale();
-  const router = useRouter()
 
   return (
     <Container $isBlack={isBlack ? isBlack : isWindowScrolled}>
@@ -39,17 +34,15 @@ export const Header = ({ isBlack }: HeaderProps) => {
         <Logo />
       </Left>
       <Middle>
-        <NavLink href='/' locale={router.locale} passHref>{t("component.Header.nav.home")}</NavLink>
-        <NavLink href='/shop' locale={router.locale} passHref>{t("component.Header.nav.shop")}</NavLink>
-        <NavLink href='/contact' locale={router.locale} passHref>{t("component.Header.nav.contact")}</NavLink>
+        {!isMobile && <Nav />}
       </Middle>
-      {/* {!isMobile && <Nav />} */}
       <Right>
         {/* <Search /> */}
         {/* <HeartIcon /> */}
         <CartButton />
+        {isMobile && <MobileNavButton onClick={() => setIsOpen(!isOpen)} isBlack={isBlack ? isBlack : isWindowScrolled} />}
       </Right>
-      {/* {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />} */}
+      {isMobile && <MobileNav isOpen={isOpen} close={() => setIsOpen(false)} />}
     </Container>
   );
 };
@@ -60,9 +53,22 @@ const CartButton = () => {
   const totalProductQuantity = getTotalProductsQuantity(productInCart)
 
   return (
-    <Button onClick={toggleAsideCart}>
+    <Button onClick={toggleAsideCart} $isBlack={false}>
       <ShoppingBagIcon />
       {!!totalProductQuantity && <Badge>{totalProductQuantity}</Badge>}
+    </Button>
+  )
+}
+
+type MobileNavButtonProps = {
+  onClick: VoidFunction,
+  isBlack: boolean
+}
+
+const MobileNavButton = ({ onClick, isBlack }: MobileNavButtonProps) => {
+  return (
+    <Button onClick={onClick} $isBlack={isBlack}>
+      <Icon name='list' />
     </Button>
   )
 }

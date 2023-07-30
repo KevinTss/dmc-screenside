@@ -39,9 +39,9 @@ export const Footer = () => {
           <Col>
             <SubTitle>Online shop</SubTitle>
             <Text>
-              <NavLink href='/' locale={router.locale} passHref>{t("component.Header.nav.home")}</NavLink>
-              <NavLink href='/shop' locale={router.locale} passHref>{t("component.Header.nav.shop")}</NavLink>
-              <NavLink href='/contact' locale={router.locale} passHref>{t("component.Header.nav.contact")}</NavLink>
+              <NavLink href='/' locale={router.locale} passHref>{t("component.Nav.home")}</NavLink>
+              <NavLink href='/shop' locale={router.locale} passHref>{t("component.Nav.shop")}</NavLink>
+              <NavLink href='/contact' locale={router.locale} passHref>{t("component.Nav.contact")}</NavLink>
             </Text>
           </Col>
         </Row>

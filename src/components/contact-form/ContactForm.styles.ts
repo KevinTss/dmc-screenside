@@ -1,7 +1,15 @@
+import { MediaQuery } from 'src/constants';
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
+  display: flex;
+  justify-content: center;
   margin: 80px 0;
+  width: 100%;
+
+  ${MediaQuery.M_AND_DOWN} {
+    margin: 40px 0;
+  }
 `;
 
 export const StatusText = styled.p`

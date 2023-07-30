@@ -1,26 +1,31 @@
-import { Nav as NavEl, Items, Item } from './style';
-import { useLocale } from '../../hooks';
-import { NavLink } from '../ui';
+import { NavLink } from 'src/components/ui';
+import { useLocale } from 'src/hooks';
 
-export default function Nav({ isVertical }) {
+import { Nav as NavEl, Items, Item } from './Nav.styles';
+
+type NavProps = {
+  isVertical?: boolean
+}
+
+export const Nav = ({ isVertical = false }: NavProps) => {
   const { locale, t } = useLocale();
 
   return (
     <NavEl>
-      <Items isVertical={isVertical}>
+      <Items $isVertical={isVertical}>
         <Item>
           <NavLink href='/' locale={locale} passHref>
-            {t('header.nav.home')}
+            {t('component.Nav.home')}
           </NavLink>
         </Item>
         <Item>
           <NavLink href='/shop' locale={locale} passHref>
-            {t('header.nav.shop')}
+            {t('component.Nav.shop')}
           </NavLink>
         </Item>
         <Item>
           <NavLink href='/contact' locale={locale} passHref>
-            {t('header.nav.contact')}
+            {t('component.Nav.contact')}
           </NavLink>
         </Item>
       </Items>
