@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import { useState } from 'react';
+import { useState, FormEventHandler } from 'react';
 import { Form, Field } from 'src/components/ui';
 import { useLocale } from 'src/hooks';
 
@@ -11,17 +11,23 @@ const initialFormValue = {
   message: '',
 }
 
-export const ContactForm = () => {
+type ContactFormProps = {
+  onSuccess: VoidFunction
+  isDisabled: boolean
+}
+
+export const ContactForm = ({ onSuccess, isDisabled }: ContactFormProps) => {
   const [status, setStatus] = useState<'error' | 'success' | null>(null);
   const { t } = useLocale();
   const { handleChange, values, handleSubmit } = useFormik<typeof initialFormValue>({
     initialValues: initialFormValue,
     onSubmit: (values, { resetForm }) => {
-      fetch('/api/hello', {
+      if (!values.email || !values.name || !values.message) return
+      if (isDisabled) return
+      fetch('/api/send-message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify(values), // body data type must match "Content-Type" header
       })
@@ -30,7 +36,7 @@ export const ContactForm = () => {
             console.warn(response);
             setStatus('error');
           } else {
-            setStatus('success');
+            onSuccess()
             resetForm();
           }
         })
@@ -43,7 +49,7 @@ export const ContactForm = () => {
 
   return (
     <FormContainer>
-      <Form onSubmit={(e) => console.log('submit', e)}>
+      <Form onSubmit={handleSubmit as FormEventHandler}>
         <Field
           label={t('component.ContactForm.label.name')}
           id='name'
@@ -68,14 +74,12 @@ export const ContactForm = () => {
           onChange={handleChange}
           value={values.message}
         />
-        <Button type='submit'>
+        <Button type='submit' disabled={isDisabled}>
           {t('component.ContactForm.submit')}
         </Button>
-        {status && (
+        {status === 'error' && (
           <StatusText>
-            {status === 'error'
-              ? 'Internal error, try again later'
-              : 'You message has been sent'}
+            Internal error, try again later
           </StatusText>
         )}
       </Form>

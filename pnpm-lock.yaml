@@ -5,6 +5,7 @@ specifiers:
   '@shopify/hydrogen-react': ^2023.7.0
   '@types/jest': ^29.5.2
   '@types/node': ^18.16.17
+  '@types/node-mailjet': ^3.3.9
   '@types/react': ^18.2.10
   '@types/react-dom': ^18.2.4
   '@types/react-gtm-module': ^2.0.1
@@ -49,6 +50,7 @@ devDependencies:
   '@babel/core': 7.22.9
   '@types/jest': 29.5.3
   '@types/node': 18.17.1
+  '@types/node-mailjet': 3.3.9
   '@types/react': 18.2.17
   '@types/react-dom': 18.2.7
   '@types/react-gtm-module': 2.0.1
@@ -1739,6 +1741,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/node-mailjet/3.3.9:
+    resolution: {integrity: sha512-OSwpRjw0DPNCfRQTCcYOAT42uCcbOmAufZjHbqRW+MDsO3QOBTYajwT8J0JlRdgMdBrMEcEkIqLCbc0OSfSiRQ==}
     dev: true
 
   /@types/node/18.17.1:
