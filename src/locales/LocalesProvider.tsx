@@ -1,11 +1,10 @@
 import { useRouter } from 'next/router';
 import type { ReactNode } from 'react';
 import { IntlProvider } from "react-intl";
-
+import { Locales } from 'src/types'
 
 import { en } from './langs/en'
 import { i18n } from '../../next.config'
-import { Locales } from '../types'
 
 const messages: Record<Locales, typeof en> = {
   en

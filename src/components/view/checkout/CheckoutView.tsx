@@ -6,11 +6,11 @@
 
 // import { ContactForm } from '../../components/contact-form';
 // import { useRouter } from 'next/navigation'
+import { CartBody } from 'src/components/cart-body';
+import { DefaultTemplate } from 'src/components/template';
+import { useCart, useShopifyCartCreate } from 'src/hooks';
+
 import { Container } from './CheckoutView.styles';
-import { CartBody } from '../../../components/cart-body';
-import { DefaultTemplate } from '../../../components/template';
-// import { Text } from '../../components/ui';
-import { useCart, useShopifyCartCreate } from '../../../hooks';
 
 
 export const CheckoutView = () => {
