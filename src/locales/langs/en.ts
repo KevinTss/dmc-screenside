@@ -23,6 +23,7 @@ export const en = {
   'component.HomePresentationSection.description':
     'Step into the world of refined indulgence with Table, an exquisite destination for discerning connoisseurs. Elevate your aperitif experience with our meticulously sourced ingredients, carefully selected to tantalize your senses. From opulent wines to artisanal beers, every offering at Table exudes unparalleled quality and craftsmanship. Indulge in the finest olives and cachuete meticulously chosen to complement your drink of choice. Embrace a life of refined taste and sophistication with Table, where quality meets simplicity in every delightful sip and bite.',
   'component.HomePresentationSection.title': 'About us',
+  'component.ProductSheet.addToCart': 'Add to cart',
   'component.ShopView.loadMore': 'Load more',
   'component.ShopView.title': 'Nos produits',
 };

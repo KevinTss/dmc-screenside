@@ -9,11 +9,11 @@ import {
   Price,
   BreadcrumbsContainer,
   Content,
-  Separator
+  Separator,
+  Button
 } from './ProductSheet.styles';
-import { useCart, useLocale } from '../../../hooks';
+import { useLocale, useAppState } from '../../../hooks';
 import type { Product } from '../../../types';
-import { Button } from '../../ui';
 
 
 type ProductSheetProps = {
@@ -21,8 +21,9 @@ type ProductSheetProps = {
 }
 
 export const ProductSheet = ({ product }: ProductSheetProps) => {
-  // const { add,  isAddLoading, open} = useCart();
   const { t } = useLocale();
+  const { addToCart } = useAppState()
+
   return (
     <Container>
       <BreadcrumbsContainer>
@@ -43,17 +44,15 @@ export const ProductSheet = ({ product }: ProductSheetProps) => {
           <Price>
             €{product.price.amount}
           </Price>
-        {/* <Button
-            isLoading={false}
+          <Button
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              // add(product);
-              // open();
+              addToCart(product.handle, 1, product.variantId)
             }}
           >
-            {t('component.ProductCard.addToCart')}
-          </Button> */}
+            {t('component.ProductSheet.addToCart')}
+          </Button>
         </Content>
       </Body>
     </Container>
