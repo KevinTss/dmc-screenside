@@ -1,28 +1,46 @@
 {
-  "name": "beerify-test",
+  "name": "ScreenSide-dmc",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:ts": "tsc"
   },
   "dependencies": {
-    "axios": "^0.24.0",
-    "formik": "^2.2.9",
+    "@shopify/hydrogen-react": "^2023.7.0",
+    "axios": "1.4.0",
+    "formik": "2.4.2",
     "lodash.debounce": "^4.0.8",
-    "next": "12.0.7",
-    "node-mailjet": "^3.4.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-gtm-module": "^2.0.11",
-    "react-icons": "^4.3.1",
-    "react-query": "^3.34.5",
-    "styled-components": "^5.3.3",
-    "yup": "^0.32.11"
+    "next": "13.4.12",
+    "node-mailjet": "6.0.4",
+    "polished": "4.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-gtm-module": "2.0.11",
+    "react-icons": "4.10.1",
+    "react-intl": "6.4.4",
+    "react-query": "3.39.3",
+    "sharp": "^0.32.4",
+    "styled-components": "6.0.5",
+    "yup": "1.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^18.16.17",
+    "@types/node-mailjet": "^3.3.9",
+    "@types/react": "^18.2.10",
+    "@types/react-dom": "^18.2.4",
+    "@types/react-gtm-module": "^2.0.1",
+    "@types/styled-components": "^5.1.26",
     "eslint": "8.5.0",
-    "eslint-config-next": "12.0.7"
+    "eslint-config-next": "12.0.7",
+    "react-is": "^18.2.0",
+    "typescript": "^5.1.3"
+  },
+  "engine": {
+    "node": "18.17.0"
   }
 }

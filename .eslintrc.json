@@ -1,3 +1,27 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["external", "builtin"],
+          ["internal"],
+          ["index", "sibling", "parent"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "src/**",
+            "group": "external"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+    // "max-len": ["error", { "code": 20 }]
+  }
 }
