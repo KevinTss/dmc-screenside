@@ -19,7 +19,7 @@ export const Footer = () => {
           <Col>
             <SubTitle>Address</SubTitle>
             <Text>
-              Rue Vanderkindere 404
+              Rue Vanderkindere 446
               <br />
               1180 Uccle
               <br />
